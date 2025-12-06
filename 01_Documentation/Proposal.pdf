@@ -1,0 +1,141 @@
+✅ CS6P05 Project Proposal
+Project Title:
+Design and Implementation of a Cyber Essentials Compliance Readiness Framework for Small and Medium Enterprises (SMEs)
+(Commercial name: Tanasiom Aegis Cyber Readiness Service)
+Student: Dumitru Tanasie (dut0032@my.londonmet.ac.uk)
+Student ID: 22041369
+Course: BSc Computer Networking & Cyber Security
+Supervisor: Dr Subeksha Shrestha
+________________________________________
+1 Introduction / Problem Statement
+Small and medium enterprises (SMEs) are increasingly required to demonstrate cybersecurity compliance when bidding for government contracts or handling personal data.
+The UK Government’s Cyber Essentials (CE) scheme provides a recognised baseline for information-security assurance (NCSC 2023).
+However, many SMEs face challenges such as limited expertise, lack of awareness of compliance requirements, and absence of structured processes for implementation (Small Business Commissioner 2023).
+These issues lead to failed tenders, data-breach exposure and non-compliance penalties.
+A guided Cyber Essentials readiness framework is therefore needed to help SMEs reach compliance efficiently.
+________________________________________
+2 Aim of the Project
+To design, develop and evaluate a Cyber Essentials Readiness Toolkit that assists SMEs in understanding, preparing for, and attaining Cyber Essentials certification securely and efficiently.
+________________________________________
+3 Objectives
+1.	Research Cyber Essentials requirements and common SME security challenges (NCSC 2023; IASME 2023).
+2.	Design a structured readiness and self-assessment workflow aligned with CE control areas.
+3.	Develop a practical toolkit including:
+ • Risk-assessment and device-control templates
+ • Implementation guidance
+ • Policy and procedure pack
+4.	Prototype a lightweight web dashboard to visualise readiness status.
+5.	Evaluate the toolkit using a simulated SME case study.
+6.	Reflect on the legal, ethical and professional implications of compliance (BCS 2023).
+________________________________________
+4 Background / Rationale
+The project aligns with the BSc Computer Networking & Cyber Security programme learning outcomes and with industry best practice.
+Cyber Essentials is a UK Government-backed standard required for many public-sector suppliers and recommended by insurers (NCSC 2023).
+Research shows that SMEs struggle to interpret technical CE controls, often resulting in partial or misapplied implementations (Von Solms & Van Niekerk 2013).
+Producing an accessible, step-by-step readiness toolkit therefore fills an identified gap in SME cyber-governance capability (Small Business Commissioner 2023).
+________________________________________
+5 Proposed Solution / Artefact
+Component	Description
+Initial Security Assessment Questionnaire	Evaluate baseline security posture
+System Inventory & Access Control Template	Map devices, users and permissions
+Firewall / MFA / Patch Guides	Step-by-step configuration and verification
+Compliance Gap Report Template	Summarise readiness and remediation steps
+Policy Documentation Pack	Password, Remote Access and Incident Response policies
+Monitoring & Review Checklist	Maintain ongoing CE compliance
+Together these form the Tanasiom Aegis Cyber Readiness Toolkit, providing a reusable compliance-readiness framework for SMEs.
+________________________________________
+6 Methodology
+An investigative and design-based methodology will be applied (Dawson 2015).
+Stage	Activities
+Research & Literature Review	Analyse CE documentation and SME threat landscape (NCSC 2023)
+Requirements Analysis	Identify SME technical environments and constraints
+Framework Design	Create readiness workflow and artefact architecture
+Artefact Development	Produce templates, policies and dashboard prototype
+Evaluation	Test toolkit using a simulated SME case study
+Reflection & Reporting	Analyse results and compile final report (Dawson 2015)
+This process supports learning outcomes LO1 – LO7:
+independent research → design → implementation → evaluation → professional reflection.
+________________________________________
+7 Resource Requirements
+•	Software: Microsoft 365, Visual Studio Code, Draw.io, GitHub.
+•	Documentation: NCSC and IASME official guides.
+•	Hardware: Standard laptop environment for simulation.
+No external datasets, paid hosting or company data are required.
+________________________________________
+8 Work Breakdown Structure (WBS)
+Table 1 – Work Breakdown Structure
+No.	Activity	Duration	Description
+1	Research & Literature Review	3 weeks	Review CE documentation and SME context
+2	Requirements Analysis	2 weeks	Identify CE controls and SME needs
+3	Framework & Toolkit Design	3 weeks	Define workflow and templates
+4	Toolkit Development	4 weeks	Create policies, guides and forms
+5	Dashboard Prototype	3 weeks	Develop simple web UI
+6	Evaluation & Testing	3 weeks	Validate toolkit with SME scenario
+7	Reporting & Reflection	4 weeks	Prepare interim and final reports
+Total Duration: ≈ 22 – 24 weeks
+________________________________________
+9 Project Milestones and Schedule
+Table 2 – Project Milestones
+Milestone	Deliverable	Week Due
+M1	Project Proposal Approved	Week 5
+M2	Interim Report (3 500 words)	Week 13
+M3	Toolkit + Dashboard Artefact Complete	Week 25
+M4	Final Report (8 000 words)	Week 25
+M5	Viva / Oral Exam	Weeks 25 – 27
+Figure 1 – Simplified Gantt Chart (Weeks)
+Weeks	Activity
+1 – 3	Research & Literature Review
+4 – 5	Requirements Analysis
+6 – 8	Framework & Toolkit Design
+9 – 12	Toolkit Development
+13	Interim Report
+14 – 18	Dashboard Prototype & Testing
+19 – 22	Evaluation & Refinement
+23 – 25	Final Report
+25 – 27	Viva Preparation
+________________________________________
+10 Legal, Ethical, Social & Professional Considerations
+•	GDPR compliance: no personal or real company data collected (BCS 2023).
+•	Responsible disclosure: no offensive security testing.
+•	Confidentiality: all evaluation data simulated.
+•	Professional ethics: adheres to the BCS Code of Conduct (BCS 2023).
+•	Social impact: enhances SME cyber resilience and awareness.
+________________________________________
+11 Expected Outcomes
+•	A documented and tested Cyber Essentials Readiness Toolkit.
+•	A prototype dashboard visualising compliance progress.
+•	A professional artefact suitable for consultancy use.
+•	Demonstrated mastery of cybersecurity governance and project-management techniques (Dawson 2015).
+________________________________________
+12 Repository / Folder Structure
+Table 3 – Repository Structure
+/Tanasiom-Aegis-CE-Readiness-Framework
+│
+├── /Documentation
+│   ├── Literature_Review.pdf
+│   ├── Methodology_Design.pdf
+│   └── Final_Report.pdf
+│
+├── /Toolkit
+│   ├── Initial_Assessment_Questionnaire.docx
+│   ├── Device_and_Access_Control_Template.xlsx
+│   ├── Firewall_and_MFA_Guide.pdf
+│   ├── Patch_Management_Procedure.pdf
+│   ├── Gap_Assessment_Report_Template.docx
+│   ├── Policy_Pack/
+│   │   ├── Password_Policy.docx
+│   │   ├── Remote_Access_Policy.docx
+│   │   └── Incident_Response_Procedure.docx
+│   └── Monitoring_and_Review_Checklist.pdf
+│
+└── /Project_Logs
+    └── Supervisor_Meeting_Notes.docx
+________________________________________
+13 References (Harvard Style)
+•	British Computer Society (BCS) (2023) Code of Conduct. London: BCS.
+•	Dawson, C. (2015) Projects in Computing and Information Systems: A Student Guide. 3rd ed. Pearson.
+•	IASME Consortium (2023) Cyber Essentials Self-Assessment Guide for SMEs. Worcester: IASME.
+•	National Cyber Security Centre (NCSC) (2023) Cyber Essentials: Requirements for IT Infrastructure. London: UK Government.
+•	Small Business Commissioner (2023) SME Cyber Resilience Report. London: HM Government.
+•	Von Solms, R. & Van Niekerk, J. (2013) ‘From information security to cyber security.’ Computers & Security, 38, 97–102.
+
