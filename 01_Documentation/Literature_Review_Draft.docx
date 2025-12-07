@@ -1,0 +1,22 @@
+Structure (use Heading styles):
+
+Title: Literature Review — Tanasiom Aegis
+
+Short intro paragraph (what this chapter does)
+
+Thematic sections (each 2–3 paragraphs):
+
+Cyber Essentials overview (cite NCSC/IASME)
+
+SME cyber challenges (cite Small Business Commissioner; Von Solms)
+
+Existing tools and gaps (cite competitor analysis)
+
+Risk & governance implications (BCS & academic)
+
+Short conclusion: gap statement linking to your project aim
+
+
+
+Introduction — Literature Review
+Cyber Essentials (CE) provides a government-backed baseline for information security in UK organisations (NCSC, 2023). However, evidence indicates that small and medium enterprises often struggle to interpret and implement CE controls due to limited technical expertise, resource constraints, and competing priorities (Small Business Commissioner, 2023; Von Solms & Van Niekerk, 2013). This literature review summarises official guidance, academic studies and industry tools to identify the key barriers SMEs face and to justify the design choices for the Tanasiom Aegis toolkit.
