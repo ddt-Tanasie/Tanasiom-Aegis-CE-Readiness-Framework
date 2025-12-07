@@ -1,0 +1,32 @@
+Include:
+
+Purpose & scope
+
+Roles (IT owner, approver)
+
+Patch schedule (Weekly check + monthly full rollouts)
+
+Windows example: How to check Windows Update (click path: Start → Settings → Update & Security → Windows Update → Check for updates).
+
+Linux example: commands:
+
+Ubuntu/Debian:
+
+sudo apt update
+sudo apt -y upgrade
+
+
+RHEL/CentOS:
+
+sudo yum update
+
+
+Rollout approach: test on two machines → approve → push via Windows WSUS or scripting
+
+Evidence & verification: export update history or screenshot
+
+Emergency patching process
+
+Sample policy line:
+
+Policy: Security updates should be validated and applied to all workstations within 14 calendar days of release, except where testing indicates a critical incompatibility. All patch operations must be logged and a screenshot of successful update applied (or an update log) uploaded to evidence folder.
