@@ -1,0 +1,47 @@
+Sections:
+
+Header (use general header)
+
+Company information (table):
+
+Company name:
+
+Address:
+
+Industry:
+
+Number of employees:
+
+IT contact / email:
+
+Business context (checkboxes):
+
+Do you process personal data? (Y/N) — If Yes, what types?
+
+Are you required to hold Cyber Essentials for tenders? (Y/N)
+
+Short inventory summary:
+
+Estimated number of workstations:
+
+Number of servers:
+
+Cloud services used: (e.g., Office365)
+
+Control checklist (table: Control | Question | Yes/No | Evidence required | Notes)
+
+Example row: Boundary Firewall | Is a boundary firewall in place and configured to block inbound admin ports? | Y/N | Screenshot of firewall rule table | —
+
+Example row: MFA | Is multi-factor authentication enabled for admin accounts? | Y/N | Screenshot from Admin console showing MFA enabled | —
+
+Example row: Patch Management | Are security updates applied within 14 days? | Y/N | Patch history or update logs | —
+
+Preliminary scoring formula (explain): e.g., each ‘Yes’ = 1 point; Score = points/total * 100%
+
+Copy-paste example snippet (toward top of the doc):
+
+Control: Multi-Factor Authentication (MFA)
+Question: Is MFA enforced for all accounts with administrative privileges?
+Response: [Yes/No]
+Evidence required: Screenshot of admin console showing MFA status OR exported MFA report.
+Notes: If No, recommend immediate MFA enablement for admin accounts.
