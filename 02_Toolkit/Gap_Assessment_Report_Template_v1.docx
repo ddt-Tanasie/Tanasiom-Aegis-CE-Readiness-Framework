@@ -1,0 +1,22 @@
+Include:
+
+Title / header (use standard header)
+
+Executive summary (1 short paragraph)
+
+Scope & Method (what was tested)
+
+Findings table — create a Word table with these columns:
+
+Control Area | Checklist Item | Status (Pass/Partial/Fail) | Evidence | Priority | Recommended Action | Owner | Due Date
+
+Sample table row:
+
+Control Area	Checklist Item	Status	Evidence	Priority	Recommended Action	Owner	Due Date
+Patch management	Workstations patched within 14 days	Fail	Device_List shows 4/15 with old patch date	High	Implement automated patch schedule; patch unpatched hosts	IT	2026-01-15
+
+Remediation plan — numbered list with time estimates (hours) and priority
+
+Appendix: Evidence — list screenshot filenames and file paths
+
+Save as Gap_Assessment_Report_Template_v1.docx. When running evaluation, save a filled copy Evaluation/Gap_Assessment_AcmeWidgets.docx.
