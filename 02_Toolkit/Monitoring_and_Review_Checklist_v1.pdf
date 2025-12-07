@@ -1,0 +1,13 @@
+Create table:
+
+Columns: Task | Frequency | Responsible | Evidence required.
+
+Example rows:
+
+Firewall rule review | Monthly | IT Manager | Screenshot of firewall policy export
+
+Patch status check | Weekly | IT Support | Export of update logs
+
+User access review | Quarterly | IT Manager | Current Device_and_Access_Control_Template.xlsx export
+
+Export this Word doc to PDF as Monitoring_and_Review_Checklist_v1.pdf
