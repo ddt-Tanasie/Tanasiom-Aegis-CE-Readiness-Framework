@@ -1,0 +1,35 @@
+Create in Word then export to PDF. Include:
+
+Purpose & scope
+
+Prerequisites (admin credentials, backup config)
+
+Step-by-step firewall verification (for a typical SMB UTM — example clicks):
+
+Open browser → https://<firewall-ip> → Login with admin user
+
+Navigate: Policy → Inbound Rules → verify rule Allow Established exists
+
+Verify admin interface blocking from WAN: System → Admin Access → ensure “Allow remote admin” is unchecked
+
+Export config: System → Maintenance → Backup/Export → Save file
+
+MFA setup example (Office365) — include exact click path:
+
+Login to Microsoft 365 Admin center → Users → Active users → Multi-factor authentication → Select user(s) → Enable → enforce
+
+Evidence examples — screenshot placeholders and what to capture
+
+Troubleshooting tips & references
+
+Copy-paste sample firewall step to use as content:
+
+Verify admin interface is not exposed to WAN
+
+Login to the firewall management console.
+
+Click System → Administration → Management Access.
+
+Ensure Allow remote admin (or similar) is unchecked.
+
+Take a screenshot of this page and save as firewall_admin_access.png. This screenshot is required evidence for the CE self-assessment.
