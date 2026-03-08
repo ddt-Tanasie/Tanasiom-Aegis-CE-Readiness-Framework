@@ -91,6 +91,11 @@ Dashboard prototype materials. This will contain either:
 Testing plan, test evidence, user feedback, evaluation narrative, and improvements/future work.
 
 ---
+## Related Technical Lab
+
+The practical lab environment used to demonstrate security assessment workflows is available in the related repository:
+
+- [Tanasiom Aegis Security Lab]((https://github.com/ddt-Tanasie/Tanasiom-Aegis-Lab))
 
 ## How to Use (Current)
 1. Start with `02_Toolkit/Initial_Assessment_Questionnaire` to capture SME baseline
