@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tanasiom Aegis — Dashboard Wireframes</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#fafaf8;
+  --ink:#1a1a2e;
+  --mid:#6b7280;
+  --light:#e5e7eb;
+  --lighter:#f3f4f6;
+  --wire:#c8cdd6;
+  --wire2:#e8eaed;
+  --accent:#1e3a5f;
+  --accent2:#2d5a8e;
+  --red:#c0392b;
+  --amber:#b45309;
+  --green:#15803d;
+  --blue:#1d4ed8;
+  --serif:'Instrument Serif',Georgia,serif;
+  --mono:'IBM Plex Mono',monospace;
+  --sans:'IBM Plex Sans',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);color:var(--ink);
+  font-family:var(--sans);line-height:1.5;
+  background-image:
+    radial-gradient(circle at 1px 1px, #d1d5db 1px, transparent 0);
+  background-size:24px 24px;
+}
+
+/* ── COVER ── */
+.cover{
+  background:var(--ink);color:#fff;
+  padding:4rem 3rem 3rem;
+  position:relative;overflow:hidden;
+  page-break-after:always;
+}
+.cover::before{
+  content:'';position:absolute;
+  right:-100px;top:-100px;
+  width:600px;height:600px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.06);
+}
+.cover::after{
+  content:'';position:absolute;
+  right:-60px;top:-60px;
+  width:400px;height:400px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.04);
+}
+.cover-label{
+  font-family:var(--mono);font-size:.65rem;color:rgba(255,255,255,.4);
+  letter-spacing:.2em;text-transform:uppercase;margin-bottom:2rem;
+  display:flex;align-items:center;gap:.6rem;
+}
+.cover-label::before{content:'//';color:rgba(255,255,255,.25)}
+.cover h1{
+  font-family:var(--serif);font-size:clamp(2.5rem,6vw,4.5rem);
+  line-height:1.05;letter-spacing:-.02em;margin-bottom:.5rem;font-weight:400;
+}
+.cover h1 em{color:#7eb3f5;font-style:italic}
+.cover-sub{color:rgba(255,255,255,.55);font-size:.95rem;max-width:500px;margin:1rem 0 2.5rem;line-height:1.65}
+.cover-meta{
+  display:flex;gap:3rem;border-top:1px solid rgba(255,255,255,.1);
+  padding-top:1.5rem;flex-wrap:wrap;
+}
+.cm-item label{font-family:var(--mono);font-size:.6rem;color:rgba(255,255,255,.35);letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:.2rem}
+.cm-item span{font-size:.82rem;color:rgba(255,255,255,.75)}
+
+/* ── TOC ── */
+.toc{padding:3rem;border-bottom:1px solid var(--light)}
+.toc h2{font-family:var(--serif);font-size:1.5rem;margin-bottom:1.5rem;font-weight:400}
+.toc-items{display:flex;flex-direction:column;gap:.1rem}
+.toc-item{
+  display:flex;align-items:baseline;gap:.5rem;
+  padding:.4rem 0;border-bottom:1px dotted var(--light);
+  font-size:.85rem;color:var(--mid);text-decoration:none;transition:color .15s;
+}
+.toc-item:hover{color:var(--ink)}
+.toc-num{font-family:var(--mono);font-size:.7rem;color:var(--accent2);flex-shrink:0;width:24px}
+.toc-name{flex:1;color:var(--ink);font-weight:500}
+.toc-dots{flex:1;border-bottom:1px dotted var(--light);margin:0 .5rem;position:relative;top:-.2rem}
+.toc-page{font-family:var(--mono);font-size:.7rem}
+
+/* ── SECTION WRAPPER ── */
+.section{padding:3rem;border-bottom:2px solid var(--light)}
+.sec-header{margin-bottom:2.5rem}
+.sec-num{font-family:var(--mono);font-size:.62rem;color:var(--accent2);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.4rem}
+.sec-title{font-family:var(--serif);font-size:2rem;font-weight:400;letter-spacing:-.015em;line-height:1.1}
+.sec-title em{color:var(--accent2);font-style:italic}
+.sec-desc{color:var(--mid);font-size:.85rem;margin-top:.4rem;max-width:680px;line-height:1.6}
+
+/* ── WIREFRAME BROWSER CHROME ── */
+.browser{
+  background:#fff;
+  border:1.5px solid var(--wire);
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 4px 24px rgba(0,0,0,.08), 0 1px 4px rgba(0,0,0,.04);
+  margin-bottom:2rem;
+  position:relative;
+}
+.browser-bar{
+  background:#f0f2f5;border-bottom:1px solid var(--wire);
+  padding:.5rem .75rem;display:flex;align-items:center;gap:.6rem;
+}
+.b-dots{display:flex;gap:.3rem}
+.bd{width:10px;height:10px;border-radius:50%}
+.bd-r{background:#ff5f57}.bd-y{background:#febc2e}.bd-g{background:#28c840}
+.b-url{
+  flex:1;background:#fff;border:1px solid var(--wire);border-radius:4px;
+  padding:.2rem .6rem;font-family:var(--mono);font-size:.65rem;color:var(--mid);
+  margin:0 .5rem;
+}
+.b-screen-label{font-family:var(--mono);font-size:.6rem;color:var(--accent2);background:rgba(29,74,210,.08);padding:2px 7px;border-radius:3px;border:1px solid rgba(29,74,210,.15)}
+
+/* ── WIREFRAME COMPONENTS ── */
+.wf{padding:.75rem;background:#fafbfc;position:relative}
+
+/* nav */
+.wf-nav{
+  background:var(--ink);border-radius:5px;
+  padding:.45rem .75rem;display:flex;align-items:center;gap:.5rem;margin-bottom:.5rem;
+}
+.wf-nav-logo{
+  width:22px;height:22px;background:var(--accent2);border-radius:3px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--mono);font-size:.5rem;color:#fff;font-weight:600;flex-shrink:0;
+}
+.wf-nav-brand{font-family:var(--mono);font-size:.6rem;color:rgba(255,255,255,.8);flex:1}
+.wf-tabs{display:flex;gap:2px}
+.wf-tab{
+  font-family:var(--mono);font-size:.55rem;color:rgba(255,255,255,.45);
+  padding:.2rem .45rem;border-radius:2px;
+}
+.wf-tab.active{color:#fff;background:rgba(255,255,255,.12)}
+.wf-nav-pill{
+  font-family:var(--mono);font-size:.5rem;
+  background:rgba(34,197,94,.15);color:#22c55e;
+  border:1px solid rgba(34,197,94,.3);padding:1px 6px;border-radius:8px;
+}
+
+/* ghost blocks */
+.ghost{
+  background:var(--wire2);border:1.5px dashed var(--wire);
+  border-radius:4px;display:flex;align-items:center;justify-content:center;
+  font-family:var(--mono);font-size:.6rem;color:var(--mid);text-align:center;
+  line-height:1.4;
+}
+.ghost-label{padding:.4rem .6rem}
+
+/* hero section */
+.wf-hero{
+  background:linear-gradient(135deg,#1a1a2e 0%,#1e3a5f 100%);
+  border-radius:5px;padding:1rem;margin-bottom:.4rem;text-align:center;
+}
+.wf-hero-tag{font-family:var(--mono);font-size:.52rem;color:rgba(255,255,255,.35);letter-spacing:.1em;margin-bottom:.4rem}
+.wf-hero-h{font-family:var(--serif);font-size:1.1rem;color:#fff;margin-bottom:.3rem;font-weight:400;line-height:1.15}
+.wf-hero-h em{color:#7eb3f5;font-style:italic}
+.wf-hero-sub{font-family:var(--sans);font-size:.6rem;color:rgba(255,255,255,.45);margin-bottom:.6rem}
+.wf-hero-btns{display:flex;gap:.3rem;justify-content:center}
+.wf-btn-p{
+  background:var(--accent2);color:#fff;border:none;border-radius:3px;
+  font-family:var(--mono);font-size:.55rem;padding:.3rem .65rem;
+}
+.wf-btn-s{
+  background:none;color:rgba(255,255,255,.6);
+  border:1px solid rgba(255,255,255,.2);border-radius:3px;
+  font-family:var(--mono);font-size:.55rem;padding:.3rem .65rem;
+}
+
+/* stat strip */
+.wf-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:.3rem;margin-bottom:.4rem}
+.wf-stat{
+  background:#fff;border:1px solid var(--wire);border-radius:3px;
+  padding:.4rem;text-align:center;
+}
+.wf-stat-n{font-family:var(--serif);font-size:.9rem;color:var(--accent)}
+.wf-stat-l{font-family:var(--mono);font-size:.48rem;color:var(--mid)}
+
+/* area tiles */
+.wf-areas{display:grid;grid-template-columns:repeat(5,1fr);gap:.3rem;margin-bottom:.4rem}
+.wf-area{
+  background:#fff;border:1px solid var(--wire);border-radius:3px;
+  padding:.4rem .3rem;text-align:center;
+}
+.wf-area-n{font-family:var(--mono);font-size:.48rem;color:var(--accent2)}
+.wf-area-name{font-family:var(--sans);font-size:.55rem;font-weight:600;margin-top:1px}
+.wf-area-q{font-family:var(--mono);font-size:.45rem;color:var(--mid)}
+
+/* feat grid */
+.wf-feats{display:grid;grid-template-columns:repeat(3,1fr);gap:.3rem;margin-bottom:.4rem}
+.wf-feat{background:#fff;border:1px solid var(--wire);border-radius:3px;padding:.5rem}
+.wf-feat-icon{font-size:.75rem;margin-bottom:.2rem}
+.wf-feat-t{font-size:.58rem;font-weight:600;color:var(--ink);margin-bottom:.15rem}
+.wf-feat-d{font-size:.52rem;color:var(--mid);line-height:1.35}
+
+/* repo cards */
+.wf-repo{display:grid;grid-template-columns:1fr 1fr;gap:.3rem;margin-bottom:.4rem}
+.wf-rc{
+  background:#fff;border:1px solid var(--wire);border-radius:3px;
+  padding:.4rem;display:flex;gap:.35rem;align-items:flex-start;
+}
+.wf-rc-icon{font-size:.7rem;flex-shrink:0}
+.wf-rc-name{font-size:.55rem;font-weight:600;color:var(--ink)}
+.wf-rc-desc{font-size:.48rem;color:var(--mid);line-height:1.3}
+
+/* progress bar */
+.wf-progress{
+  background:#f0f2f5;border:1px solid var(--wire);border-radius:3px;
+  padding:.3rem .5rem;display:flex;align-items:center;gap:.4rem;margin-bottom:.4rem;
+}
+.wf-area-pill{
+  font-family:var(--mono);font-size:.5rem;padding:1px 6px;border-radius:8px;
+}
+.pill-fw{color:#3b82f6;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.25)}
+.pill-sc{color:#8b5cf6;background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.25)}
+.pill-um{color:#10b981;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.25)}
+.pill-ua{color:#f59e0b;background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.25)}
+.pill-mp{color:#ef4444;background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.25)}
+.wf-prog-track{flex:1;height:3px;background:var(--wire);border-radius:2px;overflow:hidden}
+.wf-prog-fill{height:100%;border-radius:2px;background:var(--accent2)}
+.wf-prog-txt{font-family:var(--mono);font-size:.52rem;color:var(--mid);white-space:nowrap}
+
+/* question card */
+.wf-qcard{
+  background:#fff;border:1px solid var(--wire);border-radius:5px;
+  padding:.75rem;margin-bottom:.4rem;
+}
+.wf-qmeta{display:flex;gap:.3rem;align-items:center;margin-bottom:.4rem}
+.wf-qid{font-family:var(--mono);font-size:.52rem;background:var(--lighter);color:var(--mid);padding:1px 5px;border-radius:2px}
+.wf-crit{font-family:var(--mono);font-size:.5rem;background:rgba(192,57,43,.08);color:var(--red);border:1px solid rgba(192,57,43,.2);padding:1px 5px;border-radius:2px}
+.wf-qtitle{font-family:var(--serif);font-size:.95rem;color:var(--ink);margin-bottom:.25rem;font-weight:400;line-height:1.25}
+.wf-qtext{font-size:.58rem;color:var(--mid);line-height:1.45;margin-bottom:.3rem}
+.wf-qhint{font-size:.53rem;color:#6b7280;font-style:italic;background:var(--lighter);border-left:2px solid var(--wire);padding:.25rem .4rem;border-radius:0 2px 2px 0;line-height:1.4}
+
+/* answer grid */
+.wf-agrid{display:grid;grid-template-columns:1fr 1fr;gap:.3rem;margin-bottom:.4rem}
+.wf-ans{
+  background:var(--lighter);border:1.5px solid var(--wire);border-radius:4px;
+  padding:.45rem .5rem;
+}
+.wf-ans.sel-y{border-color:#15803d;background:rgba(21,128,61,.06)}
+.wf-ans.sel-p{border-color:#b45309;background:rgba(180,83,9,.06)}
+.wf-ans.sel-n{border-color:#c0392b;background:rgba(192,57,43,.06)}
+.wf-ans.sel-na{border-color:#9ca3af;background:rgba(156,163,175,.06)}
+.wf-ans-key{font-family:var(--mono);font-size:.58rem;font-weight:600}
+.wf-ans-label{font-size:.55rem;color:var(--mid)}
+.wf-ans-pts{font-family:var(--mono);font-size:.48rem;color:#9ca3af;margin-top:1px}
+
+/* nav row */
+.wf-navrow{display:flex;justify-content:space-between;gap:.3rem}
+.wf-ghost-btn{
+  background:#fff;border:1px solid var(--wire);border-radius:3px;
+  font-family:var(--mono);font-size:.55rem;color:var(--mid);padding:.3rem .6rem;
+}
+.wf-cta-btn{
+  background:var(--accent2);border:none;border-radius:3px;
+  font-family:var(--mono);font-size:.55rem;color:#fff;padding:.3rem .6rem;
+}
+
+/* results */
+.wf-ring-wrap{
+  display:flex;align-items:center;justify-content:center;
+  gap:1rem;margin-bottom:.4rem;
+}
+.wf-ring{
+  width:80px;height:80px;border-radius:50%;
+  border:8px solid var(--accent2);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  background:radial-gradient(circle,transparent 60%,rgba(29,74,210,.05) 100%);
+}
+.wf-ring-inner{text-align:center}
+.wf-ring-pct{font-family:var(--serif);font-size:1.1rem;font-weight:400;color:var(--ink)}
+.wf-ring-cls{font-family:var(--mono);font-size:.45rem;color:var(--accent2)}
+.wf-badge{
+  display:inline-block;font-family:var(--mono);font-size:.55rem;font-weight:600;
+  padding:2px 8px;border-radius:10px;margin:.2rem 0;
+}
+.badge-ready{background:rgba(21,128,61,.1);color:var(--green);border:1px solid rgba(21,128,61,.2)}
+.badge-fail{background:rgba(192,57,43,.1);color:var(--red);border:1px solid rgba(192,57,43,.2)}
+.wf-ring-info{text-align:center}
+.wf-ring-desc{font-size:.58rem;color:var(--mid);max-width:200px;line-height:1.4}
+
+.wf-results-grid{display:grid;grid-template-columns:1fr 1fr;gap:.4rem;margin-bottom:.4rem}
+.wf-rcard{background:#fff;border:1px solid var(--wire);border-radius:4px;padding:.5rem}
+.wf-rcard-title{font-size:.6rem;font-weight:600;color:var(--ink);margin-bottom:.4rem}
+
+.wf-ctrl-bar{margin-bottom:.3rem}
+.wf-ctrl-label{display:flex;justify-content:space-between;font-size:.52rem;margin-bottom:.15rem}
+.wf-ctrl-pct{font-family:var(--mono);font-size:.5rem;color:var(--mid)}
+.wf-ctrl-track{height:5px;background:var(--wire2);border-radius:2px;overflow:hidden}
+.wf-ctrl-fill{height:100%;border-radius:2px}
+
+.wf-radar-ghost{
+  width:100%;height:90px;display:flex;align-items:center;justify-content:center;
+  border:1.5px dashed var(--wire);border-radius:4px;
+  font-family:var(--mono);font-size:.55rem;color:var(--mid);
+}
+
+.wf-gap-item{border:1px solid var(--wire);border-radius:3px;padding:.4rem;margin-bottom:.25rem;display:flex;gap:.3rem;align-items:flex-start}
+.wf-gpill{font-family:var(--mono);font-size:.5rem;padding:1px 5px;border-radius:2px;font-weight:600;flex-shrink:0;margin-top:1px}
+.gp-c{background:rgba(192,57,43,.1);color:var(--red);border:1px solid rgba(192,57,43,.2)}
+.gp-h{background:rgba(180,83,9,.1);color:var(--amber);border:1px solid rgba(180,83,9,.2)}
+.gp-m{background:rgba(29,78,216,.1);color:var(--blue);border:1px solid rgba(29,78,216,.2)}
+.wf-gap-title{font-size:.58rem;font-weight:600;color:var(--ink);line-height:1.25}
+.wf-gap-rem{font-size:.52rem;color:var(--mid);margin-top:.1rem}
+
+/* templates */
+.wf-tpl-grid{display:grid;grid-template-columns:1fr 1fr;gap:.35rem;margin-bottom:.4rem}
+.wf-tpl{background:#fff;border:1px solid var(--wire);border-radius:4px;padding:.55rem}
+.wf-tpl-head{display:flex;gap:.35rem;align-items:flex-start;margin-bottom:.3rem}
+.wf-tpl-icon{font-size:.75rem}
+.wf-tpl-name{font-size:.58rem;font-weight:600;color:var(--ink)}
+.wf-tpl-area{font-family:var(--mono);font-size:.48rem;background:rgba(29,78,216,.08);color:var(--blue);border:1px solid rgba(29,78,216,.15);padding:1px 5px;border-radius:2px;display:inline-block;margin-top:1px}
+.wf-tpl-desc{font-size:.52rem;color:var(--mid);line-height:1.35;margin-bottom:.35rem}
+.wf-tpl-dl{font-family:var(--mono);font-size:.5rem;color:var(--mid);border:1px solid var(--wire);border-radius:2px;padding:1px 6px;display:inline-block}
+
+/* repo */
+.wf-repo-hdr{background:var(--ink);border-radius:4px;padding:.4rem .6rem;margin-bottom:.3rem;display:flex;align-items:center;justify-content:space-between}
+.wf-repo-name{font-family:var(--mono);font-size:.58rem;color:var(--accent2)}
+.wf-repo-meta{font-family:var(--mono);font-size:.5rem;color:rgba(255,255,255,.35)}
+.wf-folder{background:#fff;border:1px solid var(--wire);border-radius:4px;overflow:hidden;margin-bottom:.3rem}
+.wf-folder-row{
+  display:flex;align-items:center;gap:.4rem;padding:.4rem .6rem;
+  font-size:.58rem;font-weight:600;color:var(--ink);cursor:default;
+}
+.wf-folder-icon{font-size:.7rem}
+.wf-folder-desc{font-size:.5rem;color:var(--mid);margin-left:auto;flex-shrink:0}
+.wf-folder-chev{font-size:.55rem;color:var(--mid)}
+.wf-file{
+  display:flex;align-items:center;gap:.4rem;padding:.3rem .6rem .3rem 1.5rem;
+  border-top:1px solid var(--wire2);font-size:.53rem;color:var(--mid);
+}
+.wf-file-icon{font-size:.6rem}
+.wf-file-size{font-family:var(--mono);font-size:.48rem;margin-left:auto}
+
+/* ── CALLOUT SYSTEM ── */
+.callout-wrap{position:relative;display:inline-block}
+.callout{
+  position:absolute;
+  width:18px;height:18px;border-radius:50%;
+  background:var(--accent);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--mono);font-size:.58rem;font-weight:600;
+  border:2px solid #fff;
+  box-shadow:0 2px 8px rgba(0,0,0,.25);
+  z-index:10;cursor:default;
+  pointer-events:none;
+}
+
+.callout-num{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:18px;height:18px;border-radius:50%;
+  background:var(--accent);color:#fff;
+  font-family:var(--mono);font-size:.6rem;font-weight:600;
+  flex-shrink:0;
+}
+
+/* ── ANNOTATION TABLE ── */
+.annotation-block{
+  background:#fff;border:1px solid var(--light);border-radius:6px;
+  overflow:hidden;margin-top:1rem;
+}
+.ann-header{
+  background:var(--ink);color:#fff;
+  padding:.5rem .85rem;
+  font-family:var(--mono);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;
+}
+.ann-row{
+  display:grid;grid-template-columns:28px 1fr 2fr;
+  gap:.6rem;padding:.5rem .85rem;border-bottom:1px solid var(--wire2);
+  align-items:start;
+}
+.ann-row:last-child{border-bottom:none}
+.ann-row:hover{background:#fafbfc}
+.ann-label{font-size:.78rem;font-weight:600;color:var(--ink)}
+.ann-desc{font-size:.78rem;color:var(--mid);line-height:1.5}
+
+/* ── FLOW DIAGRAM ── */
+.flow-wrap{
+  background:#fff;border:1px solid var(--light);border-radius:8px;
+  padding:2rem;margin-top:1.5rem;
+}
+.flow-title{font-family:var(--mono);font-size:.65rem;color:var(--mid);letter-spacing:.1em;text-transform:uppercase;margin-bottom:1.5rem}
+.flow-row{display:flex;align-items:center;justify-content:center;gap:.75rem;flex-wrap:wrap;margin-bottom:.75rem}
+.flow-node{
+  background:var(--lighter);border:1.5px solid var(--wire);border-radius:6px;
+  padding:.5rem .85rem;text-align:center;min-width:110px;
+}
+.flow-node.active{background:var(--ink);border-color:var(--ink);color:#fff}
+.flow-node.active .fn-name{color:#fff}
+.flow-node.active .fn-sub{color:rgba(255,255,255,.5)}
+.fn-name{font-size:.78rem;font-weight:600;color:var(--ink)}
+.fn-sub{font-family:var(--mono);font-size:.58rem;color:var(--mid);margin-top:.1rem}
+.flow-arrow{
+  font-size:1.1rem;color:var(--wire);flex-shrink:0;
+}
+.flow-arrow.down{transform:rotate(90deg)}
+.flow-cond{
+  background:rgba(29,78,216,.06);border:1.5px dashed rgba(29,78,216,.25);
+  border-radius:4px;padding:.3rem .75rem;
+  font-family:var(--mono);font-size:.62rem;color:var(--blue);
+}
+.flow-split{
+  display:flex;align-items:center;justify-content:center;gap:2rem;margin:.25rem 0;
+}
+
+/* ── LEGEND ── */
+.legend{
+  background:#fff;border:1px solid var(--light);border-radius:6px;
+  padding:1.25rem;margin-bottom:2rem;
+}
+.legend-title{font-family:var(--mono);font-size:.62rem;color:var(--mid);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.75rem}
+.legend-items{display:flex;gap:1.5rem;flex-wrap:wrap}
+.legend-item{display:flex;align-items:center;gap:.45rem;font-size:.77rem;color:var(--mid)}
+.li-box{width:18px;height:12px;border-radius:2px}
+.li-dashed{background:var(--wire2);border:1.5px dashed var(--wire)}
+.li-solid{background:#fff;border:1.5px solid var(--wire)}
+.li-dark{background:var(--ink)}
+.li-blue{background:rgba(29,78,216,.08);border:1.5px solid rgba(29,78,216,.2)}
+.li-callout{
+  width:16px;height:16px;border-radius:50%;
+  background:var(--accent);display:flex;align-items:center;justify-content:center;
+  font-family:var(--mono);font-size:.5rem;color:#fff;font-weight:600;
+}
+
+/* ── DIVIDER ── */
+.div{border:none;border-top:1px solid var(--light);margin:2rem 0}
+
+/* ── PAGE BADGE ── */
+.page-badge{
+  display:inline-flex;align-items:center;gap:.4rem;
+  font-family:var(--mono);font-size:.62rem;
+  background:rgba(29,74,94,.06);color:var(--accent2);
+  border:1px solid rgba(29,74,94,.15);
+  padding:.3rem .75rem;border-radius:4px;margin-bottom:1.5rem;
+}
+
+/* ── RESPONSIVE ── */
+@media print{
+  body{background:white}
+  .section{page-break-before:always}
+}
+@media(max-width:700px){
+  .wf-areas{grid-template-columns:repeat(3,1fr)}
+  .wf-stats{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════ COVER ═══════ -->
+<div class="cover">
+  <div class="cover-label">Design Artefact Documentation</div>
+  <h1>Tanasiom Aegis<br><em>Dashboard Wireframes</em></h1>
+  <p class="cover-sub">Low-fidelity annotated wireframes for all five screens of the Cyber Essentials Readiness Toolkit interactive web dashboard. Produced as part of CS6P05 Final Year Project artefact design documentation.</p>
+  <div class="cover-meta">
+    <div class="cm-item"><label>Student</label><span>Dumitru Tanasie · 22041369</span></div>
+    <div class="cm-item"><label>Module</label><span>CS6P05 Final Year Project</span></div>
+    <div class="cm-item"><label>Institution</label><span>London Metropolitan University</span></div>
+    <div class="cm-item"><label>Screens</label><span>5 (Overview, Assessment, Results, Templates, Repository)</span></div>
+    <div class="cm-item"><label>Academic Year</label><span>2025–26</span></div>
+  </div>
+</div>
+
+<!-- ═══════ TOC ═══════ -->
+<div class="toc">
+  <h2>Contents</h2>
+  <div class="toc-items">
+    <a href="#legend" class="toc-item"><span class="toc-num">0</span><span class="toc-name">Legend & Navigation Flow</span><span class="toc-dots"></span><span class="toc-page">p.2</span></a>
+    <a href="#s1" class="toc-item"><span class="toc-num">1</span><span class="toc-name">Screen 1 — Overview / Home</span><span class="toc-dots"></span><span class="toc-page">p.3</span></a>
+    <a href="#s2" class="toc-item"><span class="toc-num">2</span><span class="toc-name">Screen 2 — Assessment</span><span class="toc-dots"></span><span class="toc-page">p.4</span></a>
+    <a href="#s3" class="toc-item"><span class="toc-num">3</span><span class="toc-name">Screen 3 — Results</span><span class="toc-dots"></span><span class="toc-page">p.5</span></a>
+    <a href="#s4" class="toc-item"><span class="toc-num">4</span><span class="toc-name">Screen 4 — Templates</span><span class="toc-dots"></span><span class="toc-page">p.6</span></a>
+    <a href="#s5" class="toc-item"><span class="toc-num">5</span><span class="toc-name">Screen 5 — Repository</span><span class="toc-dots"></span><span class="toc-page">p.7</span></a>
+  </div>
+</div>
+
+<!-- ═══════ LEGEND + FLOW ═══════ -->
+<div class="section" id="legend">
+  <div class="sec-header">
+    <div class="sec-num">// Section 0</div>
+    <div class="sec-title">Legend & <em>Navigation Flow</em></div>
+    <p class="sec-desc">Symbols and conventions used across all wireframe diagrams, followed by the user navigation flow between screens.</p>
+  </div>
+
+  <div class="legend">
+    <div class="legend-title">// Wireframe conventions</div>
+    <div class="legend-items">
+      <div class="legend-item"><div class="li-box li-dashed"></div>Placeholder / ghost block</div>
+      <div class="legend-item"><div class="li-box li-solid"></div>UI component / card</div>
+      <div class="legend-item"><div class="li-box li-dark"></div>Navigation bar / dark element</div>
+      <div class="legend-item"><div class="li-box li-blue"></div>Interactive / clickable element</div>
+      <div class="legend-item"><div class="li-callout">1</div>Numbered callout annotation</div>
+    </div>
+  </div>
+
+  <div class="flow-wrap">
+    <div class="flow-title">// User navigation flow</div>
+
+    <div class="flow-row">
+      <div class="flow-node active"><div class="fn-name">Overview</div><div class="fn-sub">Screen 1</div></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-cond">Click "Start Assessment"</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node"><div class="fn-name">Assessment</div><div class="fn-sub">Screen 2 · Q1–50</div></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-cond">Complete all 50 Qs</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node"><div class="fn-name">Results</div><div class="fn-sub">Screen 3</div></div>
+    </div>
+
+    <div style="text-align:center;color:var(--mid);font-size:.75rem;margin:.5rem 0">← All tabs accessible at any point via the persistent navigation bar →</div>
+
+    <div class="flow-row">
+      <div class="flow-node"><div class="fn-name">Templates</div><div class="fn-sub">Screen 4</div></div>
+      <div class="flow-arrow">↔</div>
+      <div class="flow-node"><div class="fn-name">Repository</div><div class="fn-sub">Screen 5</div></div>
+      <div class="flow-arrow">↔</div>
+      <div class="flow-cond">Results → "View templates →"</div>
+    </div>
+
+    <div class="div"></div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem">
+      <div style="background:var(--lighter);border-radius:5px;padding:.75rem">
+        <div style="font-family:var(--mono);font-size:.6rem;color:var(--accent2);margin-bottom:.3rem">Entry points</div>
+        <div style="font-size:.78rem;color:var(--mid)">Overview screen is the default landing page. All tabs reachable from the persistent nav bar.</div>
+      </div>
+      <div style="background:var(--lighter);border-radius:5px;padding:.75rem">
+        <div style="font-family:var(--mono);font-size:.6rem;color:var(--accent2);margin-bottom:.3rem">State persistence</div>
+        <div style="font-size:.78rem;color:var(--mid)">Assessment answers held in JS object during session. Back navigation preserves previous selections.</div>
+      </div>
+      <div style="background:var(--lighter);border-radius:5px;padding:.75rem">
+        <div style="font-family:var(--mono);font-size:.6rem;color:var(--accent2);margin-bottom:.3rem">Results unlock</div>
+        <div style="font-size:.78rem;color:var(--mid)">Score badge appears on Results nav tab only after assessment is complete. Restarts clear state.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ SCREEN 1: OVERVIEW ═══════ -->
+<div class="section" id="s1">
+  <div class="sec-header">
+    <div class="sec-num">// Screen 1</div>
+    <div class="sec-title">Overview <em>/ Home</em></div>
+    <p class="sec-desc">Landing screen presenting project identity, key statistics, five CE control area tiles, feature summary cards, and repository navigation. Primary call-to-action launches the assessment.</p>
+  </div>
+
+  <div class="page-badge">📄 Screen 1 of 5 · Overview</div>
+
+  <div class="browser">
+    <div class="browser-bar">
+      <div class="b-dots"><span class="bd bd-r"></span><span class="bd bd-y"></span><span class="bd bd-g"></span></div>
+      <div class="b-url">ddt-tanasie.github.io/Tanasiom-Aegis-CE-Readiness-Framework/</div>
+      <span class="b-screen-label">Screen 1 — Overview</span>
+    </div>
+    <div class="wf">
+
+      <!-- NAV -->
+      <div class="wf-nav" style="position:relative">
+        <span style="position:absolute;top:-8px;right:60px" class="callout">1</span>
+        <div class="wf-nav-logo">TA</div>
+        <div class="wf-nav-brand">Tanasiom Aegis</div>
+        <div class="wf-tabs">
+          <span class="wf-tab active">Overview</span>
+          <span class="wf-tab">Assessment</span>
+          <span class="wf-tab">Results</span>
+          <span class="wf-tab">Templates</span>
+          <span class="wf-tab">Repository</span>
+        </div>
+        <div class="wf-nav-pill">● Active</div>
+      </div>
+
+      <!-- HERO -->
+      <div style="position:relative">
+        <span style="position:absolute;top:-8px;right:10px" class="callout">2</span>
+        <div class="wf-hero">
+          <div class="wf-hero-tag">CS6P05 · LONDON METROPOLITAN UNIVERSITY · 22041369</div>
+          <div class="wf-hero-h">Cyber Essentials<br><em>Readiness Toolkit</em></div>
+          <div class="wf-hero-sub">A structured, evidence-based framework for UK SMEs preparing for Cyber Essentials certification.</div>
+          <div class="wf-hero-btns">
+            <div class="wf-btn-p">Start readiness assessment →</div>
+            <div class="wf-btn-s">Browse repository</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STATS -->
+      <div style="position:relative;margin-top:.4rem">
+        <span style="position:absolute;top:-8px;right:10px" class="callout">3</span>
+        <div class="wf-stats">
+          <div class="wf-stat"><div class="wf-stat-n">50</div><div class="wf-stat-l">QUESTIONS</div></div>
+          <div class="wf-stat"><div class="wf-stat-n">5</div><div class="wf-stat-l">CE CONTROLS</div></div>
+          <div class="wf-stat"><div class="wf-stat-n">7</div><div class="wf-stat-l">TEMPLATES</div></div>
+          <div class="wf-stat"><div class="wf-stat-n">~80%</div><div class="wf-stat-l">THREATS BLOCKED</div></div>
+        </div>
+      </div>
+
+      <!-- AREAS -->
+      <div style="position:relative;margin-top:.4rem">
+        <span style="position:absolute;top:-8px;right:10px" class="callout">4</span>
+        <div class="wf-areas">
+          <div class="wf-area"><div class="wf-area-n">01</div><div class="wf-area-name">Firewalls</div><div class="wf-area-q">10 questions</div></div>
+          <div class="wf-area"><div class="wf-area-n">02</div><div class="wf-area-name">Secure Config</div><div class="wf-area-q">10 questions</div></div>
+          <div class="wf-area"><div class="wf-area-n">03</div><div class="wf-area-name">Update Mgmt</div><div class="wf-area-q">10 questions</div></div>
+          <div class="wf-area"><div class="wf-area-n">04</div><div class="wf-area-name">User Access</div><div class="wf-area-q">10 questions</div></div>
+          <div class="wf-area"><div class="wf-area-n">05</div><div class="wf-area-name">Malware</div><div class="wf-area-q">10 questions</div></div>
+        </div>
+      </div>
+
+      <!-- FEATURE CARDS -->
+      <div style="position:relative;margin-top:.4rem">
+        <span style="position:absolute;top:-8px;right:10px" class="callout">5</span>
+        <div class="wf-feats">
+          <div class="wf-feat"><div class="wf-feat-icon">🎯</div><div class="wf-feat-t">Calibrated scoring</div><div class="wf-feat-d">Yes=2 / Partial=1 / No=0 / N/A excluded from denominator</div></div>
+          <div class="wf-feat"><div class="wf-feat-icon">📊</div><div class="wf-feat-t">Visual results</div><div class="wf-feat-d">Score ring, radar chart, per-control bars, gap analysis</div></div>
+          <div class="wf-feat"><div class="wf-feat-icon">📁</div><div class="wf-feat-t">Templates</div><div class="wf-feat-d">7 downloadable policy documents linked to 02_Toolkit</div></div>
+        </div>
+      </div>
+
+      <!-- REPO CARDS -->
+      <div style="position:relative;margin-top:.4rem">
+        <span style="position:absolute;top:-8px;right:10px" class="callout">6</span>
+        <div class="wf-repo">
+          <div class="wf-rc"><div class="wf-rc-icon">📁</div><div><div class="wf-rc-name">01_Documentation</div><div class="wf-rc-desc">Proposal, interim report, literature review, references</div></div></div>
+          <div class="wf-rc"><div class="wf-rc-icon">📁</div><div><div class="wf-rc-name">02_Toolkit</div><div class="wf-rc-desc">Questionnaire, gap report, guidance documents</div></div></div>
+          <div class="wf-rc"><div class="wf-rc-icon">🌐</div><div><div class="wf-rc-name">03_Dashboard_Prototype</div><div class="wf-rc-desc">This interactive dashboard</div></div></div>
+          <div class="wf-rc"><div class="wf-rc-icon">📁</div><div><div class="wf-rc-name">04_Evaluation</div><div class="wf-rc-desc">TechStart case study · 42% → 92%</div></div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="annotation-block">
+    <div class="ann-header">// Callout annotations — Screen 1: Overview</div>
+    <div class="ann-row"><span class="callout-num">1</span><div class="ann-label">Navigation Bar</div><div class="ann-desc">Fixed to top of viewport (position: sticky). Dark navy background. Logo + brand name left-aligned. Tab row centre. Active tab highlighted with bottom border. Status pill right-aligned. Score badge on Results tab appears only after assessment completion.</div></div>
+    <div class="ann-row"><span class="callout-num">2</span><div class="ann-label">Hero Section</div><div class="ann-desc">Full-width dark navy hero with radial gradient. Eyebrow tag shows project context. Serif headline with italic accent colour. Two CTAs: primary "Start assessment" triggers startFresh() to begin Q1; secondary "Browse repository" navigates to Screen 5.</div></div>
+    <div class="ann-row"><span class="callout-num">3</span><div class="ann-label">Statistics Strip</div><div class="ann-desc">Four metric cards displaying scope of the assessment. Purpose: reassure users of the breadth and rigour before they begin. Numbers are static display only.</div></div>
+    <div class="ann-row"><span class="callout-num">4</span><div class="ann-label">Control Area Tiles</div><div class="ann-desc">Five clickable cards, one per CE control area. All tiles trigger startFresh() and begin the assessment from Question 1. Hover state: slight elevation and border colour change to accent blue. Question count shown as secondary label.</div></div>
+    <div class="ann-row"><span class="callout-num">5</span><div class="ann-label">Feature Cards</div><div class="ann-desc">Three-column grid explaining the toolkit's three main capabilities. Informational only — not interactive. Purpose: set expectations before the user starts so they understand what they will receive from the results.</div></div>
+    <div class="ann-row"><span class="callout-num">6</span><div class="ann-label">Repository Cards</div><div class="ann-desc">Four cards linking directly to the four main GitHub repository folders. Open in new tab (target="_blank"). Provide transparency of the academic project structure from within the deployed tool.</div></div>
+  </div>
+</div>
+
+<!-- ═══════ SCREEN 2: ASSESSMENT ═══════ -->
+<div class="section" id="s2">
+  <div class="sec-header">
+    <div class="sec-num">// Screen 2</div>
+    <div class="sec-title">Assessment <em>Screen</em></div>
+    <p class="sec-desc">50-question assessment interface. One question at a time. Progress bar, question card with CE requirement text and hint, four answer buttons, and back/next navigation. Shown here mid-assessment at a critical-flagged question.</p>
+  </div>
+
+  <div class="page-badge">📄 Screen 2 of 5 · Assessment</div>
+
+  <div class="browser">
+    <div class="browser-bar">
+      <div class="b-dots"><span class="bd bd-r"></span><span class="bd bd-y"></span><span class="bd bd-g"></span></div>
+      <div class="b-url">ddt-tanasie.github.io/Tanasiom-Aegis-CE-Readiness-Framework/ · #assess</div>
+      <span class="b-screen-label">Screen 2 — Assessment</span>
+    </div>
+    <div class="wf">
+
+      <!-- NAV -->
+      <div class="wf-nav">
+        <div class="wf-nav-logo">TA</div>
+        <div class="wf-nav-brand">Tanasiom Aegis</div>
+        <div class="wf-tabs">
+          <span class="wf-tab">Overview</span>
+          <span class="wf-tab active">Assessment</span>
+          <span class="wf-tab">Results</span>
+          <span class="wf-tab">Templates</span>
+          <span class="wf-tab">Repository</span>
+        </div>
+        <div class="wf-nav-pill">● Active</div>
+      </div>
+
+      <!-- PROGRESS BAR -->
+      <div style="position:relative">
+        <span style="position:absolute;top:-8px;right:10px" class="callout">1</span>
+        <div class="wf-progress">
+          <span class="wf-area-pill pill-ua">User Access Control</span>
+          <div class="wf-prog-track"><div class="wf-prog-fill" style="width:62%"></div></div>
+          <div class="wf-prog-txt">31 / 50</div>
+        </div>
+      </div>
+
+      <!-- QUESTION CARD -->
+      <div style="position:relative">
+        <span style="position:absolute;top:-8px;right:10px" class="callout">2</span>
+        <div class="wf-qcard">
+          <div class="wf-qmeta">
+            <span class="wf-qid">UA-01</span>
+            <span class="wf-crit">⚠ Critical — auto-fail if No</span>
+          </div>
+          <div class="wf-qtitle">MFA on ALL cloud services</div>
+          <div class="wf-qtext">Is Multi-Factor Authentication (MFA) enabled and enforced for all cloud services across all user and administrator accounts?</div>
+          <div class="wf-qhint">Automatic fail, no exceptions: any cloud service without MFA = CE failure. IASME Test Case 4: "authentication to cloud services must always use MFA".</div>
+        </div>
+      </div>
+
+      <!-- ANSWER GRID -->
+      <div style="position:relative">
+        <span style="position:absolute;top:-8px;right:10px" class="callout">3</span>
+        <div class="wf-agrid">
+          <div class="wf-ans sel-y">
+            <div class="wf-ans-key" style="color:var(--green)">YES</div>
+            <div class="wf-ans-label">Fully implemented</div>
+            <div class="wf-ans-pts">2 points</div>
+          </div>
+          <div class="wf-ans">
+            <div class="wf-ans-key" style="color:var(--amber)">PARTIAL</div>
+            <div class="wf-ans-label">Inconsistently applied</div>
+            <div class="wf-ans-pts">1 point</div>
+          </div>
+          <div class="wf-ans">
+            <div class="wf-ans-key" style="color:var(--red)">NO</div>
+            <div class="wf-ans-label">Not implemented</div>
+            <div class="wf-ans-pts">0 points</div>
+          </div>
+          <div class="wf-ans">
+            <div class="wf-ans-key" style="color:var(--mid)">N/A</div>
+            <div class="wf-ans-label">Not applicable</div>
+            <div class="wf-ans-pts">excluded from score</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NAV ROW -->
+      <div style="position:relative">
+        <span style="position:absolute;top:-8px;right:10px" class="callout">4</span>
+        <div class="wf-navrow">
+          <div class="wf-ghost-btn">← Back</div>
+          <div style="font-family:var(--mono);font-size:.55rem;color:var(--mid);padding:.3rem 0;align-self:center">UA-01 of 50 · User Access Control</div>
+          <div class="wf-cta-btn">Next →</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="annotation-block">
+    <div class="ann-header">// Callout annotations — Screen 2: Assessment</div>
+    <div class="ann-row"><span class="callout-num">1</span><div class="ann-label">Progress Bar</div><div class="ann-desc">Sticky below the navigation bar (top: 54px). Control area pill changes colour per CE area: blue (Firewalls), purple (Secure Config), green (Updates), amber (User Access), red (Malware). Animated fill bar. Question counter shows n/50. Updates on every question change.</div></div>
+    <div class="ann-row"><span class="callout-num">2</span><div class="ann-label">Question Card</div><div class="ann-desc">Fade-in animation (fadeUp, 0.35s) on each new question render. Question ID badge in monospace. Critical questions show a red warning tag — alerts user this is an automatic CE fail condition. Title in serif font (large). Body text explains the NCSC requirement. Hint is in a bordered left-accented container to distinguish it visually from the question.</div></div>
+    <div class="ann-row"><span class="callout-num">3</span><div class="ann-label">Answer Grid</div><div class="ann-desc">2×2 button grid. Clicking an answer highlights it with the appropriate colour (YES=green, PARTIAL=amber, NO=red, N/A=grey). Only one answer selectable at a time — clicking a new answer deselects the previous. Selection enables the Next button. Selected state persists if user navigates back.</div></div>
+    <div class="ann-row"><span class="callout-num">4</span><div class="ann-label">Navigation Row</div><div class="ann-desc">Back button disabled on Q1. Next button disabled until an answer is selected (prevents progressing without answering). On Q50, Next label changes to "View results →" and triggers the scoring engine. Context label shows current position and control area name.</div></div>
+  </div>
+</div>
+
+<!-- ═══════ SCREEN 3: RESULTS ═══════ -->
+<div class="section" id="s3">
+  <div class="sec-header">
+    <div class="sec-num">// Screen 3</div>
+    <div class="sec-title">Results <em>Screen</em></div>
+    <p class="sec-desc">Displays overall readiness score, classification badge, per-control bar charts, radar chart, and prioritised gap analysis. Shown here with a "Significant Gaps" result scenario to illustrate the gap list structure.</p>
+  </div>
+
+  <div class="page-badge">📄 Screen 3 of 5 · Results</div>
+
+  <div class="browser">
+    <div class="browser-bar">
+      <div class="b-dots"><span class="bd bd-r"></span><span class="bd bd-y"></span><span class="bd bd-g"></span></div>
+      <div class="b-url">ddt-tanasie.github.io/Tanasiom-Aegis-CE-Readiness-Framework/ · #results</div>
+      <span class="b-screen-label">Screen 3 — Results</span>
+    </div>
+    <div class="wf">
+
+      <!-- NAV -->
+      <div class="wf-nav">
+        <div class="wf-nav-logo">TA</div>
+        <div class="wf-nav-brand">Tanasiom Aegis</div>
+        <div class="wf-tabs">
+          <span class="wf-tab">Overview</span>
+          <span class="wf-tab">Assessment</span>
+          <span class="wf-tab active">Results <span style="background:var(--accent2);color:#fff;font-size:.45rem;padding:0 4px;border-radius:6px;margin-left:2px">62%</span></span>
+          <span class="wf-tab">Templates</span>
+          <span class="wf-tab">Repository</span>
+        </div>
+        <div class="wf-nav-pill">● Active</div>
+      </div>
+
+      <!-- SCORE HERO -->
+      <div style="position:relative;text-align:center;padding:.75rem;background:#fff;border:1px solid var(--wire);border-radius:5px;margin-bottom:.4rem">
+        <span style="position:absolute;top:-8px;right:10px" class="callout">1</span>
+        <div style="font-family:var(--mono);font-size:.52rem;color:var(--mid);margin-bottom:.4rem;letter-spacing:.1em;text-transform:uppercase">Assessment complete</div>
+        <div class="wf-ring-wrap">
+          <div class="wf-ring">
+            <div class="wf-ring-inner">
+              <div class="wf-ring-pct">62%</div>
+              <div class="wf-ring-cls">SIG. GAPS</div>
+            </div>
+          </div>
+          <div class="wf-ring-info">
+            <div class="wf-badge" style="background:rgba(180,83,9,.1);color:var(--amber);border:1px solid rgba(180,83,9,.2)">SIGNIFICANT GAPS</div>
+            <div class="wf-ring-desc">Substantial work required. Follow the remediation roadmap, prioritising CRITICAL and HIGH items first.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RESULTS GRID -->
+      <div style="position:relative">
+        <span style="position:absolute;top:-8px;right:10px" class="callout">2</span>
+        <div class="wf-results-grid">
+          <div class="wf-rcard">
+            <div class="wf-rcard-title">Control area scores</div>
+            <div class="wf-ctrl-bar"><div class="wf-ctrl-label"><span>Firewalls</span><span class="wf-ctrl-pct">70%</span></div><div class="wf-ctrl-track"><div class="wf-ctrl-fill" style="width:70%;background:#3b82f6"></div></div></div>
+            <div class="wf-ctrl-bar"><div class="wf-ctrl-label"><span>Secure Config</span><span class="wf-ctrl-pct">45%</span></div><div class="wf-ctrl-track"><div class="wf-ctrl-fill" style="width:45%;background:#8b5cf6"></div></div></div>
+            <div class="wf-ctrl-bar"><div class="wf-ctrl-label"><span>Update Mgmt</span><span class="wf-ctrl-pct">80%</span></div><div class="wf-ctrl-track"><div class="wf-ctrl-fill" style="width:80%;background:#10b981"></div></div></div>
+            <div class="wf-ctrl-bar"><div class="wf-ctrl-label"><span>User Access</span><span class="wf-ctrl-pct">40%</span></div><div class="wf-ctrl-track"><div class="wf-ctrl-fill" style="width:40%;background:#f59e0b"></div></div></div>
+            <div class="wf-ctrl-bar"><div class="wf-ctrl-label"><span>Malware</span><span class="wf-ctrl-pct">75%</span></div><div class="wf-ctrl-track"><div class="wf-ctrl-fill" style="width:75%;background:#ef4444"></div></div></div>
+          </div>
+          <div class="wf-rcard">
+            <div class="wf-rcard-title">Readiness radar</div>
+            <div class="wf-radar-ghost">
+              <div style="text-align:center">
+                <svg width="120" height="110" viewBox="0 0 120 110">
+                  <polygon points="60,8 108,38 92,90 28,90 12,38" fill="none" stroke="#dde3ec" stroke-width="1"/>
+                  <polygon points="60,24 90,44 79,76 41,76 30,44" fill="none" stroke="#dde3ec" stroke-width="1"/>
+                  <polygon points="60,40 72,50 66,62 54,62 48,50" fill="none" stroke="#dde3ec" stroke-width="1"/>
+                  <polygon points="60,14 100,42 85,84 35,84 20,42" fill="rgba(29,78,216,.12)" stroke="rgba(29,78,216,.5)" stroke-width="1.5"/>
+                  <circle cx="60" cy="14" r="3" fill="#1d4ed8"/>
+                  <circle cx="100" cy="42" r="3" fill="#1d4ed8"/>
+                  <circle cx="85" cy="84" r="3" fill="#1d4ed8"/>
+                  <circle cx="35" cy="84" r="3" fill="#1d4ed8"/>
+                  <circle cx="20" cy="42" r="3" fill="#1d4ed8"/>
+                  <text x="60" y="4" text-anchor="middle" font-size="7" fill="#6b7280" font-family="IBM Plex Mono">Firewalls</text>
+                  <text x="112" y="44" text-anchor="start" font-size="7" fill="#6b7280" font-family="IBM Plex Mono">Config</text>
+                  <text x="90" y="102" text-anchor="middle" font-size="7" fill="#6b7280" font-family="IBM Plex Mono">Updates</text>
+                  <text x="30" y="102" text-anchor="middle" font-size="7" fill="#6b7280" font-family="IBM Plex Mono">Access</text>
+                  <text x="0" y="44" text-anchor="start" font-size="7" fill="#6b7280" font-family="IBM Plex Mono">Malware</text>
+                </svg>
+                <div style="font-size:.5rem;color:var(--mid)">Chart.js radar · 0–100%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GAP LIST -->
+      <div style="background:#fff;border:1px solid var(--wire);border-radius:4px;padding:.5rem;margin-bottom:.4rem;position:relative">
+        <span style="position:absolute;top:-8px;right:10px" class="callout">3</span>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.4rem">
+          <div style="font-size:.6rem;font-weight:600;color:var(--ink)">Gap analysis & remediation roadmap</div>
+          <div class="wf-btn-p" style="font-size:.52rem;padding:.2rem .5rem;">↓ Export gap report</div>
+        </div>
+        <div class="wf-gap-item"><span class="wf-gpill gp-c">CRITICAL</span><div><div class="wf-gap-title">[UA-01] MFA on ALL cloud services</div><div class="wf-gap-rem">Remediation: Enable MFA in Microsoft 365 Admin Centre → Security Defaults…</div></div></div>
+        <div class="wf-gap-item"><span class="wf-gpill gp-c">CRITICAL</span><div><div class="wf-gap-title">[UA-02] Separate admin accounts required</div><div class="wf-gap-rem">Remediation: Create dedicated admin accounts; never use admin for daily tasks…</div></div></div>
+        <div class="wf-gap-item"><span class="wf-gpill gp-h">HIGH</span><div><div class="wf-gap-title">[SC-02] Default application passwords unchanged</div><div class="wf-gap-rem">Remediation: Audit all software for default credentials and change each one…</div></div></div>
+        <div class="wf-gap-item"><span class="wf-gpill gp-m">MEDIUM</span><div><div class="wf-gap-title">[SC-08] No asset inventory maintained</div><div class="wf-gap-rem">Remediation: Complete the Device and Software Inventory template in 02_Toolkit…</div></div></div>
+      </div>
+
+      <!-- BOTTOM BTNS -->
+      <div style="position:relative">
+        <span style="position:absolute;top:-8px;right:10px" class="callout">4</span>
+        <div class="wf-navrow">
+          <div class="wf-ghost-btn">Restart assessment</div>
+          <div class="wf-cta-btn">View templates →</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="annotation-block">
+    <div class="ann-header">// Callout annotations — Screen 3: Results</div>
+    <div class="ann-row"><span class="callout-num">1</span><div class="ann-label">Score Ring & Badge</div><div class="ann-desc">Chart.js doughnut chart (180px, 80% cutout, 900ms animation). Ring colour reflects classification: green=Ready, blue=Nearly Ready, amber=Significant Gaps, red=Not Ready/Critical Fail. Badge and percentage label are overlaid via absolute positioning. Score also pushed to Results nav tab badge.</div></div>
+    <div class="ann-row"><span class="callout-num">2</span><div class="ann-label">Control Bars + Radar</div><div class="ann-desc">Side-by-side cards. Left: five animated bar charts, one per CE control area, each uniquely colour-coded. Right: Chart.js radar chart with five axes (0–100%). Radar fill uses blue translucent polygon. Both charts update dynamically based on answer data.</div></div>
+    <div class="ann-row"><span class="callout-num">3</span><div class="ann-label">Gap Analysis List</div><div class="ann-desc">Gaps sorted CRITICAL → HIGH → MEDIUM. Each item shows severity pill, question ID, title, and specific remediation action. Export button generates a Blob-based .txt file download containing the full gap report with student ID, scores, and all remediation text.</div></div>
+    <div class="ann-row"><span class="callout-num">4</span><div class="ann-label">Action Buttons</div><div class="ann-desc">Restart clears the answers object, resets cur to 0, hides the score badge, and navigates to Screen 2 from Q1. "View templates" navigates to Screen 4. Both maintain the persistent nav bar.</div></div>
+  </div>
+</div>
+
+<!-- ═══════ SCREEN 4: TEMPLATES ═══════ -->
+<div class="section" id="s4">
+  <div class="sec-header">
+    <div class="sec-num">// Screen 4</div>
+    <div class="sec-title">Templates <em>Screen</em></div>
+    <p class="sec-desc">Seven downloadable policy and guidance templates in a two-column card grid. Each card opens a modal preview and provides a plain-text download. Linked to 02_Toolkit folder in the GitHub repository.</p>
+  </div>
+
+  <div class="page-badge">📄 Screen 4 of 5 · Templates</div>
+
+  <div class="browser">
+    <div class="browser-bar">
+      <div class="b-dots"><span class="bd bd-r"></span><span class="bd bd-y"></span><span class="bd bd-g"></span></div>
+      <div class="b-url">ddt-tanasie.github.io/Tanasiom-Aegis-CE-Readiness-Framework/ · #templates</div>
+      <span class="b-screen-label">Screen 4 — Templates</span>
+    </div>
+    <div class="wf">
+
+      <!-- NAV -->
+      <div class="wf-nav">
+        <div class="wf-nav-logo">TA</div>
+        <div class="wf-nav-brand">Tanasiom Aegis</div>
+        <div class="wf-tabs">
+          <span class="wf-tab">Overview</span>
+          <span class="wf-tab">Assessment</span>
+          <span class="wf-tab">Results</span>
+          <span class="wf-tab active">Templates</span>
+          <span class="wf-tab">Repository</span>
+        </div>
+        <div class="wf-nav-pill">● Active</div>
+      </div>
+
+      <!-- HEADER -->
+      <div style="padding:.5rem 0 .35rem;position:relative">
+        <span style="position:absolute;top:-8px;right:10px" class="callout">1</span>
+        <div style="font-family:var(--serif);font-size:1rem;color:var(--ink);font-weight:400">Templates & guidance documents</div>
+        <div style="font-size:.6rem;color:var(--mid);margin-top:.15rem">All templates linked to your repository's <span style="font-family:var(--mono);color:var(--accent2)">02_Toolkit</span> folder.</div>
+      </div>
+
+      <!-- TEMPLATE GRID -->
+      <div style="position:relative">
+        <span style="position:absolute;top:-8px;right:10px" class="callout">2</span>
+        <div class="wf-tpl-grid">
+          <div class="wf-tpl">
+            <div class="wf-tpl-head"><span class="wf-tpl-icon">🔥</span><div><div class="wf-tpl-name">Firewall Rules Documentation</div><span class="wf-tpl-area">Firewalls</span></div></div>
+            <div class="wf-tpl-desc">Document all inbound firewall rules with business justification, approver name, and review dates.</div>
+            <div class="wf-tpl-dl">↓ Download .txt</div>
+          </div>
+          <div class="wf-tpl">
+            <div class="wf-tpl-head"><span class="wf-tpl-icon">🔐</span><div><div class="wf-tpl-name">Password Policy v1.0</div><span class="wf-tpl-area">User Access Control</span></div></div>
+            <div class="wf-tpl-desc">NCSC-aligned password policy: minimum 12 chars, no mandatory expiry, brute-force protection.</div>
+            <div class="wf-tpl-dl">↓ Download .txt</div>
+          </div>
+          <div class="wf-tpl">
+            <div class="wf-tpl-head"><span class="wf-tpl-icon">🛡️</span><div><div class="wf-tpl-name">MFA Implementation Guide</div><span class="wf-tpl-area">User Access Control</span></div></div>
+            <div class="wf-tpl-desc">Step-by-step guide for enabling MFA on Microsoft 365. MFA is mandatory under CE — automatic fail if not configured.</div>
+            <div class="wf-tpl-dl">↓ Download .txt</div>
+          </div>
+          <div class="wf-tpl">
+            <div class="wf-tpl-head"><span class="wf-tpl-icon">🩹</span><div><div class="wf-tpl-name">Patch Management Procedure</div><span class="wf-tpl-area">Update Management</span></div></div>
+            <div class="wf-tpl-desc">Formal patch process aligned with the 14-day CE requirement. Includes Patch Tracking Log columns.</div>
+            <div class="wf-tpl-dl">↓ Download .txt</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODAL EXAMPLE -->
+      <div style="position:relative;margin-top:.4rem">
+        <span style="position:absolute;top:-8px;right:10px" class="callout">3</span>
+        <div style="background:rgba(0,0,0,.35);border-radius:5px;padding:.4rem;display:flex;align-items:center;justify-content:center">
+          <div style="background:#fff;border:1px solid var(--wire);border-radius:5px;padding:.6rem;width:80%;position:relative">
+            <div style="position:absolute;top:.35rem;right:.4rem;font-size:.65rem;color:var(--mid)">✕</div>
+            <div style="font-family:var(--serif);font-size:.82rem;color:var(--ink);margin-bottom:.3rem;font-weight:400">MFA Implementation Guide</div>
+            <div style="font-size:.55rem;color:var(--mid);line-height:1.5;margin-bottom:.4rem">
+              <strong style="color:var(--ink)">Why MFA is mandatory — no exceptions</strong><br>
+              IASME Test Case 4: authentication to cloud services must always use MFA. Any cloud service without MFA = automatic fail...<br><br>
+              <strong style="color:var(--ink)">Steps for Microsoft 365</strong><br>
+              1. Sign in to admin.microsoft.com as Global Administrator<br>
+              2. Go to: Identity → Security Defaults → Enable…
+            </div>
+            <div style="display:flex;gap:.3rem">
+              <div class="wf-btn-p" style="font-size:.52rem">↓ Download template</div>
+              <div class="wf-ghost-btn" style="font-size:.52rem">Close</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="annotation-block">
+    <div class="ann-header">// Callout annotations — Screen 4: Templates</div>
+    <div class="ann-row"><span class="callout-num">1</span><div class="ann-label">Screen Header</div><div class="ann-desc">Serif heading and subtitle using monospace-styled inline code to reference the repository folder name. Fade-in animation on load. The folder reference reinforces the connection between the live tool and the GitHub repository.</div></div>
+    <div class="ann-row"><span class="callout-num">2</span><div class="ann-label">Template Card Grid</div><div class="ann-desc">Seven cards in a 2-column responsive grid. Each card: icon, template name, CE control area badge, description text, download button. Entire card is clickable (opens modal). Download button has event.stopPropagation() to allow independent download without opening modal. Hover: border colour shifts to accent blue, slight vertical lift.</div></div>
+    <div class="ann-row"><span class="callout-num">3</span><div class="ann-label">Preview Modal</div><div class="ann-desc">Semi-transparent dark overlay. Modal contains full template content rendered as structured HTML (headings + bullet lists). Scroll enabled within modal for long content. Close options: × button or click outside modal. Download button inside modal generates Blob-based .txt file using the Blob API with the template name as filename.</div></div>
+  </div>
+</div>
+
+<!-- ═══════ SCREEN 5: REPOSITORY ═══════ -->
+<div class="section" id="s5">
+  <div class="sec-header">
+    <div class="sec-num">// Screen 5</div>
+    <div class="sec-title">Repository <em>Screen</em></div>
+    <p class="sec-desc">Expandable folder browser showing live GitHub repository contents loaded via the GitHub Contents API. Includes project info, evaluation results summary, and key references. Shown with 01_Documentation folder expanded.</p>
+  </div>
+
+  <div class="page-badge">📄 Screen 5 of 5 · Repository</div>
+
+  <div class="browser">
+    <div class="browser-bar">
+      <div class="b-dots"><span class="bd bd-r"></span><span class="bd bd-y"></span><span class="bd bd-g"></span></div>
+      <div class="b-url">ddt-tanasie.github.io/Tanasiom-Aegis-CE-Readiness-Framework/ · #repo</div>
+      <span class="b-screen-label">Screen 5 — Repository</span>
+    </div>
+    <div class="wf">
+
+      <!-- NAV -->
+      <div class="wf-nav">
+        <div class="wf-nav-logo">TA</div>
+        <div class="wf-nav-brand">Tanasiom Aegis</div>
+        <div class="wf-tabs">
+          <span class="wf-tab">Overview</span>
+          <span class="wf-tab">Assessment</span>
+          <span class="wf-tab">Results</span>
+          <span class="wf-tab">Templates</span>
+          <span class="wf-tab active">Repository</span>
+        </div>
+        <div class="wf-nav-pill">● Active</div>
+      </div>
+
+      <!-- HEADER -->
+      <div style="padding:.5rem 0 .3rem">
+        <div style="font-family:var(--serif);font-size:1rem;color:var(--ink);font-weight:400">Repository browser</div>
+        <div style="font-size:.58rem;color:var(--mid)">ddt-Tanasie / Tanasiom-Aegis-CE-Readiness-Framework · MIT Licence · 46 commits</div>
+      </div>
+
+      <!-- REPO HEADER BAR -->
+      <div style="position:relative">
+        <span style="position:absolute;top:-8px;right:10px" class="callout">1</span>
+        <div class="wf-repo-hdr">
+          <div class="wf-repo-name">ddt-Tanasie / Tanasiom-Aegis-CE-Readiness-Framework</div>
+          <div class="wf-repo-meta">Last pushed: 24 Mar 2026 · 46 commits</div>
+        </div>
+      </div>
+
+      <!-- FOLDERS -->
+      <div style="position:relative">
+        <span style="position:absolute;top:-8px;right:10px" class="callout">2</span>
+
+        <!-- Open folder -->
+        <div class="wf-folder">
+          <div class="wf-folder-row">
+            <span class="wf-folder-icon">📁</span>
+            <span>01_Documentation</span>
+            <span class="wf-folder-desc">Reports · Literature review · Wireframes</span>
+            <span class="wf-folder-chev">▼</span>
+          </div>
+          <div class="wf-file"><span class="wf-file-icon">📄</span>Project_Proposal_22041369.pdf<span class="wf-file-size">412KB</span></div>
+          <div class="wf-file"><span class="wf-file-icon">📝</span>Interim_Report_22041369.docx<span class="wf-file-size">745KB</span></div>
+          <div class="wf-file"><span class="wf-file-icon">📄</span>Literature_Review_Notes.md<span class="wf-file-size">28KB</span></div>
+          <div class="wf-file"><span class="wf-file-icon">📊</span>Evidence_Table.xlsx<span class="wf-file-size">64KB</span></div>
+        </div>
+
+        <!-- Closed folders -->
+        <div class="wf-folder">
+          <div class="wf-folder-row">
+            <span class="wf-folder-icon">📁</span>
+            <span>02_Toolkit</span>
+            <span class="wf-folder-desc">Assessment · Gap report · Guidance docs</span>
+            <span class="wf-folder-chev">▶</span>
+          </div>
+        </div>
+        <div class="wf-folder" style="border:2px solid var(--accent2)">
+          <div class="wf-folder-row">
+            <span class="wf-folder-icon">🌐</span>
+            <span style="color:var(--accent2)">03_Dashboard_Prototype</span>
+            <span class="wf-folder-desc" style="color:var(--accent2)">This dashboard (you are here)</span>
+            <span class="wf-folder-chev">▶</span>
+          </div>
+        </div>
+        <div class="wf-folder">
+          <div class="wf-folder-row">
+            <span class="wf-folder-icon">📁</span>
+            <span>04_Evaluation</span>
+            <span class="wf-folder-desc">TechStart case study · Before/after</span>
+            <span class="wf-folder-chev">▶</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT INFO MINI -->
+      <div style="position:relative;margin-top:.4rem">
+        <span style="position:absolute;top:-8px;right:10px" class="callout">3</span>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:.3rem">
+          <div style="background:#fff;border:1px solid var(--wire);border-radius:3px;padding:.45rem">
+            <div style="font-size:.5rem;color:var(--mid);font-weight:600;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.2rem">Student</div>
+            <div style="font-size:.58rem;font-weight:600;color:var(--ink)">Dumitru Tanasie · 22041369</div>
+          </div>
+          <div style="background:#fff;border:1px solid var(--wire);border-radius:3px;padding:.45rem">
+            <div style="font-size:.5rem;color:var(--mid);font-weight:600;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.2rem">Evaluation</div>
+            <div style="font-size:.58rem;font-weight:600;color:var(--ink)">42% → <span style="color:var(--green)">92%</span> after toolkit</div>
+          </div>
+          <div style="background:#fff;border:1px solid var(--wire);border-radius:3px;padding:.45rem">
+            <div style="font-size:.5rem;color:var(--mid);font-weight:600;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.2rem">Supervisor</div>
+            <div style="font-size:.58rem;font-weight:600;color:var(--ink)">Dr Subeksha Shrestha</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="annotation-block">
+    <div class="ann-header">// Callout annotations — Screen 5: Repository</div>
+    <div class="ann-row"><span class="callout-num">1</span><div class="ann-label">Repo Header</div><div class="ann-desc">Dark header bar showing repository full name, last push date (fetched from GitHub API), and commit count. Provides immediate academic evidence of version-controlled development activity alongside the live artefact.</div></div>
+    <div class="ann-row"><span class="callout-num">2</span><div class="ann-label">Folder Tree</div><div class="ann-desc">Each folder is an expandable/collapsible panel using CSS class toggling. On first expansion, file contents are fetched via the GitHub Contents API (api.github.com/repos/…/contents/PATH). Files display icon, name, size, and link to GitHub on click. Current dashboard folder (03_Dashboard_Prototype) highlighted with accent border. API fallback: if rate-limited, a static tree is shown. "You are here" label on the active folder grounds the user.</div></div>
+    <div class="ann-row"><span class="callout-num">3</span><div class="ann-label">Project Info Strip</div><div class="ann-desc">Three summary cards below the file tree: student identity, evaluation headline (42% → 92%), and supervisor name. Provides academic context for any supervisor or assessor reviewing the live deployed tool. Below this strip: full key references section in Harvard format.</div></div>
+  </div>
+</div>
+
+<!-- ═══════ FOOTER ═══════ -->
+<div style="background:var(--ink);color:rgba(255,255,255,.5);padding:2rem 3rem;font-size:.75rem;line-height:1.7">
+  <div style="max-width:900px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem">
+    <div>
+      <div style="font-family:var(--serif);font-size:1rem;color:#fff;margin-bottom:.35rem;font-weight:400">Tanasiom Aegis</div>
+      Dumitru Tanasie · 22041369 · dut0032@my.londonmet.ac.uk<br>
+      BSc Computer Networking & Cyber Security · London Metropolitan University<br>
+      Supervisor: Dr Subeksha Shrestha · CS6P05 · 2025–26
+    </div>
+    <div style="font-family:var(--mono);font-size:.65rem;text-align:right">
+      <div style="color:#fff;margin-bottom:.3rem">5 screens documented</div>
+      <div>Wireframes v1.0 · March 2026</div>
+      <div style="margin-top:.5rem"><a href="https://github.com/ddt-Tanasie/Tanasiom-Aegis-CE-Readiness-Framework" target="_blank" style="color:rgba(126,179,245,.7);text-decoration:none">GitHub Repository ↗</a></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
