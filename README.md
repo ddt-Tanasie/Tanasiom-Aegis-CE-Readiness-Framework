@@ -111,3 +111,16 @@ Dumitru Tanasie
 BSc Computer Networking & Cyber Security  
 London Metropolitan University
 
+🔗 Tanasiom Aegis Links (Saved)
+🌐 Main Framework
+
+👉 https://ddt-tanasie.github.io/Tanasiom-Aegis-CE-Readiness-Framework/
+
+🧪 Lab Page
+
+👉 https://ddt-tanasie.github.io/Tanasiom-Aegis-CE-Readiness-Framework/lab.html
+
+🎨 Wireframes
+
+👉 https://ddt-tanasie.github.io/Tanasiom-Aegis-CE-Readiness-Framework/tanasiom-aegis-wireframes%20(1).html
+
