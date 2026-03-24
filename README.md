@@ -124,3 +124,6 @@ London Metropolitan University
 
 👉 https://ddt-tanasie.github.io/Tanasiom-Aegis-CE-Readiness-Framework/tanasiom-aegis-wireframes%20(1).html
 
+£Strategy -entry
+https://ddt-tanasie.github.io/Tanasiom-Aegis-CE-Readiness-Framework/tanasiom-strategy.html
+
