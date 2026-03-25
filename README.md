@@ -127,3 +127,5 @@ London Metropolitan University
 £Strategy -entry
 https://ddt-tanasie.github.io/Tanasiom-Aegis-CE-Readiness-Framework/tanasiom-strategy.html
 
+Sales-page
+https://ddt-tanasie.github.io/Tanasiom-Aegis-CE-Readiness-Framework/tanasiom-aegis-sales-page.html
