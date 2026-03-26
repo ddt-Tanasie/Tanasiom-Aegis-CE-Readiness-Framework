@@ -129,3 +129,6 @@ https://ddt-tanasie.github.io/Tanasiom-Aegis-CE-Readiness-Framework/tanasiom-str
 
 Sales-page
 https://ddt-tanasie.github.io/Tanasiom-Aegis-CE-Readiness-Framework/tanasiom-aegis-sales-page.html
+
+
+vuln https://ddt-tanasie.github.io/Tanasiom-Aegis-CE-Readiness-Framework/cve-2011-2523-report.html
