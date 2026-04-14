@@ -132,3 +132,6 @@ https://ddt-tanasie.github.io/Tanasiom-Aegis-CE-Readiness-Framework/tanasiom-aeg
 
 
 vuln https://ddt-tanasie.github.io/Tanasiom-Aegis-CE-Readiness-Framework/cve-2011-2523-report.html
+
+live web -react  
+https://ddt-tanasie.github.io/tanasiom-aegis-v2-live/
