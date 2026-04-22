@@ -1,21 +1,472 @@
-IASME Consortium and the Cyber Essentials Assessment Framework
+Source Analysis / Structured Evidence Extraction
+IASME Consortium - Cyber Essentials Certification Process and Assessment Framework
 
-IASME Consortium is the official delivery partner for the UK Cyber Essentials scheme and therefore represents a key source for understanding how Cyber Essentials is interpreted, administered, and assessed in practice. IASME documentation is especially relevant to this project because the proposed artefact is intended to support SMEs in preparing for Cyber Essentials readiness. While the National Cyber Security Centre (NCSC) defines the technical requirements of the scheme, IASME provides the procedural and assessment context through which organisations engage with certification.
+You can place this in an appendix, background research section, or source analysis chapter.
 
-IASME (2025) describes Cyber Essentials as the UK Government’s minimum baseline standard for cybersecurity for organisations of all sizes. The scheme is structured around five technical control areas: firewalls, secure configuration, user access control, malware protection, and security update management. This is particularly relevant to the present project because the proposed readiness toolkit is organised around the same control areas, enabling direct alignment between the artefact and the recognised certification structure. In this sense, IASME provides not only a description of certification, but also a practical framework that can inform the design of SME-focused readiness tools.
+Source Analysis: IASME Consortium – Cyber Essentials Certification Process and Assessment Framework
+1. Source Overview
 
-A key contribution of IASME’s guidance is its explanation of the two-tier certification model. At the first level, Cyber Essentials is an independently verified self-assessment in which organisations answer a standardised set of questions regarding systems, users, devices, and working practices. These responses must be approved by a senior organisational representative and are then reviewed by an external assessor. At the second level, Cyber Essentials Plus requires a technical verification exercise, including testing of sampled devices, cloud services, and internet-facing systems. This distinction is important because it demonstrates that Cyber Essentials is not merely a checklist exercise, but part of a broader assurance model. For this project, that distinction supports the development of a toolkit that does more than help users answer questions; it should also help them understand the operational reality behind those questions.
+This source analysis examines material published by IASME Consortium Ltd, the official delivery partner for the UK Cyber Essentials scheme. The source set includes website guidance, certification process information, the Cyber Essentials Plus Test Specification v3.2 (April 2025), the Cyber Essentials Requirements for IT Infrastructure v3.2 (April 2025), insurance information, assessor requirements, and supply chain assurance guidance.
 
-The certification process outlined by IASME also highlights practical barriers that may affect SME participation. Organisations must register, complete the assessment through an online portal, obtain senior sign-off, respond to assessor feedback where required, and renew certification annually. This structure indicates that Cyber Essentials involves not only technical compliance but also administrative preparation, internal accountability, and timely evidence gathering. For many SMEs, particularly those without dedicated cybersecurity personnel, this process may create uncertainty and hesitation. Therefore, IASME’s material indirectly supports the case for a structured readiness toolkit, as such a toolkit can reduce confusion and help organisations prepare before engaging with formal certification.
+IASME is a significant source for this project because it provides practical detail on how Cyber Essentials operates in real certification settings. While the National Cyber Security Centre (NCSC) defines the technical baseline of the scheme, IASME explains how applicants engage with certification, how assessors interpret requirements, and how organisations move from self-assessment to verified technical audit. This makes IASME particularly relevant to the proposed Tanasiom Aegis Cyber Essentials readiness toolkit, as the artefact is designed to help SMEs prepare for this real-world process.
 
-IASME’s Cyber Essentials Plus Test Specification is also valuable because it reveals the level of rigour applied during technical verification. The test specification sets out how assessors examine internet-facing services, patching practice, malware protection, multi-factor authentication, and account separation. The document shows that compliance is assessed through both technical testing and procedural verification rather than through policy statements alone. For example, internet-facing services may be checked for high-risk vulnerabilities, patching is evaluated against a defined remediation window, cloud services are tested for multi-factor authentication, and privileged access arrangements are reviewed to ensure separation between standard and administrative accounts. These requirements are highly relevant to this project because they identify the types of weaknesses that an SME readiness toolkit should help organisations detect and address before formal assessment.
+Document Information
+Organisation: IASME Consortium Ltd
+Role: Official NCSC Cyber Essentials Delivery Partner
+Publisher Address: Wyche Innovation Centre, Upper Colwall, Malvern, WR13 6PL
+Company Number: 07897132
+Contact: 03300 882 752 | info@iasme.co.uk
+Website: IASME official website
+Documents Reviewed
+IASME website content on Cyber Essentials
+Cyber Essentials Plus Test Specification v3.2 (April 2025)
+Cyber Essentials Requirements for IT Infrastructure v3.2 (April 2025)
+Insurance information
+Assessor requirements
+Chamber programme information
+2. Harvard References
 
-Particularly significant is IASME’s emphasis on multi-factor authentication, patch management, and access control. The test specification indicates that cloud services must be protected with multi-factor authentication, that high-risk vulnerabilities must be remediated within the required timeframe, and that users should not perform everyday activities with administrative privileges. These areas can therefore be treated as recurring indicators of readiness risk. From the perspective of artefact design, this justifies the inclusion of implementation guidance, account management templates, and patch-tracking mechanisms. In other words, IASME’s published assessment model helps identify which controls are most likely to require translation into practical SME-facing guidance.
+The following references can be used for this source set:
 
-Another useful aspect of IASME’s material is the insight it gives into the evidential logic of the scheme. Although basic Cyber Essentials is a self-assessment rather than a full audit, the wider IASME documentation shows that organisations benefit from maintaining structured evidence, such as configuration records, update histories, access control information, and implementation notes. This is important because SMEs often struggle not only with implementing controls, but with demonstrating that they are implemented consistently. A readiness toolkit that supports documentation and evidence collection therefore aligns well with the operational expectations implied by the certification model.
+IASME Consortium (2025a) Cyber Essentials Certification. Available at: IASME official website (Accessed: 8 December 2025).
 
-IASME also presents Cyber Essentials as offering commercial value beyond compliance. Certification is positioned as a means of demonstrating cybersecurity assurance to customers, buyers, and supply-chain partners, while eligible UK organisations may also receive cyber liability insurance linked to certification. From an academic standpoint, this is relevant because it shows that Cyber Essentials operates not only as a technical security scheme but also as a trust and market-access mechanism. For SMEs, the incentive to pursue readiness may therefore be driven by procurement eligibility, customer assurance, and reputational value as much as by technical risk reduction. This broader framing supports the project rationale, particularly where SMEs seek accessible ways to improve cyber posture without the cost and complexity of larger compliance frameworks such as ISO/IEC 27001.
+IASME Consortium (2025b) Cyber Essentials Plus Test Specification v3.2. Malvern: IASME Consortium Ltd.
 
-However, IASME’s material should also be interpreted critically. As the official delivery partner, IASME’s publications are authoritative in explaining the operation of the scheme, but they are also scheme-facing documents intended to support adoption and delivery. For that reason, they are highly valuable for understanding process, requirements, and assessor expectations, but less suited on their own to demonstrating independent evidence of SME barriers or long-term organisational impact. This means IASME should be used alongside academic and policy literature rather than as the sole basis for justification. In this project, IASME is therefore most appropriately used as a practice-oriented source that explains how Cyber Essentials works in operational terms, while broader academic sources are used to analyse why SMEs need such support and what barriers they face in adoption.
+IASME Consortium (2025c) Cyber Essentials Requirements for IT Infrastructure v3.2. Malvern: IASME Consortium Ltd.
 
-Overall, IASME provides a strong foundation for the design of the proposed Cyber Essentials readiness toolkit. Its certification guidance clarifies the structure of the scheme, its test specification identifies the practical control areas most likely to affect assessment outcomes, and its process documentation highlights the administrative and evidential burden placed on smaller organisations. These insights directly inform the artefact by showing where SMEs are likely to require structured support, simplified guidance, and practical implementation tools. Consequently, IASME is not merely a background source, but a central reference point for aligning the toolkit with the realities of Cyber Essentials certification.
+3. What Cyber Essentials Is
+
+IASME describes Cyber Essentials as the UK Government’s minimum baseline standard for cybersecurity for organisations of all sizes. According to the source material, the scheme is annually renewable and is aligned to five technical controls designed to reduce exposure to the most common internet-based cyber threats. IASME also states that questions can be downloaded in advance, that certification can lead to progression toward Cyber Essentials Plus, and that qualifying UK organisations may receive cyber liability insurance where eligibility conditions are met.
+
+This framing is important to the project because it positions Cyber Essentials not as an advanced enterprise framework, but as a practical baseline. For SMEs, this means the scheme is intended to be accessible, but it still requires a level of organisational readiness, evidence awareness, and technical understanding that many small firms may not already possess. This directly supports the rationale for a structured readiness toolkit.
+
+Key Points Identified
+Cyber Essentials is presented as a minimum baseline standard
+Certification is valid for 12 months
+The scheme is based on five technical control areas
+Questions are available to review in advance
+There are two levels: Cyber Essentials and Cyber Essentials Plus
+Insurance may be included for eligible UK organisations meeting the required conditions
+4. Two Levels of Certification
+4.1 Cyber Essentials (Basic Level)
+
+IASME describes Cyber Essentials as an independently verified self-assessment. Organisations answer a common set of questions relating to scope, staff, devices, working practices, and the five core controls: user access control, secure configuration, security update management, firewalls, and malware protection. The answers must be signed off by a senior organisational representative, such as a board member or equivalent, and are then marked by an independent assessor.
+
+This is particularly relevant to SMEs because the basic level is not purely technical; it also depends on organisational accountability and accurate interpretation of the questions. This suggests that many SMEs may benefit from guidance that helps them understand both the control requirements and the meaning of the assessment process.
+
+IASME Pricing Structure for Cyber Essentials
+
+At the time of the extracted source material, IASME listed the following pricing:
+
+Organisation Size	Employees	Price
+Micro	0–9	£320 + VAT (£384 total)
+Small	10–49	£440 + VAT (£528 total)
+Medium	50–249	£500 + VAT (£600 total)
+Large	250+	£600 + VAT (£720 total)
+Chamber Member Pricing
+Organisation Size	Employees	Price
+Micro	0–9	£310 + VAT (£372 total)
+Small	10–49	£430 + VAT (£516 total)
+Medium	50–249	£490 + VAT (£588 total)
+Large	250+	£590 + VAT (£708 total)
+
+These pricing details are useful to the project because they help position the affordability of self-directed readiness support. They also support the argument that unsuccessful or premature certification attempts may impose avoidable cost and delay on SMEs.
+
+4.2 Cyber Essentials Plus
+
+Cyber Essentials Plus is described by IASME as a technical audit of IT systems and is only available once an organisation has already completed the verified self-assessment stage. Although it is based on the same technical requirements, it involves hands-on testing of systems to confirm that the controls are genuinely in place.
+
+IASME states that this audit covers:
+
+a representative sample of user devices
+all internet gateways
+all servers with internet-accessible services
+
+This is important because it demonstrates that the scheme moves beyond declared compliance and into practical verification. For this project, that strengthens the case for a readiness toolkit that goes beyond helping applicants fill in answers and instead supports actual implementation.
+
+Comparison of CE and CE Plus
+Aspect	Cyber Essentials	Cyber Essentials Plus
+Assessment type	Self-assessment questionnaire	Technical audit
+Verification method	Assessor reviews submitted answers	Hands-on system testing
+Prerequisite	None	Requires valid CE certificate first
+Assurance level	Standard baseline assurance	Higher assurance
+Pricing model	Fixed by organisation size	Variable depending on complexity
+Nature of evidence	Primarily declarative	Directly tested and observed
+5. Certification Process
+
+IASME outlines a structured assessment journey. Organisations must register, make payment, receive login access to the online portal, complete the assessment, obtain senior sign-off, and submit the answers for independent marking. Where feedback is issued, the organisation is given two working days to respond and resubmit. Once certification is achieved, the organisation receives a certificate and is listed on the public directory. Certification must then be renewed annually.
+
+Certification Process Flow
+Purchase
+Register online
+Make payment
+Receive portal log-in details
+Complete Assessment
+Answer all questions through the online platform
+Obtain board-level or equivalent sign-off
+Submit for Marking
+Independent assessor reviews submission
+Feedback may be issued
+Organisation has 2 working days to address feedback
+Pass and Certification
+Certificate issued
+Organisation listed on public directory
+Digital badge/certificate can be displayed
+Renewal
+Certificate expires after 12 months
+Re-certification is required to remain listed
+Indicative Timeline from the Source Material
+Application to portal access: 1–2 business days
+Completion of assessment: typically 1–4 weeks for SMEs
+Marking: 2–5 business days
+Feedback response window: 2 working days
+Certificate issuance after pass: 1–2 business days
+
+These process details are useful to the project because they show that Cyber Essentials is not simply a technical benchmark; it is also an administrative and governance process. SMEs lacking internal structure may therefore struggle even if they are partially compliant technically.
+
+6. Free Support and Readiness Resources
+
+IASME also provides several support mechanisms intended to help organisations prepare before applying for certification.
+
+Resources Identified
+Free 30-minute consultation
+Available for SMEs
+Delivered by an NCSC-assured Cyber Advisor
+Question set downloads
+PDF booklet format
+Excel spreadsheet format
+Allows applicants to view all questions before purchasing
+Requirements document
+Provides detailed explanation of technical requirements
+Supports interpretation of questions
+Knowledge Hub
+Online resource centre
+Includes guidance and answers to common questions
+Readiness Tool
+Interactive self-assessment tool
+Produces a tailored action plan
+
+This is directly relevant to the Tanasiom Aegis project because it shows that readiness support already exists in some form. However, it also indicates that there remains room for tailored SME-facing support tools that are more structured, more artefact-driven, or more tightly aligned to specific organisational contexts.
+
+7. Cyber Liability Insurance
+
+IASME states that eligible UK-domiciled organisations with turnover below £20 million, where certification covers the whole organisation and the organisation opts in, may receive cyber liability insurance linked to Cyber Essentials certification.
+
+Eligibility Criteria
+The entire organisation must be certified
+The organisation must be domiciled in the UK or Crown Dependencies
+Annual turnover must be below £20 million
+The organisation must opt in to the insurance
+Insurance Summary from the Source Material
+Total limit of indemnity: £25,000
+24-hour cyber incident helpline
+Underwritten by American International Group UK Limited
+Administered through Sutcliffe & Co Insurance Brokers
+Areas Described as Covered
+Security and privacy liability
+Event management costs
+Legal expenses
+IT expenses
+Data recovery expenses
+Reputation protection expenses
+Notification expenses
+Credit monitoring and ID monitoring expenses
+First response expenses
+Extortion threat
+Regulatory investigation defence costs
+Data protection fines where insurable by law
+Network interruption mitigation costs
+Stated Exclusions / Limits
+£1,000 excess in standard cases
+£5,000 excess for claims arising from USA/Canada activities
+Six-hour network interruption retention
+Does not cover money stolen through cyber fraud/electronic means
+Upgrade Options Listed in the Source
+Revenue Band	Limit	Annual Premium
+£0–£10m	£100,000	£305.76
+£0–£10m	£250,000	£546.56
+£10m–£20m	£100,000	£1,347.36
+£10m–£20m	£250,000	£1,678.88
+Policy Duration
+
+The insurance is linked to certification and lasts for 12 months from certification. It cannot be renewed independently of Cyber Essentials.
+
+For this project, the insurance component is relevant because it shows that Cyber Essentials has commercial value beyond compliance and procurement. It can also be framed as part of the wider business case for certification.
+
+8. Cyber Essentials Plus Test Specification v3.2
+
+The CE Plus test specification is especially important because it reveals what assessors actually test when verifying controls.
+
+8.1 Purpose and Audience
+
+IASME states that the document is aimed primarily at assessors carrying out Cyber Essentials Plus assessments, although it may also be useful to applicants wishing to understand how compliance is judged. Its purpose is to enable independent testing of compliance with the technical requirements of the scheme and to define pass/fail criteria.
+
+This is highly valuable to the present project because it allows the artefact to be informed not only by stated requirements, but by the actual verification logic behind those requirements.
+
+8.2 Pre-Assessment Requirements
+
+Before testing begins, the assessor must:
+
+obtain appropriate written permission
+verify that the scope matches the valid CE self-assessment certificate
+confirm technically that the scope matches the networks and systems being assessed
+verify effective segregation where the scope is not the whole organisation
+identify the samples to be tested
+ensure the correct report template is in place
+
+IASME states that evidence relating to these preparatory checks must be retained by the certifying body for at least the lifetime of the certificate.
+
+This highlights the importance of boundary definition, scope control, and evidence retention, which are useful design considerations for a readiness toolkit.
+
+9. Pass/Fail Logic
+
+The test specification states that each test case and sub-test is marked either pass or fail. All sub-tests within a test case must pass for the test case to pass, and all test cases must pass for the overall assessment to pass, unless a specific exception applies.
+
+IASME also notes that advisory notes may accompany results in order to explain rationales or identify improvements.
+
+Key Assessment Principle
+Any single failed sub-test may lead to the parent test case, and therefore the overall assessment, being marked as failed unless an exception is explicitly permitted.
+
+This is important because it illustrates the strict assurance logic applied in CE Plus and helps explain why SMEs may benefit from pre-assessment readiness support.
+
+10. Test Case 1: Remote Vulnerability Assessment
+
+This test case is intended to determine whether an internet-based opportunist attacker could compromise the applicant’s systems using common low-skill methods.
+
+Key Requirements Extracted
+All relevant IP addresses must be identified, including IaaS where applicable
+All identified IPs must be scanned using an approved vulnerability scanning tool
+Internet-facing services are then judged against a defined decision process
+Main Decision Criteria Identified
+Presence of vulnerabilities with CVSS 7.0 or above
+Whether the service is public and read-only
+Whether authentication is required
+Whether multi-factor authentication is used
+Whether default passwords have been changed
+Whether login attempts are throttled
+Whether lockout occurs after no more than 10 failed login attempts
+Important Thresholds
+CVSS ≥7.0 is treated as a key risk threshold
+Maximum failed login attempts before lockout: 10
+
+This is directly useful to the project because it shows where readiness tools can help organisations review internet-exposed services, change defaults, document authentication protections, and improve access hardening.
+
+11. Representative Sample Testing
+
+The specification states that for all but the smallest networks, it is impractical to test every device. Instead, assessors should use representative samples while ensuring sufficient confidence that the sample reflects all in-scope devices.
+
+Sample Testing Rules Identified
+Applies to end-user devices, internally hosted servers, and cloud services
+Standardised configurations may reduce the number of required samples
+Sample size calculation must be documented
+Evidence of the sample calculation must be retained for the lifetime of the certificate
+For cloud services, at least one normal user and one administrative user must be tested per service
+
+This supports the logic of toolkit templates that help SMEs identify systems, user roles, and service types clearly.
+
+12. Test Case 2: Authenticated Vulnerability Scan / Patch Management
+
+This test is designed to identify missing vulnerability fixes on sampled end-user devices, servers, and IaaS instances.
+
+Conditions That Trigger Concern
+
+The assessor identifies vulnerabilities that meet any of the following:
+
+vendor classifies them as critical or high risk
+CVSS v3 base score of 7 or above
+vendor does not specify severity details for the vulnerability fixed by the update
+Key Rule
+
+If a vulnerability fix has been available for more than 14 days and has not been applied, the sub-test is failed.
+
+Additional Note
+
+IASME states that virtual patching is not accepted as a long-term mitigation for legacy unsupported operating systems.
+
+This is one of the most important findings for the project because it strongly supports the inclusion of patch-tracking templates, remediation guidance, and update governance within the artefact.
+
+13. Test Case 3: Malware Protection
+
+This test case applies to sampled end-user devices, servers with interactive desktops, and IaaS instances.
+
+Acceptable Protection Approaches
+anti-malware software
+application allow listing
+Sub-test Areas Identified
+Email-delivered malware defence
+Browser-downloaded malware defence
+Manual checks to confirm anti-malware is installed, operational, and updated
+Application allow listing controls, including trust and code execution restrictions
+Operational Expectations
+malicious files should not be accessible to users without controls intervening
+executable files should not run without additional protective interaction
+anti-malware logs and update state should demonstrate correct operation
+
+This is relevant to the project because SMEs may assume that simply installing antivirus is sufficient, whereas IASME’s model shows that configuration, operation, and verification also matter.
+
+14. Test Case 4: Multi-Factor Authentication
+
+This test applies to all cloud services in scope.
+
+Core Requirement
+
+Users and administrators accessing cloud services must be prompted for multi-factor authentication when accessing from an untrusted device or incognito session.
+
+Key Observations
+all cloud services are in scope
+both user and administrative access are tested
+where several services share an authentication platform, testing can be applied per authentication service rather than separately for every application
+
+This is one of the most significant practical findings from the source. For the Tanasiom Aegis project, it strongly justifies dedicated guidance on cloud MFA implementation and evidence capture.
+
+15. Test Case 5: Account Separation
+
+This test applies to sampled end-user devices, servers with interactive desktops, and cloud environments where administrative processes can be run.
+
+Core Principle
+
+Standard user accounts should not be able to perform administrative actions without separate privileged authentication.
+
+Assessment Logic
+
+A user logged in with a normal account attempts to perform an administrative process. If the action runs under the same account rather than requiring separate credentials, the sub-test is failed.
+
+This directly supports the inclusion of access-control templates and guidance on separate administrator accounts within the artefact.
+
+16. Concluding the Assessment
+
+Once all testing is complete, the assessor compiles a report. If all test cases are passed, the applicant may be awarded Cyber Essentials Plus certification.
+
+IASME also allows a limited exception process where failures result only from a small number of minor issues and there is no indication of broader process weakness.
+
+Exception Criteria Identified
+less than 5% of performed tests show only marginal deviation
+there is no evidence of wider failure in the applicant’s cybersecurity processes
+delivery partner discretion is required
+
+This is useful for academic discussion because it shows that although the scheme is strict, there remains some limited room for professional judgement in borderline cases.
+
+17. Assessor Requirements
+
+IASME also provides information on what is required to become a Cyber Essentials assessor.
+
+Experience Requirement
+At least three years’ experience in IT or security
+Study periods do not count toward this requirement
+Experience Accepted by IASME
+IT support roles
+cyber security consultancy
+IT engineering
+IT architecture
+cyber security architecture
+network/infrastructure engineering
+physical computer support
+direct management of technical IT/cyber teams
+Experience Not Accepted
+university placements
+non-cyber consultancy
+non-IT engineering
+generic analysis roles
+general management not tied to technical IT/cyber oversight
+sales roles
+data input and administrative tasks
+Qualification Routes
+
+One of the following is required:
+
+CISSP, CISM, or ISO 27001 Lead Auditor
+CCP practitioner-level membership routes
+UK Cyber Security Council practitioner/principal/chartered registration
+IASME Assessor Skills Assessment exam
+Certification Body Requirements
+
+Security-related and quality-related certifications are also required of certification bodies.
+
+For the project, this section helps demonstrate that Cyber Essentials assessment is not informal or arbitrary. It is delivered through a structured assurance ecosystem with defined competency expectations.
+
+18. Supply Chain Assurance
+
+IASME positions Cyber Essentials as a useful mechanism for supply chain risk management.
+
+Use Cases Identified
+tender requirements
+supplier onboarding
+third-party risk management
+contract conditions
+due diligence
+
+The source argues that certification gives buyers a tangible way to verify supplier cybersecurity posture and improve confidence in digital supply chains. This is especially relevant to the project’s business justification, as SMEs often pursue certification not purely for internal security reasons, but because customers, larger contractors, or procurement processes increasingly expect it.
+
+19. Critical Statistics and Key Numbers
+
+The following values were extracted from the source material and may be used where relevant:
+
+Metric	Value
+Certification validity	12 months
+Feedback response time	2 working days
+Micro organisation cost	£320 + VAT (£384 total)
+Small organisation cost	£440 + VAT (£528 total)
+Medium organisation cost	£500 + VAT (£600 total)
+Large organisation cost	£600 + VAT (£720 total)
+Included insurance limit	£25,000
+Insurance excess	£1,000 standard / £5,000 USA-Canada
+Insurance eligibility turnover threshold	under £20m
+Assessor experience requirement	3 years
+Minor deviation tolerance	under 5% of tests
+Patch remediation threshold	14 days
+Login lockout threshold	10 attempts
+CVSS threshold used repeatedly	7.0 or above
+20. Relevance to the Tanasiom Aegis Toolkit
+
+This source has strong practical relevance to the proposed artefact.
+
+20.1 Questionnaire Design
+
+IASME’s assessment process supports the inclusion of:
+
+structured questions mapped to the five CE controls
+response logic reflecting compliance status
+declaration/sign-off mechanisms
+evidence-awareness built into the readiness workflow
+20.2 Scoring and Readiness Interpretation
+
+The source supports a readiness model that reflects the strict nature of Cyber Essentials assessment. However, any internal scoring model should be presented as indicative only and not as a substitute for formal certification decisions.
+
+20.3 Template Development
+
+The assessment logic strongly supports the inclusion of:
+
+firewall documentation templates
+patch tracking templates
+MFA implementation guidance
+user access control matrices
+malware protection verification guidance
+20.4 Evidence Collection Support
+
+Although basic Cyber Essentials is self-assessed, the source shows the value of maintaining structured evidence in advance. This supports the project’s emphasis on helping SMEs gather screenshots, logs, inventories, and policy records.
+
+20.5 SME Barrier Analysis
+
+The source also highlights likely SME difficulties:
+
+interpreting technical language
+understanding evidence expectations
+handling governance sign-off
+responding to feedback quickly
+maintaining readiness for annual renewal
+21. Critical Evaluation of the Source
+
+IASME is a highly relevant and authoritative source for understanding Cyber Essentials operations because it is the official delivery partner for the scheme. It is especially strong in explaining process, assessment logic, and practical certification expectations.
+
+However, the source should also be interpreted critically. IASME documentation is scheme-facing and implementation-oriented. It is highly useful for understanding how certification works, but it does not by itself provide independent academic analysis of SME behaviour, adoption barriers, or long-term organisational impact. For that reason, it should be used alongside academic and policy sources such as NCSC publications, SME cyber resilience studies, and broader cybersecurity governance literature.
+
+Therefore, within the project, IASME is best used as:
+
+an operational authority on certification process and assessment criteria
+a design reference for shaping the toolkit
+a practice-based source rather than a standalone academic justification
+22. Conclusion
+
+The IASME source set provides detailed insight into how Cyber Essentials is delivered, assessed, and operationalised in practice. It confirms that the scheme is structured around five technical controls, two certification levels, and a defined assurance process involving self-assessment, independent marking, and in some cases hands-on technical audit. It also identifies specific control areas that are heavily scrutinised, including vulnerability management, MFA, malware protection, and account separation.
+
+For the Tanasiom Aegis project, this source is particularly valuable because it helps bridge the gap between high-level Cyber Essentials requirements and the practical realities faced by SMEs during readiness and certification. It therefore provides a strong foundation for artefact design, especially in the development of questionnaires, templates, guidance materials, and evidence-collection tools intended to support SME readiness in a structured and practical way.
