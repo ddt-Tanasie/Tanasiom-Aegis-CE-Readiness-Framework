@@ -1,137 +1,163 @@
-# Tanasiom Aegis - Cyber Essentials Readiness Framework
+# Tanasiom Aegis — Cyber Essentials Readiness Framework
 
-## Project Overview
-**Design and Implementation of a Cyber Essentials Compliance Readiness Toolkit for Small and Medium Enterprises (SMEs)**
+## Overview
 
-### Student Information
-- **Name:** Dumitru Tanasie
-- **Student ID:** 22041369
-- **Email:** dut0032@my.londonmet.ac.uk
-- **Course:** BSc Computer Networking & Cyber Security
-- **Institution:** London Metropolitan University
-- **Supervisor:** Dr Subeksha Shrestha
-- **Academic Year:** 2025-26
+**Tanasiom Aegis** is a structured Cyber Essentials readiness framework designed to support UK small and medium enterprises (SMEs) in assessing security posture, identifying compliance gaps, and implementing practical remediation steps prior to formal certification.
 
-### Project Aim
-To design, develop and evaluate a Cyber Essentials Readiness Toolkit that assists SMEs in understanding, preparing for, and attaining Cyber Essentials certification securely and efficiently.
+This project integrates:
 
-### Project Status
-🟢 **Active Development** - Interim Report Phase (Due: 5 January 2026)
-
-### Repository Structure
-
-
-/Tanasiom-Aegis-CE-Readiness-Framework/
-├── /01_Documentation/           # Project reports and research
-├── /02_Toolkit/                 # Templates, guides, and policies
-├── /03_Dashboard_Prototype/     # Web-based readiness dashboard
-├── /04_Evaluation/              # Testing and case studies
-├── /05_Project_Management/      # Meeting logs and planning
-└── README.md
-
-
-### Key Deliverables
-- ✅ Project Proposal (Submitted: Nov 2025)
-- ⏳ Interim Report (Due: 5 Jan 2026)
-- ⏳ Complete Toolkit Package (Due: March 2026)
-- ⏳ Dashboard Prototype (Due: March 2026)
-- ⏳ Final Report (Due: March 2026)
-
-### Technologies Used
-- Microsoft Office 365 (Word, Excel, PowerPoint)
-- HTML5, CSS3, JavaScript
-- Chart.js (for visualizations)
-- GitHub (version control)
-- Draw.io (diagrams)
-
-### References
-- NCSC (2023) *Cyber Essentials Requirements for IT Infrastructure*
-- IASME (2023) *Cyber Essentials Self-Assessment Guide*
-- British Computer Society (2023) *Code of Conduct*
+* academic research and analysis
+* a practical readiness toolkit
+* a prototype dashboard interface
+* a supporting technical lab environment
 
 ---
 
-**Last Updated:** December 2025
+## Academic Context
 
+**Project Title**
+Design and Implementation of a Cyber Essentials Compliance Readiness Toolkit for Small and Medium Enterprises (SMEs)
 
+**Student**
+Dumitru Tanasie (22041369)
+BSc Computer Networking & Cyber Security
+London Metropolitan University
 
+**Supervisor**
+Dr Subeksha Shrestha
 
-Update January 2026    
+**Academic Year**
+2025–2026
 
-# Tanasiom Aegis — Cyber Essentials Readiness Toolkit (UK SMEs)
+---
 
-**Tanasiom Aegis** is a Cyber Essentials readiness toolkit designed to help UK small and medium enterprises (SMEs) assess compliance gaps and follow practical remediation guidance prior to formal certification.
+## Project Aim
 
-This repository contains:
-- Project documentation (reports, literature review, references)
-- A readiness toolkit (questionnaire, policies, templates, evidence pack structure)
-- A dashboard prototype concept (wireframe and prototype placeholder)
-- Evaluation materials (testing, feedback, evaluation write-up)
+To design, develop, and evaluate a Cyber Essentials readiness toolkit that enables SMEs to:
+
+* understand security requirements
+* assess current compliance posture
+* identify and prioritise risks
+* implement practical security improvements
+* prepare effectively for certification
+
+---
+
+## Project Status
+
+🟢 **Active Development**
+Current Phase: Interim Report (January 2026)
 
 ---
 
 ## Repository Structure
 
-### 01_Documentation
-Contains proposal, interim/final reports, literature review work, references, wireframes, and supporting evidence files.
-
-### 02_Toolkit
-The practical Cyber Essentials readiness toolkit:
-- Initial assessment questionnaire
-- Gap assessment report template
-- Evidence table / evidence pack approach
-- Guidance documents (Firewall/MFA, Patch Management, Monitoring & Review, Device & Access Control)
-
-### 03_Dashboard_Prototype
-Dashboard prototype materials. This will contain either:
-- A working web prototype (recommended), or
-- A clickable design prototype + sample data
-
-### 04_Evaluation
-Testing plan, test evidence, user feedback, evaluation narrative, and improvements/future work.
+```plaintext
+Tanasiom-Aegis-CE-Readiness-Framework/
+├── 01_Academic_Documentation/   # Research, reports, and academic materials
+├── 02_Readiness_Toolkit/        # Practical toolkit (templates, policies, guidance)
+├── 03_Dashboard_Prototype/      # Interface concepts and prototype artefacts
+├── 04_Evaluation/               # Testing, validation, and analysis
+├── 05_Project_Management/       # Planning, logs, and development tracking
+└── README.md
+```
 
 ---
-## Related Technical Lab
 
-The practical lab environment used to demonstrate security assessment workflows is available in the related repository:
+## Key Deliverables
 
-- [Tanasiom Aegis Security Lab]((https://github.com/ddt-Tanasie/Tanasiom-Aegis-Lab))
+* ✅ Project Proposal (Completed — Nov 2025)
+* ⏳ Interim Report (In Progress — Jan 2026)
+* ⏳ Readiness Toolkit Package (Target — March 2026)
+* ⏳ Dashboard Prototype (Target — March 2026)
+* ⏳ Final Report (Target — March 2026)
 
-## How to Use (Current)
-1. Start with `02_Toolkit/Initial_Assessment_Questionnaire` to capture SME baseline
-2. Use `02_Toolkit/Gap_Assessment_Report` to document gaps and priorities
-3. Use `01_Documentation/Evidence_Table.xlsx` to track proof required for each control
-4. Use `03_Dashboard_Prototype` to demonstrate a visual readiness dashboard concept
-5. Use `04_Evaluation` for testing evidence and evaluation write-up
+---
+
+## Technologies and Tools
+
+* Microsoft Office 365 (Word, Excel, PowerPoint)
+* HTML5, CSS3, JavaScript
+* Chart.js (data visualisation)
+* GitHub (version control and deployment)
+* Draw.io (architecture and process diagrams)
+
+---
+
+## Standards and References
+
+* NCSC (2023) — *Cyber Essentials Requirements for IT Infrastructure*
+* IASME (2023) — *Cyber Essentials Self-Assessment Guide*
+* British Computer Society (2023) — *Code of Conduct*
+
+---
+
+## System Architecture (Project View)
+
+This project is supported by three interconnected components:
+
+```plaintext
+Framework Repository  → Defines methodology and toolkit
+Lab Repository        → Provides technical validation and simulation
+Live Web Prototype    → Demonstrates user-facing interface
+```
+
+---
+
+## Related Repositories
+
+**Security Lab (Technical Validation)**
+https://github.com/ddt-Tanasie/Tanasiom-Aegis-Lab
+
+**Live Web Prototype (React/Vite Deployment)**
+https://ddt-tanasie.github.io/tanasiom-aegis-v2-live/
+
+---
+
+## How to Use (Current Workflow)
+
+1. Start with the **Initial Assessment Questionnaire** to establish baseline risk
+2. Use the **Gap Assessment Report** to identify compliance gaps
+3. Maintain evidence using the **Evidence Table structure**
+4. Review prototype interfaces within `03_Dashboard_Prototype`
+5. Refer to `04_Evaluation` for testing and validation insights
+
+---
+
+## Prototype and Interface Links
+
+### 🌐 Framework Entry Point
+
+https://ddt-tanasie.github.io/Tanasiom-Aegis-CE-Readiness-Framework/
+
+### 🧪 Lab Demonstration Page
+
+https://ddt-tanasie.github.io/Tanasiom-Aegis-CE-Readiness-Framework/lab.html
+
+### 🎨 Wireframe Prototype
+
+https://ddt-tanasie.github.io/Tanasiom-Aegis-CE-Readiness-Framework/tanasiom-aegis-wireframes%20(1).html
+
+### 📊 Strategy / Entry Concept
+
+https://ddt-tanasie.github.io/Tanasiom-Aegis-CE-Readiness-Framework/tanasiom-strategy.html
+
+### 💼 Sales / Service Presentation
+
+https://ddt-tanasie.github.io/Tanasiom-Aegis-CE-Readiness-Framework/tanasiom-aegis-sales-page.html
+
+### 🛠 Vulnerability Demonstration
+
+https://ddt-tanasie.github.io/Tanasiom-Aegis-CE-Readiness-Framework/cve-2011-2523-report.html
 
 ---
 
 ## Author
-Dumitru Tanasie  
-BSc Computer Networking & Cyber Security  
+
+Dumitru Tanasie
+BSc Computer Networking & Cyber Security
 London Metropolitan University
 
-🔗 Tanasiom Aegis Links (Saved)
-🌐 Main Framework
+---
 
-👉 https://ddt-tanasie.github.io/Tanasiom-Aegis-CE-Readiness-Framework/
-
-🧪 Lab Page
-
-👉 https://ddt-tanasie.github.io/Tanasiom-Aegis-CE-Readiness-Framework/lab.html
-
-🎨 Wireframes
-
-👉 https://ddt-tanasie.github.io/Tanasiom-Aegis-CE-Readiness-Framework/tanasiom-aegis-wireframes%20(1).html
-
-£Strategy -entry
-https://ddt-tanasie.github.io/Tanasiom-Aegis-CE-Readiness-Framework/tanasiom-strategy.html
-
-Sales-page
-https://ddt-tanasie.github.io/Tanasiom-Aegis-CE-Readiness-Framework/tanasiom-aegis-sales-page.html
-
-
-vuln https://ddt-tanasie.github.io/Tanasiom-Aegis-CE-Readiness-Framework/cve-2011-2523-report.html
-
-live web -react  
-https://ddt-tanasie.github.io/tanasiom-aegis-v2-live/
+**Last Updated:** January 2026
