@@ -1,22 +1,45 @@
-Structure (use Heading styles):
-
-Title: Literature Review — Tanasiom Aegis
-
-Short intro paragraph (what this chapter does)
-
-Thematic sections (each 2–3 paragraphs):
-
-Cyber Essentials overview (cite NCSC/IASME)
-
-SME cyber challenges (cite Small Business Commissioner; Von Solms)
-
-Existing tools and gaps (cite competitor analysis)
-
-Risk & governance implications (BCS & academic)
-
-Short conclusion: gap statement linking to your project aim
+Literature Review
 
 
+This project investigates the design and implementation of a Cyber Essentials (CE) compliance readiness framework for small and medium-sized enterprises (SMEs). The literature shows that this is a credible and relevant area of study because SMEs are increasingly exposed to cyber risk while simultaneously facing growing commercial and regulatory pressure to demonstrate baseline cyber maturity. Across the literature, three consistent themes emerge: first, that Cyber Essentials functions as a practical minimum baseline for organisational security; second, that SMEs experience persistent barriers in adopting structured cybersecurity controls; and third, that effective cybersecurity for SMEs must combine technical controls with governance, ethics, and organisational processes. These themes directly justify the development of the proposed Tanasiom Aegis toolkit.
 
-Introduction — Literature Review
-Cyber Essentials (CE) provides a government-backed baseline for information security in UK organisations (NCSC, 2023). However, evidence indicates that small and medium enterprises often struggle to interpret and implement CE controls due to limited technical expertise, resource constraints, and competing priorities (Small Business Commissioner, 2023; Von Solms & Van Niekerk, 2013). This literature review summarises official guidance, academic studies and industry tools to identify the key barriers SMEs face and to justify the design choices for the Tanasiom Aegis toolkit.
+A core source for this project is the National Cyber Security Centre (NCSC) Cyber Essentials: Requirements for IT Infrastructure. The NCSC defines Cyber Essentials as a government-backed baseline built around five technical control areas: firewalls, secure configuration, user access control, malware protection, and security update management. The requirements document is especially useful because it translates high-level security expectations into concrete control requirements, including asset scope, authentication, patching timescales, and expectations around cloud services and home working. This is important for the present project because it provides the formal control structure against which the toolkit can be mapped. In academic terms, the NCSC source gives the project a clear operational baseline rather than leaving “good security” undefined. It also confirms that Cyber Essentials is intended as a minimum standard rather than a full security management system, which supports the rationale for a readiness toolkit that helps SMEs prepare for compliance in a practical and staged way.
+
+The IASME Cyber Essentials self-assessment guidance and assessment model complements the NCSC requirements by showing how organisations are expected to evidence those controls in practice. IASME’s material is valuable because it reflects the real certification pathway faced by SMEs: not just technical implementation, but also self-assessment, leadership sign-off, and external review. This supports the argument that SMEs do not merely need security controls; they need a structured process for understanding what is in scope, gathering evidence, and answering assessment questions accurately. For this project, IASME is particularly relevant because the proposed artefact is not a replacement for certification, but a pre-certification readiness mechanism. The literature therefore suggests that an SME-facing toolkit should help users interpret requirements, organise evidence, and reduce uncertainty before engaging with the formal assessment process.
+
+The wider policy literature also strengthens the business case for the project. UK government material describes Cyber Essentials as the minimum standard of cybersecurity recommended for organisations of all sizes, while impact evaluation work reports substantially fewer cyber insurance claims among organisations with Cyber Essentials in place. Government and NCSC sources further note that Cyber Essentials has become closely associated with supply-chain trust, procurement eligibility, and resilience against common internet-based threats. This is highly relevant to SMEs because the value of Cyber Essentials is therefore not purely technical; it is also commercial and reputational. In effect, certification operates as a market signal. This supports the project’s justification that an SME which cannot interpret or implement Cyber Essentials risks exclusion from contract opportunities, especially where customers or public-sector buyers expect visible proof of baseline cyber hygiene.
+
+However, the literature also makes clear that SMEs face particular obstacles in adopting cybersecurity. A useful conceptual source here is Von Solms and Van Niekerk (2013), who argue that cybersecurity extends beyond traditional information security because it concerns the broader digital environment, human behaviour, connected systems, and social consequences of insecurity. Their work helps frame why SMEs often struggle: cyber risk is no longer limited to protecting stored information, but involves managing endpoints, identities, online services, and interactions across a connected ecosystem. This broader understanding is important for the present project because it justifies why a simple checklist alone is insufficient. A readiness framework for SMEs must connect technical controls with risk awareness, governance, and operational decision-making. In this sense, the Tanasiom Aegis toolkit aligns with the shift identified by Von Solms and Van Niekerk from narrow information protection to broader cyber resilience.
+
+Recent academic work on SMEs supports this interpretation. For example, Hoong, Rezania and Baker (2024) examine how traditional SME managers encounter cybersecurity demands and show that smaller firms often experience cybersecurity as a managerial and organisational dilemma rather than a purely technical issue. Their work is especially valuable because it helps explain why adoption gaps persist even when guidance exists: SME leaders may face competing priorities, limited expertise, cost concerns, and uncertainty about where responsibility sits. Similarly, Rawindaran et al. (2023) identify barriers and challenges in SME cybersecurity practice, including limited awareness, difficulty engaging with formal frameworks, and uneven relationships with government support structures. Together, these studies strengthen the case that SMEs do not fail to adopt cybersecurity merely because they disregard risk, but because existing expectations are often not translated into formats that fit SME realities. This is one of the clearest justifications for the proposed artefact: a toolkit that simplifies interpretation, sequencing, and implementation can bridge the gap between formal standards and everyday business practice.
+
+Another key strand in the literature concerns the relationship between technical controls and governance. The NCSC and IASME materials define what needs to be in place technically, but professional and educational sources help explain how those controls should be implemented responsibly. The BCS Code of Conduct is relevant here because it frames computing practice in terms of public interest, professional competence, duty to relevant authority, and duty to the profession. For this project, the BCS source is important because the toolkit is not only a technical artefact; it also has ethical implications. Recommending security actions to SMEs creates responsibilities around accuracy, competence, legality, and avoiding harm. Including policy templates, implementation guidance, and clearly scoped recommendations aligns well with the BCS emphasis on professional integrity and responsible conduct.
+
+This ethical and professional dimension is reinforced by Dawson (2015), whose work on computing projects emphasises the need for clear problem definition, justification, methodology, and evaluation in student-led systems development. Dawson is useful in this review not because he provides cybersecurity theory directly, but because he supports the academic legitimacy of the project structure. A project of this kind must show that the artefact arises from a real-world problem, is informed by literature, and can be evaluated against identified user needs. In that sense, Dawson underpins the methodological side of the work: the toolkit must not simply exist as a product idea, but as a justified solution to an evidenced problem in SME cyber compliance.
+
+A further practical consideration is whether Cyber Essentials actually produces measurable outcomes. Here, recent UK government evaluation and NCSC commentary are useful because they connect Cyber Essentials with reduced cyber insurance claims and improved resilience. While such claims should be treated cautiously, as correlation does not automatically prove causation, the consistency of the message across official sources suggests that the scheme has practical value as a baseline intervention. This strengthens the project’s positioning: a readiness toolkit is worthwhile not only because CE is demanded in procurement, but because implementation of the underlying controls appears associated with reduced exposure to common attacks. The literature therefore supports the view that Cyber Essentials readiness is both compliance-enabling and risk-reducing.
+
+Overall, the literature reveals a clear gap between what SMEs are expected to achieve and what they are realistically equipped to implement without guidance. Official sources provide a solid control baseline, academic literature explains the organisational and managerial barriers, and professional sources establish the ethical and methodological standards for developing such an artefact. What is missing in the literature is not recognition of the problem, but a sufficiently practical SME-oriented bridge between requirements and implementation. The proposed Tanasiom Aegis Cyber Essentials Readiness Toolkit addresses that gap by turning formal expectations into structured, usable materials such as self-assessment workflows, policy templates, implementation guides, and review mechanisms. On that basis, the project is strongly justified in both academic and practical terms.
+
+Reference List (Harvard style)
+
+BCS (2023) BCS Code of Conduct. London: BCS, The Chartered Institute for IT. Available at: BCS official site.
+
+Dawson, C.W. (2015) Projects in Computing and Information Systems: A Student’s Guide. 3rd edn. Harlow: Pearson.
+
+Hoong, Y., Rezania, D. and Baker, R. (2024) ‘When traditional SME managers encounter cybersecurity: Discourse analysis of opportunities and dilemmas in meeting the demands’, Technology in Society, 78, 102650.
+
+IASME Consortium (2023) Cyber Essentials self-assessment / verified assessment guidance. Available at: IASME official site.
+
+National Cyber Security Centre (2023) Cyber Essentials: Requirements for IT Infrastructure v3.1. London: NCSC.
+
+Rawindaran, N. et al. (2023) ‘Perspective of small and medium enterprise (SME’s) and their relationship with cybersecurity’, Computers and Society / related indexed source. Available via ScienceDirect abstract.
+
+UK Government / DSIT (2024) Cyber Essentials scheme impact evaluation. Available at: GOV.UK.
+
+Von Solms, R. and Van Niekerk, J. (2013) ‘From information security to cyber security’, Computers & Security, 38, pp. 97–102.
+
+Course-listed source to verify with your module brief
+
+Small Business Commissioner (2023) SME Cyber Resilience Report.
+I could not verify this exact title on a reliable source during checking, so keep it only if this is the exact source named in your module handout.
