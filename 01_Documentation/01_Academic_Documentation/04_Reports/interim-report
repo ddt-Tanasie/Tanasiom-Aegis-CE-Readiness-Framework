@@ -1,17 +1,606 @@
-Cover page (title, name, ID, supervisor, date)
-
-Abstract (150 words)
-
-Chapter 1 – Introduction (≈400–500 words) — restate problem, aim & objectives
-
-Chapter 2 – Background / Literature Review (≈900–1,200 words) — paste the Literature_Review_Draft (condensed)
-
-Chapter 3 – Methodology (≈500–700 words) — detail investigative & design-based methodology, data sources, evaluation plan (simulated SME).
-
-Chapter 4 – Preliminary Development (≈600–800 words) — list what you have built so far: toolkit drafts, wireframes, dashboard prototype (include 2–3 screenshots).
-
-Chapter 5 – Plan & Next Steps (≈300–400 words) — show Gantt (insert as image), list immediate tasks.
-
-References (from References_Harvard.docx)
-
-Appendices — Meeting logs, Evidence_Table export, wireframe PDF (or reference where in repo).
+Interim Report
+CS6P05 PROJECT
+Design and Implementation of a Cyber Essentials Compliance
+Readiness Framework for Small and Medium Enterprises (SMEs)
+Commercial Name: Tanasiom Aegis Cyber Readiness Service
+Student Name: Dumitru Tanasie
+Student ID: 22041369
+Email: dut0032@my.londonmet.ac.uk
+Course: BSc Computer Networking & Cyber Security
+Module: CS6P05 – Final Year Project
+Supervisor: Dr Subeksha Shrestha
+Academic Year: 2025-2026
+Submission Date: 19 January 2026
+Declaration
+I, Dumitru Tanasie (Student ID: 22041369) declare this interim report is my own work and is written
+fully by me. All references are appropriate with Harvard referencing. No other work was submitted
+for further assessment other than that of the London Metropolitan University and the work is
+presented in accordance with its Academic Integrity Policy and the BCS Code of Conduct. No live
+participant data was collected; evaluation uses simulated case study scenarios ensuring ethical
+compliance.
+Signed: Dumitru Tanasie. Date: 19 January 2026
+Summary/Abstract.
+UK SMEs come under pressure to get Cyber Essentials certification to obtain public sector
+contracts, cyber insurance and supply chain compliance. However, challenges exist faced by
+SMEs such as lack of cybersecurity experience, small budgets (consultancy costs between
+£1,500-£5,000) and understanding technical requirements. This project is the creation of the
+Tanasiom Aegis Cyber Essentials Readiness Toolkit—the first structured, user-friendly
+solution designed to support UK SMEs’ self-initiating preparation for certification.
+The toolkit consists of a self-assessing questionnaire that includes a set of 50 questions that
+is used to select five core Cyber Essentials control areas, automating scoring according to
+gaps analysed, template forms with recommendations for policy and implementation, and a
+prototype dashboard created in React. The project employs design-based research
+methodology which merges literature analysis with pragmatic artefact development.
+For evidence-based assessment through an initial simulated case study (18 workers working
+in a professional services firm), early results confirm measurable improvement, as
+demonstrated by an organisational readiness profile that went from 42% at baseline to 92%
+since remediation, mostly through improvements in configuration and documenting changes
+in policy documents. Background study, questionnaire generation, template generation of
+templates and dashboard prototyping were added in the interim phase. Fina l semester is
+about completing the functionality of artefact functionality, final evaluation, holistic
+evaluation and final reports preparation.
+Contents
+Declaration..............................................................................................................................................2
+Summary/Abstract...................................................................................................................................2
+Chapter 1: Introduction ...........................................................................................................................3
+1.1Project Topic and Rationale................................................................................................................4
+1.2 Project Aims and Objectives..............................................................................................................4
+1.3 Methodology......................................................................................................................................5
+1.4 Report Structure ................................................................................................................................6
+Chapter 2: Background Research ............................................................................................................6
+2.1 A literature review of Related Work..................................................................................................6
+2.2 Products/Solutions Other Products/Solutions in Relation for Review..............................................8
+2.3 Project Scope. ....................................................................................................................................9
+2.4 Technologies and Tools. ..................................................................................................................10
+Chapter 3: Requirements Analysis and Specification ..........................................................................11
+3.1 Problem Analysis..............................................................................................................................11
+3.2 Target User Definition......................................................................................................................11
+3.3 Functional Requirements.................................................................................................................12
+3.4 Non-Functional Requirements.........................................................................................................13
+Chapter 4: Software Design ...................................................................................................................13
+4.1 User-Interface Design. .....................................................................................................................14
+4.2 Database Structure Design. .............................................................................................................15
+4.3 Software Architecture: ....................................................................................................................17
+Chapter 5: Summary and Future Work..................................................................................................18
+5.1 Development Summary to Date. .....................................................................................................18
+5.2 Reflections and Lessons...................................................................................................................19
+5.3 Remaining Work. .............................................................................................................................20
+Appendix 1: Project Management........................................................................................................21
+1.1 Original Project Plan ........................................................................................................................21
+1.2 Current Progress Review .................................................................................................................22
+1.3 Amendments to Plan ......................................................................................................................22
+References.............................................................................................................................................22
+Chapter 1: Introduction
+1.1Project Topic and Rationale
+The UK Government’s Cyber Essentials (CE) scheme provides a baseline level of cybersecurity
+protection, which safeguards against approximately 80% of common cyber-attacks, as set out by the
+National Cyber Security Centre for the UK Government (NCSC, 2024). When SMEs compete for a
+government contract, deal with sensitive customer data, or are required to comply with cyber
+insurance requirements, they need to demonstrate compliance. What started as a voluntary best
+practice has become a necessity for SMEs in government supply chains. Yet SMEs face structural
+implementation barriers. According to study findings, 47 percent find it difficult to apply security
+measures despite awareness of the threat, attributed mainly to skills shortages, financial constraints,
+and lack of dedicated cybersecurity expertise (IDC, 2023).
+Security responsibilities are usually passed down to non-specialist staff, such as directors, office
+managers, and operations personnel, who do not have a technical background. Costs of external
+consultancy (£1,500-£5,000) are significant unplanned expenses for businesses with tight margins
+(Small Business Commissioner, 2023).
+These issues are followed by unsuccessful tender applications for procurement, compliance gaps,
+regulatory fines, increases in insurance costs, and impact to the business's reputation. The project
+introduces the Tanasiom Aegis Cyber Essentials Readiness Toolkit based on the UK SME
+requirements, capabilities, and constraints. Market validation with LinkedIn engagement with SME
+decision-makers confirmed frustration with existing guidance and the demand for structured
+approaches. Other regulatory insights were gained while completing Clifford Chance LLP Cyber
+Security Virtual Internship (December 2023) on ICO procedures and GDPR breach response, which
+shaped toolkit design.
+1.2 Project Aims and Objectives
+Aim: Create, analyse, and evaluate a Cyber Essentials Readiness Toolkit that will support UK SMEs to
+understand, prepare for and achieve certification efficiently and cost-effectively, reducing reliance
+on external consultancy while supporting informed decision-making and sustainable compliance.
+Objectives:
+1. Investigate CE requirements and SME security challenges by looking at NCSC/IASME guidance via a
+rigorous structured review of academic literature and industry reports.
+2. Establish a structured readiness assessment by connecting five CE control areas linking technical
+requirements to business-accessible actions.
+3. Build a pragmatic toolkit containing a 50-question questionnaire, templates, policy documentation,
+and a dashboard prototype.
+4. Provide an action plan for remediation, gap prioritisation, and support for evidence preparation.
+5. Evaluate the toolkit using a simulated SME case study showing measurable improvement in
+readiness.
+6. Consider legal, ethical, and professional aspects, including GDPR conformity and compliance with
+BCS Code of Conduct.
+This project addresses the BSc Computer Networking & Cyber Security learning outcomes of
+applying the cybersecurity framework, working in software development, understanding compliance
+regulations, professional responsibility, and project management skills.
+1.3 Methodology
+The Project adapts a design science research methodology as a basis for research into information
+systems development in the face of practical problems (Hevner et al., 2004). It involves cyclical
+design, development, and evaluation leading to artefacts to fill identified gaps. The research takes a
+pragmatic philosophical worldview emphasizing real-world applicability.
+Project Phases:
+PHASE 1 (October-November 2025): Review of SME cybersecurity difficulties and CE requirements,
+validation via LinkedIn engagement with 8 SME decision makers in the market.
+Phase 2 (November – December 2025): Functional requirements specification & information
+architecture for five CE control domains + Scoring methodology designing + Dashboard wireframe
+design.
+Phase 3 (December 2025 - January 2026): 50-question questionnaire, 7 policy templates, Excel
+scoring matrix with automated calculations, and React dashboard prototype using
+Vite/Bootstrap/Chart.js.
+Phase 4 (January 2026): Simulated SME profile development (18 employees, professional service
+firm, Microsoft 365 environment without existing policies), baseline preparedness scoring,
+remediation modelling, post-remediation evaluation.
+Phase 5 (January-March 2026): Evaluation analysis, legal/ethical/professional considerations review,
+final report preparation, viva voce preparation.
+Data sources refer to reliable secondary resources (NCSC, IASME, academic literature) validated with
+simulated case study. No personal participant data were collected - adhering to ethical standards.
+Figure 1.1Gantt Chart
+1.4 Report Structure
+Chapter 2 conducts a literature review on SME compliance pressures, resource constraints,
+existing solutions and their limitations, plus gap analysis. Chapter 3 includes problem
+analysis, target user definition, and detailed requirements. Chapter 4 presents user interface
+(UI) design, database schema, and software architecture. In Chapter 5, we summarise
+development progress, offer critical reflections, and detail remaining work. Appendix 1
+describes project planning and management
+Chapter 2: Background Research
+2.1 A literature review of Related Work.
+External Compliance Pressure. Cyber Essentials certification became a formal requirement rather
+than voluntary for UK SMEs. NCSC (2024) confirms certification is compulsory for those making
+contracts which incorporate sensitive government data or technical services provision. This goes well
+beyond government procurement into commercial supply chains, as larger organizations require
+supplier certification, thus creating compliance pyramids across markets. Baseline control
+verification is required for cybersecurity insurance companies; some insurers require CE on policy
+issuance by the insurers (Beazley, 2023).
+Affected organisations get approximately 10 percent premium reduction through certification.
+Furthermore, CE compliance shows the right level of technical and organisational steps within the
+framework of GDPR Article 32 and may limit ICO exposure in a breach investigation. Both the EU
+NIS2 Directive and future UK supply chain regulations are expanding mandatory cybersecurity
+measures (BCS, 2023).
+Restrictions on the Resources and the Resources and Skills shortage. Systemic barriers to the
+implementation are faced by SMEs despite the increased focus on the certification despite the
+growing demand for certification. According to empirical evidence, SMEs generally do not have
+specific cybersecurity expertise, and the duties of security are also shared in the common hands of
+the non-technical staff (IDC, 2023). Roughly 47 per cent face major challenges with adopting security
+technology, which are driven by skills shortages and a lack of internal capacity. Skills gaps show up as
+the inability to interpret technical requirements, the uncertain nature of controls that relate to IT
+environments (most notably cloud and BYOD), the inability to configure systems without support,
+and confusion about what evidence is required.
+Von Solms and Van Niekerk (2013) state this, they believe information security governance
+frameworks assume organizational maturity, which many small organisations lack, leading to
+fundamental misalignments between standards and capacities. External consultancy costs £1,500 –
+£5,000 depending on complexity (Small Business Commissioner, 2023), with very large, unplanned
+costs competing with revenue stream activities.
+Certification assessment fees (£300 basic, £500+ Plus) put extra pressure. SME cyber maturity is
+hampered by time and cognitive load; senior decision-makers have extensive and overlapping
+operational and compliance responsibilities (NCSC, 2024), meaning they have relatively little
+capacity to deploy technical standards. According to Dawson (2024), compliance effort stalls due to
+competing priorities and next steps that are unclear. Such a phenomenon generates a paradox
+where SMEs know compliance is critical but are unable to invest resources. Technical Complexity.
+SMEs face difficulty understanding whether the CE requirements are relevant to current IT
+applications practice. NCSC (2024) notes BYOD, cloud services and remote work is making definition
+of scope definition for assessment difficult. Cloud duty are still a significant source of confusions. The
+cloud remains a big reason for doubt as to who is responsible for it. According to NCSC (2024), all
+regulations are the responsibility of organisations, regardless of managing external infrastructure.
+However, understanding the responsibility for IaaS versus PaaS versus SaaS environments requires
+technical knowledge that many SME decision stakeholders do not have.
+The IASME certification program encourages organisations to confirm compliance in detail for all inscope systems themselves, placing burden on those who lack such technical assurance to review
+firewall configurations, patch management procedures, or strict configuration rules. Accordingly,
+SMEs may misinterpret requirements, wrong-define scope or utilize partial controls that may look
+sufficient but are not in keeping with certification. Assessment Pressure. This failed certification
+affects more than money. For public sector type work in SMEs, failure to achieve certification has a
+direct impact on revenue opportunities. Small Business Commissioner (2023) demonstrated that
+SMEs are heavily worried about the certification process, especially when examination deadlines are
+the same as the time submission comes around the final phase of a contract. CE test is binary
+(Pass/Fail) with little partial credit. There are even single high-level failures – a lack of multi-factor
+authentication or insufficient evidence about patch management – that could ultimately lead to
+failure despite the proper application of most of the controls.
+2.2 Products/Solutions Other Products/Solutions in Relation for Review.
+The NCSC (2024) gives detailed requirements documentation for CE. These technical requirements
+with regular update are all accurately outlined in authoritative sources. And yet the documentation
+is more descriptive than instructional — describing the controls that need to be in place, but not
+granular enough about how SMEs implement controls in resource-starved contexts. Content
+assumes technical capacity that is absent for many SME practitioners.
+Commercial Managed service providers -- there is often CE prep in companies that provide CE prep
+as a package or a standalone consulting operation. These SME constraints are serious problems.
+First, the cost for some services, which are too often non-transparent in terms of cost, is out of sight.
+It indicates SMEs develop dependence on external providers, decreasing self-awareness and longterm sustainability (IACIS, 2024). The MSP processes present “black box” situations in which SMEs
+take instructions that they are not sure of and they don’t understand the reason behind any of them,
+which contradicts board-level accountability frameworks. Enterprise compliance: Commercial
+business process control (GRC) products (OneTrust, ServiceNow, RSA Archer) offer holistic
+compliance services designed for large companies that have highly capable individuals and teams to
+oversee it. These are out of place for SMEs due to cost (usually > £10,000 per year), the complexity
+of their features, and the need to train them directly from start to finish, for which the small
+business cannot afford.
+The majority of commercial tools do automated scanning or checkbox compliance that gives little to
+no context about why controls need to matter, encouraging compliance-by-checkbox rather than
+security gains. Gap Analysis: On comparative analysis the difference is that authoritative advice and
+commercial expertise have their merits but neither offers meaningful SME support in the process of
+transferring CE stipulations into practice via the delivery of well-planned, transparent, sustainable
+processes. The new toolkit addresses this gap and creates: SME specific vs generic guidance, low
+cost- self-service vs expensive consultancy, step-by-step implementation guidance versus high level
+requirements, transparent explanation vs technical buzzwords, building internal skills vs dependency
+creating services, built in evidence preparation support, sustenance for annual renewal vs one off
+engagement.
+Table 1 Comparison of Cyber Essentials Support Approaches
+2.3 Project Scope.
+In Scope:
+Five CE technical control areas (Firewalls, Secure Configuration, Security Update Management, User
+Access Control, Malware Protection), one readiness self assessment questionnaire aligned with
+NCSC/IASME requirements, scoring methodology on pass/fail risk indicators, implementation
+templates and policy documentation, visual dashboard prototype, non-technical SME decision
+makers guidance, simulated evaluation of representative case study, compliance with GDPR and BCS
+Code of Conduct guidelines. Out of Scope: Live automated security scanning, real-time monitoring
+systems, third-party security product integration, replacement for independent certification bodies
+(e.g. independent certification bodies), guarantee of certification success, standards beyond CE
+baseline, multi-tenant commercial SaaS platform (currently only allows an MVP prototype and no
+more than MVP model in the market).
+Target: Non-technical operations/office manager in a UK SME (5-10 employees, professional
+services/consultancy).
+Organisation works in cloud technology services (Microsoft 365), supports remote working,
+mandates certification for government tenders, needs certification for public procurement, client
+requirements, public sector contracts or insurance requirements.
+2.4 Technologies and Tools.
+Methodology: Design-oriented research is used to give theory, which is useful in the field of
+information systems development, solving real-world issues through an iterative approach of
+designing, developing, and evaluating information (Hevner et al., 2004). This is consistent with the
+pragmatic philosophical tendency of valuing artefact usefulness and utility (as described in Schuster
+1997).
+Hevner et al.’s seven guidelines are in play: design as artefact (tangible toolkit outputs), problem
+relevance (addresses well-documented compliance challenges experienced by SMEs), design
+evaluation (case study simulation), research contributions (addresses gap between standards and
+implementation), research rigor (creates credible sources of information and a systematic approach
+to analysis), design as a search (refining iteratively), communication of research (academic reporting
+and a potential deployment).
+Technology Stack: React 18.2 + Vite 4.4 React chosen for component-based architecture, industry
+adoption, and great ecosystem. The Vite build tool provides fast development server, hot module
+replacement and optimised production builds making them perfect for the developer during
+iterative prototyping. Bootstrap 5.3: Has responsive CSS framework and pre-built UI components for
+a professional looking interface with less custom CSS. You will help support SME decision makers,
+who are probably using the dashboard on mobile, with mobile first implementation. The framework
+accessibility features resonate with design philosophy of inclusive design.
+Chart.js 4.4: chose because the interactive graphs are basic and can be easily configured, easy to use
+and straightforward. Provides radar charts with all five control areas displayed simultaneously,
+progress bars showing overall readiness and pass/fail flags in colour-coded charts. localStorage API:
+Use browser localStorage for assessment data for testing rather than server side infrastructure for
+MVP prototype in localStorage. This is easy to implement and privacy end user-friendly—it’s just
+storage for the client-side – the whole storage. Commercial versions would roll into backend storage
+allowing for multi-device access and group work. jsPDF Library - enables downloadable result PDF of
+gap analyses with recommended action for the data export for evidence preparation. Version
+Control Git and GitHub (with private repository, structured branching). Node.js v20.11 LTS is used for
+managing npm and JavaScript runtime. Visual Studio Code as main IDE. Rationale: The stack we
+chose balances academic and industry relevance (well-established, commonly taught technologies),
+rapid development (component-based features allow us to prototype within the academic calendar),
+future-proof (architecture allows we can migrate in commercial without need to re-architect),
+professional development standards (complying with current industry best practices) and cost
+efficiency (open-source, free tools all).
+Chapter 3: Requirements Analysis and Specification
+3.1 Problem Analysis
+CE certification among UK SMEs is required for public sector contracts, customer assurance, and
+cyber insurance compliance. Nevertheless, there remains a persistent implementation gap
+characterised by: Interpretation Uncertainty (SME decision-makers find it challenging to translate
+technical CE requirements into concrete action such as defining scope/cloud responsibility/evidence
+requirements); Resource Constraints (the majority of SMEs do not have dedicated cybersecurity staff
+and cannot justify costs of £1,500-£5,000 for external consultancy); Process Fragmentation (the
+current guidance lists requirements without implementation processes); Assessment Anxiety (the
+fear of certification failure resulting from hidden requirements leads non-technical members of the
+team to feel anxious); Sustainability Challenges (even externally-assisted SMEs often lack internal
+knowledge to maintain controls for their annual renewal).
+Problem Statement: We have no systematic, easily accessible readiness processes tailored to a
+specific group, the SME community; they enable non-technical executives to prepare with purpose,
+confidence and at a minimum, external dependencies. This problem is substantiated by evidence
+from academic literature demonstrating skills and resource deficits (IDC, 2023; Von Solms and Van
+Niekerk, 2013), government recognition of challenges of SME implementation (NCSC, 2024), market
+validation of the demand for self-service guidance, and commercial evidence of the cost of
+consultancy posing access barriers (Small Business Commissioner, 2023).
+3.2 Target User Definition.
+User Persona: Sarah, Operations Manager.(fictive)
+• Role: Operations Manager at TechStart Solutions Ltd (digital consultancy, 18 employees). •
+Background: Business degree, 10 years operational management experience, no formal
+cybersecurity training. • Technical skills: Competent Microsoft 365 user, basic firewall/antivirus
+understanding, depends on IT provider for infrastructure decisions. • CE Context: Needs certification
+for £120,000 local authority contract, eight-week deadline, £500-£1,000 preparation budget. • Pain
+Points: Uncertainty interpreting NCSC guidance, fear of failing and losing contract opportunity,
+unclear if current security setup adequate. • Goals: Achieve CE certification first attempt,
+understand requirements clearly to answer assessor questions, leverage existing controls to reduce
+spending, develop internal knowledge for annual renewal.
+3.3 Functional Requirements.
+Assessment Functionality (FR1-FR4): 50 item readiness questionnaire for all 5 CE control areas;
+individual responses clearly mapped to NCSC/IASME certification criteria; four-point response scale
+(Yes=2, Partial=1, No=0, N/A=0); contextual help text for technical language. Scoring and Analysis
+(FR5-FR9): total readiness percentage; scores of each CE control area; critical failure conditions
+leading to automatic certification failures; prioritised gap analysis with remediation action in terms
+of severity; readiness, Ready (>85%), Nearly Ready (70-85%), Significant Gaps (50-70%), Not Ready
+(<50%). Templates (FR10-FR16): Password Policy, Remote Access and VPN Policy, Incident Response
+Procedure, Device and Access Control Register, Firewall Configuration Checklist, Patch Management
+Log, Acceptable Use Policy. Guidance (FR17-FR19): Plain-language remediation guidance per failed
+requirement; step-by-step instructions; reference to relevant templates. Dashboard (FR20-FR25):
+High-visibility display of overall readiness; radar chart showing per-control readiness; prioritised gap
+list with severity indicators; downloadable PDF gap analysis report; direct access to templates based
+on gaps; Save/Resume assessment.
+Table 2 : Functional Requirements Mapped to Toolkit Components
+3.4 Non-Functional Requirements.
+Usability: Toolkit usable by non-technical SME personnel without cybersecurity training. No jargon,
+all guidance in plain English. Accessibility: According to WCAG 2.1 Level AA guidelines. Performance:
+Dashboard loads in 2 seconds; scoring completed in 1 second. Data Privacy: All assessment data is
+client-side without outside server transmission; future version satisfies UK GDPR requirements.
+Reliability: The scoring engine outputs consistent deterministic results; calculation logic
+transparently documented. Maintainability: The code is written according to React best practices
+with clear component separation. Compatibility: Works in contemporary browsers with
+responsiveness. Standards Fit: All information is based on NCSC CE Requirements v3.3 and IASME
+criteria. Academic Integrity: artefacts are original work with appropriate attribution. Design adheres
+to BCS Code of Conduct principles.
+Chapter 4: Software Design
+The chapter describes the software design of the Tanasiom Aegis Cyber Essentials Readiness
+Toolkit, covering approximately 50% of the complete system design as required for the
+interim submission. This design includes user interface mockups, data storage s chema, and
+software architecture components.
+4.1 User-Interface Design.
+Clear, simple, progressive disclosure is fundamental to UI design. Highlights and comments at the
+front should serve as navigation points. Non-technical users will see little friction in accessing rich
+guidance where needed. Dashboard Home Screen: Clear, minimal design with Tanasiom Aegis
+branding, short purpose explanation, "Start Assessment" call-to-action button prominently placed.
+Secondary navigation has “About Cyber Essentials” educational resources and “Load Saved
+Assessment” functionality. One strategy is designed to prevent overwhelming first-time users with
+easy-to-navigate guides and quizzes but have optional educational elements. Assessment Question
+Interface: Showing a single question at a time with a bar displaying the progress of "Question X of 50
+(Y% complete)." Text: the question itself is written in the common language; there's also an optional
+"More Info" expandable panel for technical questions. Four big, clearly labeled “response buttons”
+(YES/PARTIAL/NO/NOT APPLICABLE) arrayed vertically. Navigation buttons (Previous/Next) at the
+bottom. Cognitive overload is minimized one question at a time. Big buttons for responding on
+touch-responsive mobile devices. Optional “More Info” panel is the second version of progressive
+disclosure, necessary information is shown at once and some context is presented for those who are
+interested in elaborating. Dashboard: Separated into 3 panels. Top panel presents total readiness
+score as large percentage with coloured classification (72% - Nearly Ready in amber). Central panel
+presents radar chart with 5 axes representing CE control area with a score between 0 and 100%. In
+the bottom panel, we have prioritised gaps with severity indicators (Critical/High/Medium/Low) and
+"View Guidance" buttons. A visual hierarchy displays board-level overview first, then technical
+breakdown. Radar chart indicates at a glance strengths/weaknesses. Colour coded severity
+indicators take advantage of common conventions. ”View Guidance” buttons allow for a transparent
+movement from where you can find a problem to implementing a solution.
+More screens illustrate steps in remediation on detailed pathways and step-by-step instructions,
+and templates available for download/preview: template library, accessibility in PDF gap analysis
+report export, assessment history (e.g., progress by time).
+Figure 2 Dashboard Home Screen Prototype
+Figure 3 Dashboard Home Screen Wireframe
+4.2 Database Structure Design.
+Data storage used for MVP prototype (browser localStorage with JSON serialisation).
+Yet data structure enables next migration to relational (PostgreSQL) and NoSQL (MongoDB) DBs
+without any extensive refactoring.
+Assessment Entity: assessment_id (UUID Primary Key), organisation_name (String Optional),
+created_date (DateTime ISO 8601), last_modified_date (DateTime), assessment_status (Enum:
+IN_PROGRESS/COMPLETED), overall_score (Integer 0-100), readiness_classification (Enum:
+READY/NEARLY_READY/SIGNIFICANT_GAPS/NOT_READY). QuestionResponse Entity: response_id
+(UUID Primary Key), assessment_id (UUID Foreign Key), question_id (Integer 1-50), control_area
+(Enum: FIREWALLS/SECURE_CONFIG/PATCH_MGMT/ACCESS_CONTROL/MALWARE),
+response_value (Enum: YES/PARTIAL/NO/NOT_APPLICABLE), points_awarded (Integer 0-2),
+timestamp (DateTime). ControlAreaScore Entity: control_score_id (UUID Primary Key),
+assessment_id (UUID Foreign Key), control_area (Enum), points_earned (Integer), points_possible
+(Integer), percentage_score (Integer 0-100), has_critical_failure (Boolean). GapAnalysisItem Entity:
+gap_id (UUID Primary Key), assessment_id (UUID Foreign Key), question_id (Integer), control_area
+(Enum), severity (Enum: CRITICAL/HIGH/MEDIUM/LOW), gap_description (String),
+remediation_guidance (Text), relevant_template_ids (Integer Array).
+Figure 4 Database Structure Design Front end/Backend
+4.3 Software Architecture:
+Toolkit follows a modular and component-based architecture which is divided into three tiers.
+Presentation Layer (React Components): UI rendering, user input capture, visual feedback. Key
+Components: App.jsx (root component managing state and routing), HomePage.jsx (landing screen),
+AssessmentQuestion.jsx (question display with response capture), ProgressTracker.jsx (visual
+progress indicator), ResultsDashboard.jsx (overall results visualisation), RadarChart.jsx (Chart.js
+wrapper), GapList.jsx (prioritised gap display), TemplateLibrary.jsx (template browser and
+download), PDFExporter.jsx (report generation using jsPDF integration). Business Logic Layer
+(JavaScript Modules): For scoring calculations, gap analysis logic, data transformation.
+As isolated pure JS functions as well, apart from UI components, ensure testability and reusability.
+Key Modules: scoringEngine.js (measures total and per-control scores), gapAnalyser.js (identifies
+failed requirements and severity), questionMappings.js (maps questions to CE requirements),
+remediationGuidance.js (provides contextual recommendations), dataValidator.js (ensures response
+data integrity). Data Layer (localStorage/Future API): abstraction layer providing save/load/delete
+methods, serialisation for JavaScript objects into JSON and a simple key-value user interface to hide
+the storage mechanism from business logic will be used.
+Future Migration: Replace storageService.js with HTTP client, and add JWT authentication, serverside validation. No logic in the business or presentation layer updated for the abstraction.
+Interaction Flow between Components: (1) User clicks response button in AssessmentQuestion
+component; (2) Response data bubbles up into App.jsx via callback; (3) App.jsx with useState to
+update assessment state; (4) App.jsx invokes scoringEngine.calculateScores(); (5) Scoring result in
+state and passed to ResultsDashboard; (6) ResultsDashboard hands off data to child components; (7)
+User interaction triggers TemplateLibrary to display relevant templates. For simpler academic use
+and viva demonstration in which we use React's built-in capabilities rather than using an external
+library. Data on evaluation in App.jsx with useState, but passed on to child elements thanks to props,
+also following the unidirectional data flow of React. Scoring Engine Algorithm: The scoring engine
+converts responses of questionnaires into control-level scores, overall readiness percentage and
+readiness classification depending on CE assessment method. Algorithm employs weighted scoring
+with binding failure conditions to guarantee failure with the IASME certifiction's binary pass/fail
+structure. All questions contribute two points max (Yes=2, Partial=1, No=0).
+Not Applicable responses removed from scoring denominator to avoid penalizing organisations for
+legitimately irrelevant controls. Handling critical failure: If any CE requirement goes wrong (no multifactor authentication for administrative access, unmanaged security updates), assessment is
+automatically classified as 'Not Ready' regardless of total percentage score derived. It mirrors CE
+evaluations in the field when vital control failures result in certification failure even as high scores in
+other aspects avoid producing deceptive “false readiness” scores and give SMEs true feedback on
+their compliance posture.
+Figure 5 Results Dashboard with Radar Chart Wireframe
+Chapter 5: Summary and Future Work
+The Tanasiom Aegis Cyber Essentials Readiness Toolkit is progressing towards progress all the stages
+planned in the autumn semester. There are completed the following deliverables and milestones:
+5.1 Development Summary to Date.
+Research of Academic Literature & Problem Analysis (October-November 2025): Literature Review
+and Analysis of Academic Literature, Government Guidance, Industry Studies; SME Cybersecurity
+Challenges of NCSC, IASME. Validated gap between formal CE requirements and practical SME
+implementation capability was confirmed in analysis. Through LinkedIn outreach to 8 SME decisionmakers, the market validation provided real world problem confirmation.
+Requirements Definition and Design (November-December 2025): Target user persona. Specific
+functional and nonfunctional requirements detail with mapping to CE areas of control. Internal
+structures to support questionnaire, scoring methodology, template categories, dashboard
+workflows.
+Artefact Development (December 2025 - January 2026) 50-question questionnaire including 5 CE
+technical control areas aligned to NCSC v3.3 requirements; seven policy/procedure templates
+created; Excel scoring matrix that supports automation, conditional formatting, gap analysis;
+dashboard prototype developed on React, Vite, Bootstrap 5.3, Chart.js; GitHub repo with commit
+history.
+Professional Development (December 2025): Completed Clifford Chance LLP Cyber Security Virtual
+Internship regarding ICO Dawn Raid response, GDPR breach notification requirements, security
+incident response methods, and data protection policy in the UK. This experience helped to align
+toolkit GDPR designs with regulatory compliance evidence, and designing templates, for regulatory
+compliance proof submission.
+Evaluation framework (January 2026): A simulated SME case study has been developed: TechStart
+Solutions Ltd (18 employees digital consultative firm, Microsoft 365, remote working, no existing
+security policies). Baseline level was 42% readiness overall, with critical failures in User Access
+Control and Security Update Management. This sets the "before" for evaluating toolkit effectiveness.
+Current Status: The project is on time, meeting all interim deliverables. Core elements have been
+greatly developed, with final semester centred in honing and full-fledged assessment. Scholarship,
+artefact making, and professional regulatory expertise form the basis on which a scholarly
+contribution and practical application of the SME cybersecurity concepts would follow.
+5.2 Reflections and Lessons.
+Technical Reflections: React + Vite were very useful in the quick prototyping. State management
+over several points was tough without Redux and my props needed to drill the wells really carefully.
+Bootstrap made UI development faster to keep responsive. localStorage: Although it simplifies MVP
+deployments, localStorage has limitations in data persistence and cross-device access—fine for
+academic testing but backend storage is critical for commercialization.
+The complex grading algorithm implementation revealed complexity that needed careful edge case
+testing.
+Research Method: Design-based research offered a suitable approach that was beneficial for
+balancing the creation of working artefact of course with its academic contribution. Iterative designdev-evaluate cycles enabled refinement based upon new insights. Meanwhile, simulated evaluation
+creates restrictions to generalisability, as real-world pilot testing with actual SMEs would greatly
+improve findings validity. LinkedIn outreach generated valuable responses that guided design
+decisions, however, the small sample size (n=5 responses from n=8 contacts) may have resulted in
+biased representation based on self-selection.
+Legal, social, ethical, professional issues: Clifford Chance internship furthered understanding of UK
+data protection law, supporting GDPR alignment areas in toolkit based on being exposed to ICO
+enforcement processes.
+Toolkit comes with disclaimers that it provides guidance not legal advice. All policy templates are our
+work and avoid copyright concerns. The simulated evaluation method met ethical requirements to
+protect important security information on sensitive data. This is good for ethics but this limits realworld applicability. If studies on human subjects were conducted in future they would obviously
+have to be approved or obtain strong ethical approval and informed consent. Project is based on BCS
+Professional Principles: Public interest (enabling affordable cybersecurity guidance for SMEs in the
+UK benefits UK cyber resilience), professional competence (exhaustive research proves
+technical/analytical capabilities), duty to relevant authority (complying with NCSC/IASME guidelines
+ensures authoritative guidance), duty to profession (transparent methodology and ethical research
+practices). Toolkit tackles digital inequality by mitigating barriers to cybersecurity compliance for
+organisations with limited resources. But “accessible” guidance remains predicated on basic digital
+literacy and proficiency in English language. Next versions will need to consider accessibility towards
+people with disabilities and multi-language support.
+Project Management – keeping the boundaries of the scope clear proved tough especially when you
+find some really interesting similar subjects. Defining “out of scope” clearly was good for staving off
+scope-creep. The external validation from regular supervisor reviews helped. Maintaining my time
+for final year project work, other modules and job alongside personal schedule had its challenges as
+well. Specific breakdowns of work and accurate estimates of a timeline helped to avoid freezes. But
+unexpected technical problems took longer than planned, underlining the need for buffer time. A lot
+of development documentation made interim reporting a lot easier to do.
+5.3 Remaining Work.
+Final Dashboard Implementation (January-February 2026):
+Integrate all 50 questions into interactive assessment flow with working state management;
+implement Chart.js radar chart visualisation showing actual calculated scores; create PDF report
+generation using jsPDF with formatted gap analysis; add save/resume assessment capability;
+implement template downloads in appropriate formats; perform cross-browser testing and
+responsive design validation.
+Complete Simulated Case Study Evaluation (January-February 2026): Deploy toolkit to TechStart
+Solutions Ltd for baseline evaluation; identify compliance gaps and significant failures; implement
+simulated remedial steps as per toolkit instruction in all five control areas; fill out policy
+documentation using provided templates; re-administer questionnaire as preparation for postremediation readiness testing; quantify the improvement between baseline (42%) and postremediation scores; identify areas most affected on control with respect to improvement and
+explore contributing factors.
+Template Refinement (Jan-Feb 2026): Track completeness and usability of the template as it's used;
+add clarifiers and examples where templates appear confusing; check template formats for proper
+usage and compliance with NCSC v3.3 requirements following a review.
+Analysis and Reflection (March 2026): Quantitative analysis of percentage increase in overall
+readiness and per-control scores; qualitative study of clarity, ease of use, and practicability of the
+toolkit components; which toolkit components had the best/worst effect; evidence of how the
+simulated evaluation approach limited performance and affected generalisability; performance data
+comparison with other success criteria to ensure that the best methods were followed; discussion of
+potential alternate strategies adopted; a discussion of the trade-off between simplicity and
+comprehensiveness; assessment of technology preference; analysis of the potential for scalability
+and commercial viability.
+Final Report Completion (March 2026): Expand interim report chapters with evaluation results and a
+critical analysis; add an extensive discussion chapter that compares findings against findings of
+existing literature; produce a conclusion that synthesises both the academic and practical
+contributions; outline new work opportunities; ensure that there is consistency in Harvard
+referencing and the completeness of bibliographies; and complete a professional formatting, proofreading, and spell-checking.
+Viva Voce Preparation (March 2026): PowerPoint presentation for project overview, methodology,
+key findings; live dashboard prototype of the assessment and outcome workflow; prepare for
+potential examiner questions, and prepare evidence; clear explanation of method selection and
+evaluation process; and methodology defence and limitation justification.
+Prioritisation: core functionality and evaluation override enhancement features. If you do have
+limited time, features rejected in reverse: (1) Core assessment and scoring [must get done]; (2)
+Simulated evaluation and results analysis [must be done]; (3) Export PDFs [should be worked on]; (4)
+Save/resume [could be deferred]; (5) Advanced visualisations [can be deferred].
+Quality Assurance: All artefacts methodologically tested i.e functional testing
+(buttons/links/workflows have all the relevant functionality), calculation testing (scoring engine
+produces the expected results), browser testing (the appearance/functionality is the same across all
+browsers), accessibility testing (the web interface is also compatible with all major web browsers),
+documentation testing (templates are complete in terms of appearance and are professionally
+formatted), and usability testing (the pages are always usable!).
+Projected Timeline: Weeks 1-4 (20 Jan-16 Feb): Finished dashboard support, testing. Weeks 5-7 (17
+Feb-9 Mar): Analysis, reflection, final report preparation, report writing. Weeks 8-9 (10 Mar-23 Mar):
+Finalization, proof-reading, editing, final viva preparation. Week 10 (24 Mar-31 Mar): Final
+submission & viva examination.
+Appendix 1: Project Management
+1.1 Original Project Plan
+Work Breakdown Structure:
+Total duration: 27 weeks (Oct 1, 2025 — Mar 31, 2026). Key Milestones: M1-Proposal approved (14
+Oct 2025); M2-Literature review completed (11 Nov 2025); M3-Questionnaire completed (2 Dec
+2025); M4-Interim report submission (19 Jan 2026); M5-Dashboard completed (3 Feb 2026); M6-
+Evaluation completed (24 Feb 2026); M7-Final report submission (31 Mar 2026).
+1.2 Current Progress Review
+19 January 2026 All activities scheduled to submit in an interim, as planned, were either completed
+on time or ahead of schedule: project initiation (Completed early), literature review (Completed on
+time), questionnaire & scoring (Completed 1 week early), template development (Completed on
+time), dashboard development (75% complete, on track). Overall Assessment: Project progressing
+according to original plan, with early completion of key design activities creating contingency for
+later phases.
+1.3 Amendments to Plan
+Amendments Made: Additional templates (increased from 5 to 7, no schedule impact); Build tool
+change (CRA→Vite, positive impact); Professional development (Clifford Chance internship,
+enhanced regulatory understanding, positive impact). No remedial actions required as project has
+not fallen behind schedule. Revised plan remains substantially identical to original with minor
+adjustments absorbed by buffer time.
+Amendment Description Rationale Impact
+Additional templates
+Increased from 5 to 7
+templates
+Identified further useful policies
+during WP4
+No impact on
+schedule
+Build tool change CRA → Vite
+Faster builds, improved
+developer experience
+Positive
+Professional
+development
+Clifford Chance virtual
+internship
+Enhanced regulatory
+understanding
+Positive
+Risk Register: Technical complexity (Resolved via React+Bootstrap reducing UI risk); Time conflicts
+(Monitoring, buffer time created through early completion); Scope creep (Controlled via explicit outof-scope definition); Dashboard completion (Monitoring, core features prioritised); Evaluation
+validity (Monitoring, clear caveats for simulated case study)
+References
+Beazley (2023) Cyber Insurance Market Report 2023. Available at: https://www.beazley.com/cyberinsurance (Accessed: 15 December 2025).
+British Computer Society (BCS) (2023) BCS Code of Conduct. Available at:
+https://www.bcs.org/membership-and-registrations/become-a-member/bcs-code-of-conduct/
+(Accessed: 10 November 2025).
+Dawson, M. (2024) 'SME cybersecurity compliance: Bridging the implementation gap', Journal of
+Small Business Management, 62(3), pp. 445-467.
+Hevner, A.R., March, S.T., Park, J. and Ram, S. (2004) 'Design science in information systems
+research', MIS Quarterly, 28(1), pp. 75-105.
+IASME Consortium (2025) Cyber Essentials Self-Assessment Guide. Available at:
+https://iasme.co.uk/cyber-essentials/ (Accessed: 5 December 2025).
+IDC (2023) Global SME Cybersecurity Survey 2023. Framingham, MA: International Data Corporation.
+International Association of Computer Investigative Specialists (IACIS) (2024) Cybercrime Impact and
+Trends Affecting Small Organisations. Fairmont, WV: IACIS.
+National Cyber Security Centre (NCSC) (2024) Cyber Essentials Requirements for IT Infrastructure
+v3.3. Available at: https://www.ncsc.gov.uk/cyberessentials/requirements (Accessed: 1 December
+2025).
+Small Business Commissioner (2023) Cybersecurity Challenges in UK Small Business. London: Office
+of the Small Business Commissioner.
+Von Solms, R. and Van Niekerk, J. (2013) 'From information security to cyber security', Computers &
+Security, 38, pp. 97-102.
+Bibliography
+Bennett, S., McRobb, S. and Farmer, R. (2010) Object-Oriented Systems Analysis and Design Using
+UML. 4th edn. London: McGraw-Hill.
+Breach, M. (2008) Dissertation Writing for Engineers and Scientists. Harlow: Pearson Education Ltd.
+Connolly, T. and Begg, C. (2014) Database Systems: A Practical Approach to Design, Implementation,
+and Management. 6th edn. Upper Saddle River, NJ: Pearson.
+Dawson, C. (2015) Projects in Computing and Information Systems: A Student's Guide. 3rd edn.
+Harlow: Pearson Education Ltd.
+Hughes, B. and Cotterell, M. (2012) Software Project Management. 6th edn. London: McGraw-Hill.
+Pfleeger, C.P., Pfleeger, S.L. and Margulies, J. (2015) Security in Computing. 5th edn. Harlow:
+Pearson.
+Sommerville, I. (2016) Software Engineering. 10th edn. Harlow: Pearson.
+Stallings, W. and Brown, L. (2018) Computer Security: Principles and Practice. 4th edn. Harlow:
+Pearson Education.
