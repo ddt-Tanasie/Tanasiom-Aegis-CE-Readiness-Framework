@@ -2,36 +2,158 @@
 
 ## Purpose
 
-This section contains key cybersecurity standards, frameworks, and official guidance used to inform the design of the Tanasiom Aegis readiness framework.
+This section contains the cybersecurity standards, regulatory guidance, industry frameworks, and official reference materials that inform the design and development of the Tanasiom Aegis Cyber Essentials Readiness Framework.
+
+These resources provide the authoritative foundation for the project's assessment methodology, compliance recommendations, security controls, and supporting documentation. By aligning the framework with recognised standards, the project ensures consistency, credibility, and practical relevance for SMEs seeking to improve their cybersecurity posture.
 
 ---
 
 ## Contents
 
-* Cyber Essentials documentation (IASME Consortium)
-* NCSC guidance and best practices
-* Supporting technical and policy references
+This section includes:
+
+* Cyber Essentials documentation and guidance.
+* IASME certification requirements.
+* National Cyber Security Centre (NCSC) publications.
+* Security best practice guidance.
+* Technical security standards and principles.
+* Policy and governance references.
+* Supporting cybersecurity frameworks.
+* Industry reports and reference materials.
 
 ---
 
-## Key Frameworks
+## Key Standards and Frameworks
 
-* Cyber Essentials (IASME)
-* NCSC Small Business Guidance
-* Secure configuration and access control principles
+### Cyber Essentials (IASME Consortium)
+
+Cyber Essentials serves as the primary framework underpinning this project.
+
+Areas of focus include:
+
+* Secure configuration.
+* Access control.
+* User account management.
+* Malware protection.
+* Security update management.
+* Vulnerability reduction practices.
+
+The readiness framework is designed to assess organisational preparedness against these core control areas.
+
+### National Cyber Security Centre (NCSC) Guidance
+
+NCSC publications provide practical cybersecurity advice tailored to organisations of varying sizes, including SMEs.
+
+Relevant guidance includes:
+
+* Small Business Cyber Security Guidance.
+* Password and authentication best practices.
+* Secure remote working recommendations.
+* Incident response guidance.
+* Cyber security awareness resources.
+* Risk management recommendations.
+
+### Access Control Principles
+
+Access control guidance supports the framework's evaluation of how organisations manage user privileges and system access.
+
+Key considerations include:
+
+* Least privilege principles.
+* Role-based access control.
+* Account lifecycle management.
+* Privileged account security.
+* Multi-factor authentication.
+
+### Secure Configuration Principles
+
+Secure configuration standards provide guidance on reducing vulnerabilities caused by default settings and insecure deployments.
+
+Assessment areas include:
+
+* Device hardening.
+* Removal of unnecessary services.
+* Secure default configurations.
+* System baseline management.
+* Configuration monitoring and review.
+
+### Security Update and Patch Management
+
+Effective patch management is essential for reducing exposure to known vulnerabilities.
+
+Areas covered include:
+
+* Operating system updates.
+* Application patching.
+* Firmware updates.
+* Vulnerability remediation processes.
+* Update verification and monitoring.
 
 ---
 
-## Role in the Project
+## Supporting References
 
-These materials provide the **authoritative baseline** for:
+Additional reference materials may include:
 
-* mapping assessment findings to recognised controls
-* ensuring alignment with certification requirements
-* validating the recommendations produced by the framework
+* NCSC cybersecurity publications.
+* IASME Cyber Essentials requirements.
+* ISO/IEC 27001 security management principles.
+* CIS Controls and implementation guidance.
+* Academic cybersecurity research.
+* Government security recommendations.
+* Industry best practice documentation.
+
+These references provide supplementary guidance where Cyber Essentials requirements may require additional interpretation or practical implementation support.
 
 ---
 
-## Notes
+## Role Within the Project
 
-All recommendations within the toolkit and lab assessments should trace back to these standards where applicable.
+The standards and references contained within this section provide the authoritative baseline for the entire project.
+
+They support:
+
+* Assessment criteria development.
+* Readiness evaluation methodologies.
+* Compliance measurement activities.
+* Security control mapping.
+* Policy and procedure recommendations.
+* Risk identification and mitigation guidance.
+* Validation of framework outputs and recommendations.
+
+All framework components are designed to align with recognised cybersecurity principles and certification requirements.
+
+---
+
+## Traceability and Compliance Alignment
+
+A key objective of the Tanasiom Aegis framework is to maintain clear traceability between assessment findings and recognised cybersecurity standards.
+
+This enables:
+
+* Transparent compliance reporting.
+* Evidence-based recommendations.
+* Consistent assessment outcomes.
+* Improved audit readiness.
+* Easier progression toward Cyber Essentials certification.
+
+Where possible, recommendations generated by the framework should be directly mapped to relevant Cyber Essentials controls and supporting NCSC guidance.
+
+---
+
+## Expected Outcomes
+
+This section helps ensure that:
+
+* The framework remains aligned with recognised cybersecurity standards.
+* Recommendations are evidence-based and defensible.
+* Assessment results reflect real-world certification requirements.
+* SMEs receive practical guidance grounded in established best practices.
+
+---
+
+## Status
+
+**Status:** Active
+
+This section will be maintained and updated throughout the project lifecycle to reflect current Cyber Essentials requirements, NCSC guidance, emerging best practices, and any additional standards incorporated into the final framework.
