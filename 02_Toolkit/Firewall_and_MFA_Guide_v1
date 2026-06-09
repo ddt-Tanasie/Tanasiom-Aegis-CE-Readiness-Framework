@@ -1,35 +1,205 @@
-Create in Word then export to PDF. Include:
+# Firewall Security Verification and Multi-Factor Authentication Validation Framework
 
-Purpose & scope
+## Purpose
 
-Prerequisites (admin credentials, backup config)
+This document defines the verification activities, evidence requirements, and validation criteria used to assess firewall security controls and multi-factor authentication implementation within organisations seeking Cyber Essentials readiness.
 
-Step-by-step firewall verification (for a typical SMB UTM — example clicks):
+The framework provides a structured approach for evaluating whether key security controls are operating effectively and whether sufficient evidence exists to demonstrate compliance with Cyber Essentials requirements.
 
-Open browser → https://<firewall-ip> → Login with admin user
+---
 
-Navigate: Policy → Inbound Rules → verify rule Allow Established exists
+# Scope
 
-Verify admin interface blocking from WAN: System → Admin Access → ensure “Allow remote admin” is unchecked
+This framework applies to:
 
-Export config: System → Maintenance → Backup/Export → Save file
+* Network firewalls and internet gateways.
+* Firewall administrative interfaces.
+* Remote management controls.
+* Configuration backup processes.
+* Microsoft 365 authentication environments.
+* Multi-factor authentication controls.
+* Supporting compliance evidence.
 
-MFA setup example (Office365) — include exact click path:
+The framework is intended for use within SME environments and may be adapted to suit different firewall vendors and cloud service providers.
 
-Login to Microsoft 365 Admin center → Users → Active users → Multi-factor authentication → Select user(s) → Enable → enforce
+---
 
-Evidence examples — screenshot placeholders and what to capture
+# Cyber Essentials Alignment
 
-Troubleshooting tips & references
+The controls assessed within this framework primarily support the following Cyber Essentials requirements:
 
-Copy-paste sample firewall step to use as content:
+### Firewalls and Internet Gateways
 
-Verify admin interface is not exposed to WAN
+Assessment of network boundary protection mechanisms used to restrict unauthorised access.
 
-Login to the firewall management console.
+### User Access Control
 
-Click System → Administration → Management Access.
+Verification of authentication controls and privileged access management.
 
-Ensure Allow remote admin (or similar) is unchecked.
+### Secure Configuration
 
-Take a screenshot of this page and save as firewall_admin_access.png. This screenshot is required evidence for the CE self-assessment.
+Validation of secure management interfaces and configuration management practices.
+
+---
+
+# Firewall Security Control Verification
+
+## Administrative Interface Protection
+
+A key Cyber Essentials requirement is that administrative interfaces must not be exposed unnecessarily to untrusted networks.
+
+The verification process assesses whether:
+
+* Remote administrative access is restricted.
+* WAN-based management access is disabled where not required.
+* Administrative functions are limited to authorised personnel.
+* Secure management practices are implemented.
+
+Evidence should demonstrate the configuration of management access settings and confirm that external administrative exposure has been appropriately controlled.
+
+### Required Evidence
+
+* Firewall administration access configuration.
+* Management interface settings.
+* Administrative access restrictions.
+
+Example evidence file:
+
+```text
+firewall_admin_access.png
+```
+
+---
+
+## Inbound Rule Verification
+
+The firewall rule base should be reviewed to determine whether network traffic is being controlled according to organisational requirements.
+
+Assessment activities include verification that:
+
+* Legitimate business services are permitted.
+* Unnecessary inbound services are removed.
+* Established connection handling is configured appropriately.
+* Public-facing services are documented and justified.
+
+Evidence should demonstrate the active rule configuration present during the assessment.
+
+### Required Evidence
+
+* Firewall policy configuration.
+* Inbound rule listings.
+* Service access controls.
+
+Example evidence file:
+
+```text
+firewall_inbound_rules.png
+```
+
+---
+
+## Configuration Backup Validation
+
+Configuration management forms an important component of secure administration.
+
+Verification should confirm that:
+
+* Firewall configurations can be exported.
+* Backup procedures exist.
+* Recovery capability can be demonstrated.
+* Backup files are stored securely.
+
+Evidence should show successful export of the active firewall configuration.
+
+### Required Evidence
+
+* Configuration export interface.
+* Backup confirmation records.
+* Exported configuration files.
+
+Example evidence file:
+
+```text
+firewall_backup_export.png
+```
+
+---
+
+# Multi-Factor Authentication Verification
+
+## Authentication Control Assessment
+
+Multi-Factor Authentication (MFA) provides an additional layer of security by requiring users to present multiple forms of verification before access is granted.
+
+The assessment evaluates whether MFA has been implemented for organisational cloud services and administrative accounts.
+
+---
+
+## Microsoft 365 MFA Implementation
+
+Where Microsoft 365 is used, verification should confirm that MFA has been enabled and enforced for relevant users.
+
+The assessment examines:
+
+* MFA activation status.
+* Enforcement status.
+* User registration completion.
+* Administrative account protection.
+
+Evidence should demonstrate that users are required to complete MFA authentication when accessing services.
+
+### Required Evidence
+
+* MFA configuration screens.
+* User registration status.
+* Enforcement settings.
+
+Example evidence files:
+
+```text
+m365_mfa_enabled.png
+
+m365_mfa_registration.png
+```
+
+---
+
+# Evidence Requirements
+
+Evidence collected through this framework should be sufficient to support Cyber Essentials self-assessment activities and internal compliance reviews.
+
+Recommended evidence includes:
+
+| Evidence Item                    | Example Filename           |
+| -------------------------------- | -------------------------- |
+| Firewall Administration Controls | firewall_admin_access.png  |
+| Inbound Firewall Rules           | firewall_inbound_rules.png |
+| Firewall Backup Process          | firewall_backup_export.png |
+| MFA Configuration                | m365_mfa_enabled.png       |
+| MFA User Registration            | m365_mfa_registration.png  |
+
+Evidence should be retained within the project evidence repository and linked to relevant assessment findings.
+
+---
+
+# Assessment Outcomes
+
+Successful verification demonstrates that:
+
+* Firewall administrative interfaces are appropriately protected.
+* Network traffic controls are functioning as intended.
+* Configuration management processes are in place.
+* Multi-factor authentication has been implemented.
+* Supporting evidence exists for compliance assessment activities.
+
+These findings contribute directly to organisational Cyber Essentials readiness and support the broader objectives of the Tanasiom Aegis Cyber Essentials Readiness Framework.
+
+---
+
+# Status
+
+**Framework Component:** Active
+
+**Classification:** Assessment and Evidence Collection Framework
+
+**Project:** Tanasiom Aegis Cyber Essentials Readiness Framework
