@@ -1,22 +1,269 @@
-Include:
+# Gap Assessment Report Template
 
-Title / header (use standard header)
+**Document Title:** Cyber Essentials Readiness Gap Assessment Report
 
-Executive summary (1 short paragraph)
+**Project:** Tanasiom Aegis Cyber Essentials Readiness Framework
 
-Scope & Method (what was tested)
+**Document Reference:** GAP-REPORT-V1
 
-Findings table — create a Word table with these columns:
+**Version:** 1.0
 
-Control Area | Checklist Item | Status (Pass/Partial/Fail) | Evidence | Priority | Recommended Action | Owner | Due Date
+**Classification:** Internal Assessment
 
-Sample table row:
+**Prepared By:** ______________________
 
-Control Area	Checklist Item	Status	Evidence	Priority	Recommended Action	Owner	Due Date
-Patch management	Workstations patched within 14 days	Fail	Device_List shows 4/15 with old patch date	High	Implement automated patch schedule; patch unpatched hosts	IT	2026-01-15
+**Organisation:** ______________________
 
-Remediation plan — numbered list with time estimates (hours) and priority
+**Assessment Date:** ______________________
 
-Appendix: Evidence — list screenshot filenames and file paths
+**Review Date:** ______________________
 
-Save as Gap_Assessment_Report_Template_v1.docx. When running evaluation, save a filled copy Evaluation/Gap_Assessment_AcmeWidgets.docx.
+---
+
+# Executive Summary
+
+This report presents the findings of a Cyber Essentials readiness assessment conducted against the organisation's current security controls and operational practices. The purpose of the assessment is to identify gaps between existing security measures and Cyber Essentials requirements, prioritise remediation activities, and provide a structured roadmap towards certification readiness.
+
+The assessment considers technical controls, governance processes, evidence availability, and operational security practices. Findings are categorised according to risk and implementation priority to support effective remediation planning.
+
+---
+
+# Scope and Methodology
+
+## Assessment Scope
+
+The following areas were assessed:
+
+* Firewalls and Internet Gateways
+* Secure Configuration
+* User Access Control
+* Malware Protection
+* Security Update Management
+* Asset Management
+* Multi-Factor Authentication
+* Evidence Collection Processes
+
+### Systems Included
+
+Document in-scope systems:
+
+* Workstations
+* Laptops
+* Servers
+* Cloud Services
+* Mobile Devices
+* Remote Access Solutions
+
+### Systems Excluded
+
+Document any formally excluded systems and provide justification.
+
+---
+
+## Assessment Method
+
+The assessment was conducted using:
+
+* Device inventory review
+* Documentation review
+* Configuration verification
+* Evidence inspection
+* User interviews (where applicable)
+* Cyber Essentials control mapping
+
+Evidence was compared against Cyber Essentials requirements and supporting NCSC guidance.
+
+---
+
+# Assessment Findings
+
+| Control Area                  | Checklist Item                            | Status  | Evidence                                             | Priority | Recommended Action                                                             | Owner   | Due Date   |
+| ----------------------------- | ----------------------------------------- | ------- | ---------------------------------------------------- | -------- | ------------------------------------------------------------------------------ | ------- | ---------- |
+| Patch Management              | Workstations patched within 14 days       | Fail    | Device_List shows 4/15 systems with outdated patches | High     | Implement automated patch deployment and remediate outstanding vulnerabilities | IT Team | 2026-01-15 |
+| User Access Control           | MFA enabled for Microsoft 365 users       | Partial | MFA enabled for admins only                          | High     | Enable MFA for all users                                                       | IT Team | __________ |
+| Secure Configuration          | Local administrator accounts controlled   | Pass    | Admin account review completed                       | Low      | Continue monitoring                                                            | IT Team | N/A        |
+| Firewalls & Internet Gateways | Firewall management interface restricted  | Pass    | firewall_admin_access.png                            | Low      | Maintain configuration review schedule                                         | IT Team | N/A        |
+| Malware Protection            | Endpoint protection installed and updated | Partial | AV status report indicates 2 unmanaged devices       | Medium   | Enrol unmanaged devices into protection platform                               | IT Team | __________ |
+
+---
+
+# Summary of Findings
+
+| Status  | Total |
+| ------- | ----- |
+| Pass    | _____ |
+| Partial | _____ |
+| Fail    | _____ |
+
+### High Priority Findings
+
+List all findings requiring immediate remediation.
+
+### Medium Priority Findings
+
+List findings requiring remediation during the next review cycle.
+
+### Low Priority Findings
+
+List improvements and optimisation opportunities.
+
+---
+
+# Remediation Plan
+
+## Priority 1 – Critical Findings
+
+### 1. Implement Automated Patch Management
+
+**Priority:** High
+
+**Estimated Effort:** 8 Hours
+
+**Owner:** IT Team
+
+**Target Completion:** __________
+
+Activities:
+
+* Deploy patch management solution.
+* Review outstanding vulnerabilities.
+* Verify successful installation.
+
+---
+
+### 2. Enable MFA for All Users
+
+**Priority:** High
+
+**Estimated Effort:** 4 Hours
+
+**Owner:** IT Team
+
+**Target Completion:** __________
+
+Activities:
+
+* Identify affected accounts.
+* Enable MFA policies.
+* Verify user registration.
+
+---
+
+## Priority 2 – Medium Findings
+
+### 3. Review Endpoint Protection Coverage
+
+**Priority:** Medium
+
+**Estimated Effort:** 3 Hours
+
+**Owner:** IT Team
+
+**Target Completion:** __________
+
+Activities:
+
+* Identify unmanaged devices.
+* Install endpoint protection.
+* Verify reporting status.
+
+---
+
+## Priority 3 – Low Findings
+
+### 4. Formalise Quarterly Security Reviews
+
+**Priority:** Low
+
+**Estimated Effort:** 2 Hours
+
+**Owner:** Management
+
+**Target Completion:** __________
+
+Activities:
+
+* Define review process.
+* Schedule quarterly assessments.
+* Maintain evidence records.
+
+---
+
+# Overall Assessment Outcome
+
+### Readiness Rating
+
+☐ Ready for Cyber Essentials Submission
+
+☐ Mostly Ready – Minor Remediation Required
+
+☐ Significant Remediation Required
+
+☐ Not Currently Ready
+
+---
+
+# Recommendations
+
+The organisation should prioritise remediation of High and Medium priority findings before proceeding with Cyber Essentials certification activities.
+
+Evidence collection processes should be formalised to improve audit readiness and reduce certification preparation effort.
+
+Periodic reassessment is recommended following completion of remediation activities.
+
+---
+
+# Appendix A – Evidence Register
+
+| Evidence File              | Description                             | File Path                                     |
+| -------------------------- | --------------------------------------- | --------------------------------------------- |
+| firewall_admin_access.png  | Firewall management access restrictions | /Evidence/Firewall/firewall_admin_access.png  |
+| firewall_inbound_rules.png | Firewall policy review evidence         | /Evidence/Firewall/firewall_inbound_rules.png |
+| firewall_backup_export.png | Configuration backup evidence           | /Evidence/Firewall/firewall_backup_export.png |
+| m365_mfa_enabled.png       | MFA enabled users                       | /Evidence/MFA/m365_mfa_enabled.png            |
+| m365_mfa_registration.png  | MFA registration status                 | /Evidence/MFA/m365_mfa_registration.png       |
+
+---
+
+# Appendix B – Supporting Documentation
+
+* Device Inventory
+* Risk Register
+* Security Policies
+* Patch Management Records
+* Vulnerability Reports
+* User Access Review Records
+* Meeting Logs
+* Assessment Notes
+
+---
+
+# Document Control
+
+| Version | Date       | Author     | Description     |
+| ------- | ---------- | ---------- | --------------- |
+| 1.0     | __________ | __________ | Initial Release |
+
+---
+
+## File Naming Convention
+
+**Template**
+
+```text
+Gap_Assessment_Report_Template_v1.docx
+```
+
+**Completed Assessment Example**
+
+```text
+/Evaluation/
+Gap_Assessment_AcmeWidgets.docx
+```
+
+**PDF Export**
+
+```text
+/Evaluation/
+Gap_Assessment_AcmeWidgets.pdf
+```
