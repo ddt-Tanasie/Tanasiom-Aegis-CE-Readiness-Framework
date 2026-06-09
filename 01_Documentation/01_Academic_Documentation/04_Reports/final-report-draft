@@ -1,1 +1,200 @@
-This is the long final submission. Structure similar to interim but expanded — see earlier messages. Save your final Word as PDF Final_Report_YYYY-MM-DD.pdf. Include appendices: full toolkit files, code README, evaluation evidence screenshots, meeting logs (PDF versions).
+# Final Report
+
+## Purpose
+
+This section contains the final academic submission for the **Tanasiom Aegis Cyber Essentials Readiness Framework** project.
+
+The report represents the culmination of the project's research, framework development, implementation, testing, evaluation, and critical reflection activities. It demonstrates how academic theory, industry standards, and practical cybersecurity methodologies were combined to develop a structured readiness framework aimed at supporting Small and Medium-Sized Enterprises (SMEs) in preparing for Cyber Essentials certification.
+
+---
+
+## Contents
+
+The final report includes:
+
+* Executive Summary
+* Introduction and Background
+* Project Aims and Objectives
+* Literature Review
+* Research Methodology
+* Requirements Analysis
+* Framework Design
+* Toolkit Development
+* Implementation Activities
+* Simulated Lab Environment
+* Cyber Essentials Control Mapping
+* Testing and Evaluation
+* Results and Findings
+* Critical Discussion
+* Limitations
+* Recommendations
+* Conclusion
+* References
+* Appendices
+
+---
+
+## Academic Contribution
+
+The report demonstrates:
+
+* Independent cybersecurity research.
+* Application of Cyber Essentials requirements in a practical setting.
+* Development of a structured readiness framework.
+* Critical evaluation of existing approaches.
+* Integration of academic literature and industry guidance.
+* Design and implementation of supporting assessment tools.
+* Reflection on framework effectiveness and future improvements.
+
+---
+
+## Framework Coverage
+
+The report evaluates readiness against the five Cyber Essentials control areas:
+
+### Firewalls and Internet Gateways
+
+Assessment of network boundary protection and secure access controls.
+
+### Secure Configuration
+
+Review of system hardening, default settings, and secure deployment practices.
+
+### User Access Control
+
+Evaluation of user account management, privilege separation, and authentication controls.
+
+### Malware Protection
+
+Assessment of anti-malware controls, endpoint protection, and application security measures.
+
+### Security Update Management
+
+Review of patch management processes, vulnerability remediation, and update governance.
+
+---
+
+## Implementation and Testing
+
+The report documents the practical implementation of the framework, including:
+
+* Readiness assessment activities.
+* Compliance gap analysis.
+* Toolkit deployment.
+* Simulated SME assessment scenarios.
+* Cyber Essentials alignment testing.
+* Evidence collection and documentation procedures.
+
+Testing activities are used to evaluate the framework's usability, effectiveness, and practical applicability within SME environments.
+
+---
+
+## Evaluation
+
+The evaluation section examines:
+
+* Framework effectiveness.
+* Accuracy of readiness assessments.
+* Ease of use for SME stakeholders.
+* Alignment with Cyber Essentials requirements.
+* Strengths and weaknesses of the proposed solution.
+* Practical challenges encountered during implementation.
+
+Evaluation findings are supported through documented evidence and testing outcomes.
+
+---
+
+## Appendices
+
+The appendices provide supporting evidence and supplementary materials referenced throughout the report.
+
+### Appendix A – Toolkit Documentation
+
+* Assessment templates.
+* Readiness questionnaires.
+* Compliance checklists.
+* Policy templates.
+* User guidance materials.
+
+### Appendix B – Technical Artefacts
+
+* Scripts and automation tools.
+* Configuration examples.
+* Technical documentation.
+* Source code repositories.
+
+### Appendix C – Code Documentation
+
+* Code README files.
+* Installation instructions.
+* Usage guidance.
+* Development notes.
+
+### Appendix D – Evaluation Evidence
+
+* Testing results.
+* Assessment outputs.
+* Validation records.
+* Supporting screenshots.
+
+### Appendix E – Project Management Evidence
+
+* Meeting logs.
+* Progress reviews.
+* Supervisor feedback records.
+* Development timeline documentation.
+
+### Appendix F – Additional Supporting Material
+
+* Research evidence tables.
+* Control mapping matrices.
+* Risk assessment documentation.
+* Supplementary technical references.
+
+All appendices should be included in PDF format where applicable.
+
+---
+
+## Submission Requirements
+
+### Final Deliverable
+
+The final submission should be exported from Microsoft Word and submitted as:
+
+**Final_Report_YYYY-MM-DD.pdf**
+
+### Supporting Evidence
+
+The final submission package should include:
+
+* Final Report PDF.
+* Toolkit files.
+* Source code repository documentation.
+* Evaluation screenshots.
+* Meeting log PDFs.
+* Supporting appendices.
+* Additional evidence referenced within the report.
+
+---
+
+## Role Within the Project
+
+This report serves as the definitive academic record of the Tanasiom Aegis project and demonstrates the complete journey from project conception through to implementation and evaluation.
+
+It provides evidence that the project objectives were addressed through a combination of academic research, practical cybersecurity implementation, and critical analysis.
+
+---
+
+## Status
+
+**Status:** In Development
+
+The final report is currently being refined and will incorporate:
+
+* Results from framework testing and validation.
+* Final Cyber Essentials control mapping.
+* Evaluation findings.
+* Critical reflections and recommendations.
+* Complete appendices and supporting evidence.
+
+Upon completion, this report will become the primary academic submission and authoritative record of the project.
