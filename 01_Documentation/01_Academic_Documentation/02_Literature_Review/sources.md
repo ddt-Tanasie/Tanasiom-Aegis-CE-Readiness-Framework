@@ -1,4 +1,4 @@
-Mandatory Core Sources (6)
+
 
 National Cyber Security Centre (NCSC) (2023) Cyber Essentials: Requirements for IT Infrastructure.
 
@@ -16,6 +16,6 @@ Optional Higher-Grade Sources (Pick 1–2)
 
 Academic article on SME adoption barriers (e.g., ISO27001/CE comparison).
 
-A government or insurer study on CE effectiveness.
 
-These give you a strong, high-quality academic foundation.
+
+
