@@ -1,1 +1,55 @@
-General header to paste at top of every toolkit doc
+# Tanasiom Aegis Cyber Essentials Readiness Framework
+
+**Document Title:** [Insert Document Title]
+
+**Project:** Tanasiom Aegis Cyber Essentials Readiness Framework
+
+**Document Reference:** [DOC-ID]
+
+**Version:** 1.0
+
+**Author:** Dumitru Tanasie
+
+**Institution:** London Metropolitan University
+
+**Module:** CS6P05 Final Year Project
+
+**Supervisor:** Dr Subeksha Shrestha
+
+**Classification:** Internal / Assessment Artefact
+
+**Date:** [DD/MM/YYYY]
+
+---
+
+## Purpose
+
+This document forms part of the Tanasiom Aegis Cyber Essentials Readiness Framework, a project developed to assist Small and Medium-Sized Enterprises (SMEs) in assessing, improving, and demonstrating readiness for Cyber Essentials certification.
+
+The contents of this document support the implementation, assessment, evaluation, or management of cybersecurity controls aligned with Cyber Essentials requirements and National Cyber Security Centre (NCSC) guidance.
+
+---
+
+## Scope
+
+This document should be used in conjunction with the wider Tanasiom Aegis framework, supporting toolkit components, assessment templates, evidence repositories, and project documentation.
+
+---
+
+## Document Control
+
+| Version | Date         | Author          | Description     |
+| ------- | ------------ | --------------- | --------------- |
+| 1.0     | [DD/MM/YYYY] | Dumitru Tanasie | Initial Release |
+
+---
+
+## Related Documents
+
+* Cyber Essentials Requirements for IT Infrastructure
+* Cyber Essentials Plus Test Specification
+* NCSC Small Business Cyber Security Guidance
+* Tanasiom Aegis Assessment Toolkit
+* Tanasiom Aegis Evidence Repository
+
+---
