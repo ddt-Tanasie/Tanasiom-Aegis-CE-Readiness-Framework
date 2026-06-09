@@ -1,47 +1,274 @@
-Sections:
+# Tanasiom Aegis Cyber Essentials Readiness Framework
 
-Header (use general header)
+**Document Title:** Cyber Essentials Readiness Assessment Questionnaire
 
-Company information (table):
+**Project:** Tanasiom Aegis Cyber Essentials Readiness Framework
 
-Company name:
+**Document Reference:** TA-ASS-001
 
-Address:
+**Version:** 1.0
 
-Industry:
+**Author:** Dumitru Tanasie
 
-Number of employees:
+**Institution:** London Metropolitan University
 
-IT contact / email:
+**Module:** CS6P05 Final Year Project
 
-Business context (checkboxes):
+**Supervisor:** Dr Subeksha Shrestha
 
-Do you process personal data? (Y/N) — If Yes, what types?
+**Classification:** Assessment Template
 
-Are you required to hold Cyber Essentials for tenders? (Y/N)
+**Date:** __________________
 
-Short inventory summary:
+---
 
-Estimated number of workstations:
+# Executive Summary
 
-Number of servers:
+This assessment questionnaire is designed to provide organisations with a structured method of evaluating their readiness for Cyber Essentials certification. The assessment captures organisational information, asset visibility, technical control implementation, and supporting evidence requirements. Findings generated through this questionnaire can be used to identify compliance gaps, prioritise remediation activities, and support Cyber Essentials readiness assessments.
 
-Cloud services used: (e.g., Office365)
+---
 
-Control checklist (table: Control | Question | Yes/No | Evidence required | Notes)
+# Company Information
 
-Example row: Boundary Firewall | Is a boundary firewall in place and configured to block inbound admin ports? | Y/N | Screenshot of firewall rule table | —
+| Field               | Information |
+| ------------------- | ----------- |
+| Company Name        |             |
+| Address             |             |
+| Industry Sector     |             |
+| Number of Employees |             |
+| IT Contact          |             |
+| Email Address       |             |
+| Assessment Date     |             |
+| Assessor            |             |
 
-Example row: MFA | Is multi-factor authentication enabled for admin accounts? | Y/N | Screenshot from Admin console showing MFA enabled | —
+---
 
-Example row: Patch Management | Are security updates applied within 14 days? | Y/N | Patch history or update logs | —
+# Business Context
 
-Preliminary scoring formula (explain): e.g., each ‘Yes’ = 1 point; Score = points/total * 100%
+### Personal Data Processing
 
-Copy-paste example snippet (toward top of the doc):
+Do you process personal data?
 
-Control: Multi-Factor Authentication (MFA)
-Question: Is MFA enforced for all accounts with administrative privileges?
-Response: [Yes/No]
-Evidence required: Screenshot of admin console showing MFA status OR exported MFA report.
-Notes: If No, recommend immediate MFA enablement for admin accounts.
+☐ Yes
+
+☐ No
+
+If Yes, specify data types:
+
+---
+
+---
+
+---
+
+---
+
+### Cyber Essentials Requirement
+
+Is Cyber Essentials certification required for:
+
+☐ Public sector tenders
+
+☐ Customer contracts
+
+☐ Supply chain requirements
+
+☐ Internal security objectives
+
+☐ Not currently required
+
+---
+
+# Technology Overview
+
+## Device Inventory Summary
+
+| Asset Type      | Quantity |
+| --------------- | -------- |
+| Workstations    |          |
+| Laptops         |          |
+| Servers         |          |
+| Mobile Devices  |          |
+| Network Devices |          |
+
+---
+
+## Cloud Services Used
+
+Examples:
+
+* Microsoft 365
+* Google Workspace
+* Azure
+* AWS
+* Dropbox
+* Other
+
+Services in Use:
+
+---
+
+---
+
+---
+
+# Control Assessment Checklist
+
+| Control Area         | Question                                                                                 | Yes / No | Evidence Required                    | Notes |
+| -------------------- | ---------------------------------------------------------------------------------------- | -------- | ------------------------------------ | ----- |
+| Boundary Firewall    | Is a boundary firewall in place and configured to restrict unauthorised inbound traffic? |          | Screenshot of firewall configuration |       |
+| Boundary Firewall    | Is administrative access restricted from external networks?                              |          | Screenshot of admin access settings  |       |
+| Secure Configuration | Have default passwords been changed?                                                     |          | Device configuration evidence        |       |
+| Secure Configuration | Are unnecessary applications removed or disabled?                                        |          | Device review screenshots            |       |
+| User Access Control  | Are user accounts unique to each individual?                                             |          | User account listing                 |       |
+| User Access Control  | Are administrator accounts separated from standard user accounts?                        |          | Account management evidence          |       |
+| MFA                  | Is multi-factor authentication enabled for administrator accounts?                       |          | MFA configuration screenshot         |       |
+| MFA                  | Is MFA enabled for cloud service access?                                                 |          | MFA policy evidence                  |       |
+| Malware Protection   | Is anti-malware software installed on all endpoints?                                     |          | Endpoint protection report           |       |
+| Malware Protection   | Are anti-malware signatures updated automatically?                                       |          | Protection status screenshot         |       |
+| Patch Management     | Are security updates applied within 14 days of release?                                  |          | Patch history or update reports      |       |
+| Patch Management     | Are unsupported operating systems removed or upgraded?                                   |          | Device inventory evidence            |       |
+
+---
+
+# Assessment Example
+
+### Control: Multi-Factor Authentication (MFA)
+
+**Question:**
+
+Is MFA enforced for all accounts with administrative privileges?
+
+**Response:**
+
+☐ Yes
+
+☐ No
+
+**Evidence Required:**
+
+Screenshot of administrative console showing MFA status or exported MFA report.
+
+**Notes:**
+
+If No, immediate implementation of MFA for privileged accounts is strongly recommended to reduce the risk of unauthorised access and credential compromise.
+
+---
+
+# Preliminary Readiness Scoring
+
+## Assessment Method
+
+Each control question is assigned a value of:
+
+| Response | Score    |
+| -------- | -------- |
+| Yes      | 1 Point  |
+| No       | 0 Points |
+
+### Formula
+
+```text
+Readiness Score (%) =
+(Total Yes Responses ÷ Total Applicable Questions) × 100
+```
+
+### Example
+
+Total Questions = 20
+
+Yes Responses = 15
+
+```text
+(15 ÷ 20) × 100 = 75%
+```
+
+Readiness Score = **75%**
+
+---
+
+# Readiness Interpretation
+
+| Score     | Interpretation                    |
+| --------- | --------------------------------- |
+| 90–100%   | High Readiness                    |
+| 75–89%    | Moderate Readiness                |
+| 50–74%    | Significant Improvements Required |
+| Below 50% | Not Currently Ready               |
+
+*This score provides an indicative measure of readiness only and does not represent an official Cyber Essentials certification decision.*
+
+---
+
+# Initial Findings Summary
+
+| Assessment Area               | Status |
+| ----------------------------- | ------ |
+| Firewalls & Internet Gateways |        |
+| Secure Configuration          |        |
+| User Access Control           |        |
+| Malware Protection            |        |
+| Security Update Management    |        |
+| Overall Readiness Score       |        |
+
+---
+
+# Assessor Comments
+
+---
+
+---
+
+---
+
+---
+
+---
+
+# Recommended Next Actions
+
+1. ---
+
+2. ---
+
+3. ---
+
+4. ---
+
+5. ---
+
+---
+
+# Supporting Evidence Checklist
+
+| Evidence Item                        | Collected |
+| ------------------------------------ | --------- |
+| Device Inventory                     | ☐         |
+| Firewall Screenshots                 | ☐         |
+| MFA Screenshots                      | ☐         |
+| User Account Review                  | ☐         |
+| Antivirus Status Reports             | ☐         |
+| Patch Management Reports             | ☐         |
+| Cloud Service Configuration Evidence | ☐         |
+
+---
+
+# Document Control
+
+| Version | Date       | Author          | Description     |
+| ------- | ---------- | --------------- | --------------- |
+| 1.0     | __________ | Dumitru Tanasie | Initial Release |
+
+---
+
+**Template Filename**
+
+```text
+Cyber_Essentials_Readiness_Assessment_Questionnaire_v1.docx
+```
+
+**Completed Assessment Example**
+
+```text
+Assessment_AcmeWidgets_2026-01-15.docx
+```
