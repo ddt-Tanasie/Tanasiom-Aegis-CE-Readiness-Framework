@@ -1,153 +1,273 @@
-✅ METHOD 1 — Manual but Simple (Spreadsheet-Based)
+# Device Inventory Management Approaches for SMEs
 
-Best for: Very small businesses (1–15 devices)
-Effort: Low
-Cost: Free
-CE Ready: Yes
+## Purpose
 
-How it works
+This document explores practical approaches that Small and Medium-Sized Enterprises (SMEs) can use to maintain an accurate inventory of devices for Cyber Essentials readiness and ongoing cybersecurity management.
 
-Create a single shared spreadsheet (Excel, Google Sheets).
+Device inventory management is a fundamental requirement for effective cybersecurity because organisations cannot secure assets they do not know exist. The approaches presented here are designed to accommodate organisations with varying levels of technical maturity, resources, and budget.
 
-Add a row for every device that:
+---
 
-Connects to business data
+## Background
 
-Accesses email
+Cyber Essentials requires organisations to understand which devices are within scope and ensure that those devices are appropriately managed, updated, and protected.
 
-Is used remotely
+Many SMEs struggle with maintaining accurate inventories due to:
 
-Users update their row monthly.
+* Limited IT resources.
+* Informal device management processes.
+* Remote and hybrid working arrangements.
+* Employee-owned device usage.
+* Lack of dedicated asset management tools.
 
-Manager reviews the sheet quarterly.
+The following approaches provide scalable solutions suitable for different organisational sizes and levels of complexity.
 
-Why it’s easy
+---
 
-Anyone can understand a spreadsheet
+# Method 1 – Manual Spreadsheet Inventory
 
-Requires no special tools or training
+## Overview
 
-CE only requires that devices are known + updated
+**Best For:** Small businesses (1–15 devices)
 
-Changes can be made immediately
+**Implementation Effort:** Low
 
-Include in your GitHub repo
+**Cost:** Free
 
-Create a folder /Device_Inventory/
+**Cyber Essentials Suitability:** Fully Suitable
 
-Add template: device_inventory_template.xlsx
+### Approach
 
-Add instructions file: METHOD_1_SPREADSHEET.md
+A shared spreadsheet is used as the central device inventory repository.
 
-✅ METHOD 2 — Semi-Automated (Form + Spreadsheet Workflow)
+Each device that:
 
-Best for: SMEs (15–50 devices), remote workers
-Effort: Medium
-Cost: Free (Google Forms)
-CE Ready: Very strong
+* Accesses business data.
+* Connects to business systems.
+* Uses business email.
+* Operates remotely for business purposes.
 
-How it works
+is recorded within the inventory.
 
-Onboarding form
-When a new user joins, they fill a Google Form with:
+Users update their information when changes occur, and management performs periodic reviews.
 
-Device type
+### Suggested Data Fields
 
-Operating system
+* Device Name
+* Device Type
+* Assigned User
+* Operating System
+* OS Version
+* Serial Number
+* Antivirus Installed
+* Auto Updates Enabled
+* Encryption Enabled
+* Last Review Date
 
-Serial number
+### Advantages
 
-Antivirus
+* Extremely simple to implement.
+* No specialist knowledge required.
+* No licensing costs.
+* Easy to explain during Cyber Essentials assessment.
 
-Auto-update enabled?
+### Limitations
 
-Form feeds into your spreadsheet automatically
-→ Creates your inventory without manual typing
+* Relies heavily on user compliance.
+* Prone to manual errors.
+* Difficult to scale as device numbers increase.
 
-Monthly “device confirmation check”
-Users receive a link to confirm:
+### Repository Structure
 
-device is still used
+```text
+/Device_Inventory/
+│
+├── device_inventory_template.xlsx
+├── METHOD_1_SPREADSHEET.md
+└── example_inventory.xlsx
+```
 
-updates are applied
+---
 
-no changes since last review
+# Method 2 – Form-Based Inventory Workflow
 
-Manager does a quarterly audit.
+## Overview
 
-Why it’s easy
+**Best For:** SMEs with 15–50 devices
 
-Less manual admin
+**Implementation Effort:** Medium
 
-Users responsible for their own devices
+**Cost:** Free
 
-Automatically timestamped entries
+**Cyber Essentials Suitability:** Strong
 
-Easy export for CE assessors
+### Approach
 
-Include in your GitHub repo
+A structured onboarding form is used to collect device information automatically.
 
-Add folder /Device_Inventory/Method_2_Form_Workflow/
+When users join the organisation, they complete a form containing:
 
-Add:
+* Device type.
+* Operating system.
+* Serial number.
+* Antivirus status.
+* Update status.
+* Encryption status.
 
-onboarding_form_template.md
+Responses automatically populate a central inventory spreadsheet.
 
-monthly_device_check.md
+Periodic device confirmation forms are then used to validate inventory accuracy.
 
-process_workflow_diagram.png (I can generate this if you want)
+### Monthly Device Confirmation
 
-✅ METHOD 3 — Fully Automated (Device Management Agent)
+Users confirm:
 
-Best for: Growing SMEs, >50 devices, remote fleet
-Effort: Very low once set up
-Cost: Cheap/free
-CE Ready: Excellent (covers most CE controls automatically)
+* Device remains in use.
+* Updates are installed.
+* No major configuration changes occurred.
+* Device ownership remains unchanged.
 
-Tools you can use
+### Advantages
 
-Microsoft Intune (Basic) – free with many Microsoft plans
+* Reduces manual administration.
+* Creates timestamped records.
+* Encourages user accountability.
+* Produces audit-friendly evidence.
 
-JumpCloud – free tier for small environments
+### Limitations
 
-ManageEngine Endpoint Central (Free)
+* Depends on users completing forms.
+* Still requires management oversight.
+* May not identify unmanaged devices automatically.
 
-Kandji / Mosyle / Jamf (mac-focused)
+### Repository Structure
 
-How it works
+```text
+/Device_Inventory/
+│
+└── Method_2_Form_Workflow/
+    │
+    ├── onboarding_form_template.md
+    ├── monthly_device_check.md
+    ├── process_workflow_diagram.png
+    └── inventory_process_guide.md
+```
 
-A lightweight agent installs on every device and automatically collects:
+---
 
-Device name
+# Method 3 – Automated Device Management
 
-OS + version
+## Overview
 
-Patch status
+**Best For:** Organisations with more than 50 devices
 
-Antivirus status
+**Implementation Effort:** Initial setup required
 
-Location
+**Cost:** Low to Moderate
 
-User assigned
+**Cyber Essentials Suitability:** Excellent
 
-Missing updates
+### Example Solutions
 
-Encryption status
+* Microsoft Intune
+* JumpCloud
+* ManageEngine Endpoint Central
+* Kandji
+* Mosyle
+* Jamf
 
-CE assessors love this because it provides:
+### Approach
 
-Accurate evidence
+A management agent is deployed to managed devices.
 
-Real-time visibility
+The platform automatically collects information including:
 
-Automatic alerts
+* Device name.
+* Operating system.
+* Patch status.
+* Antivirus status.
+* Encryption status.
+* Assigned user.
+* Device location.
+* Compliance status.
 
-Why it’s easy
+Information is continuously updated and centrally managed.
 
-Device inventory updates itself
+### Advantages
 
-No manual spreadsheet
+* Real-time inventory visibility.
+* Minimal manual effort after deployment.
+* Supports compliance monitoring.
+* Produces strong assessment evidence.
+* Helps satisfy multiple Cyber Essentials requirements simultaneously.
 
-Ensures compliance with patching, MFA, secure configuration
+### Limitations
 
-Easy to demonstrate during CE assessment
+* Requires implementation effort.
+* May involve licensing costs.
+* Requires administrative expertise.
+
+### Evidence Benefits
+
+Automated platforms can assist with:
+
+* Device inventory maintenance.
+* Security update verification.
+* Malware protection monitoring.
+* Secure configuration oversight.
+* Compliance reporting.
+
+These capabilities can significantly simplify Cyber Essentials readiness activities.
+
+---
+
+# Comparative Analysis
+
+| Feature                 | Method 1 | Method 2 | Method 3     |
+| ----------------------- | -------- | -------- | ------------ |
+| Cost                    | Free     | Free     | Low–Moderate |
+| Setup Complexity        | Low      | Medium   | High         |
+| Scalability             | Low      | Medium   | High         |
+| Automation              | None     | Partial  | Full         |
+| Audit Evidence          | Basic    | Good     | Excellent    |
+| Suitable Device Count   | 1–15     | 15–50    | 50+          |
+| Administrative Overhead | High     | Medium   | Low          |
+
+---
+
+# Recommendation
+
+The most appropriate approach depends on organisational size and maturity.
+
+### Small Organisations
+
+Method 1 provides a simple and cost-effective solution that satisfies Cyber Essentials requirements.
+
+### Growing SMEs
+
+Method 2 introduces structure and automation without additional cost and is likely to provide the best balance between usability and compliance.
+
+### Mature Organisations
+
+Method 3 offers the strongest long-term solution and supports broader cybersecurity governance, compliance monitoring, and operational efficiency.
+
+---
+
+## Future Development
+
+Potential future enhancements include:
+
+* Automated readiness scoring.
+* Asset lifecycle tracking.
+* Vulnerability management integration.
+* Compliance dashboards.
+* Cyber Essentials evidence repositories.
+* Continuous compliance monitoring.
+
+---
+
+## Status
+
+**Status:** Research Concept / Future Toolkit Component
+
+This document forms part of the Supporting Concepts section and may be incorporated into future versions of the Tanasiom Aegis Cyber Essentials Readiness Toolkit.
