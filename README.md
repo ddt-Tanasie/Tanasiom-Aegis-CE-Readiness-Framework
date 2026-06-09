@@ -110,7 +110,7 @@ Live Web Prototype    → Demonstrates user-facing interface
 https://github.com/ddt-Tanasie/Tanasiom-Aegis-Lab
 
 **Live Web Prototype (React/Vite Deployment)**
-https://ddt-tanasie.github.io/tanasiom-aegis-v2-live/
+https://tanasiomaegis.co.uk
 
 ---
 
@@ -160,4 +160,4 @@ London Metropolitan University
 
 ---
 
-**Last Updated:** January 2026
+**Last Updated:** May 2026
