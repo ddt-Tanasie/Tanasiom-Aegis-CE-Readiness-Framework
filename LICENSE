@@ -19,3 +19,73 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+
+# Copyright and Ownership
+
+## Tanasiom Aegis Cyber Essentials Readiness Framework
+
+Developed and maintained by **Tanasiom Aegis**.
+
+Original framework author and creator: **Dumitru Tanasie**.
+
+---
+
+## Copyright
+
+Copyright © 2025–2026 Tanasiom Aegis.
+
+All rights reserved except where otherwise permitted under the applicable open-source licence.
+
+---
+
+## Project Identity
+
+Tanasiom Aegis is the owner, publisher, and maintainer of:
+
+* The Cyber Essentials Readiness Framework.
+* Supporting assessment methodologies.
+* Readiness scoring models.
+* Templates and toolkits.
+* Policies and procedures.
+* Documentation and guides.
+* Software components and scripts.
+* Dashboards, workflows, and automation tools.
+* Future platform, SaaS, and service implementations derived from this framework.
+
+---
+
+## Attribution
+
+The framework was originally designed and developed by:
+
+**Dumitru Tanasie**
+
+as part of research and development activities associated with the Tanasiom Aegis project.
+
+---
+
+## Disclaimer
+
+The Tanasiom Aegis Cyber Essentials Readiness Framework, associated documentation, templates, policies, procedures, software components, online services, dashboards, APIs, automation tools, and future platform implementations are provided on an "as-is" basis without warranties of any kind.
+
+Tanasiom Aegis makes no guarantee regarding:
+
+* Cyber Essentials certification.
+* Cyber Essentials Plus certification.
+* Regulatory compliance.
+* Security effectiveness.
+* Business continuity.
+* Protection from cyber incidents.
+* Suitability for any specific purpose.
+
+Users remain responsible for validating controls, implementing security measures, maintaining backups, and obtaining independent professional advice where required.
+
+---
+
+## License
+
+Unless otherwise stated, repository contents are licensed under the MIT License.
+
+See the LICENSE file for full terms.
