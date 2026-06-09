@@ -1,32 +1,425 @@
-Include:
+# Tanasiom Aegis Cyber Essentials Readiness Framework
 
-Purpose & scope
+**Document Title:** Patch Management Policy and Procedure
 
-Roles (IT owner, approver)
+**Project:** Tanasiom Aegis Cyber Essentials Readiness Framework
 
-Patch schedule (Weekly check + monthly full rollouts)
+**Document Reference:** TA-PATCH-001
 
-Windows example: How to check Windows Update (click path: Start → Settings → Update & Security → Windows Update → Check for updates).
+**Version:** 1.0
 
-Linux example: commands:
+**Author:** Dumitru Tanasie
 
-Ubuntu/Debian:
+**Institution:** London Metropolitan University
 
+**Classification:** Policy and Operational Procedure
+
+**Date:** __________________
+
+---
+
+# Executive Summary
+
+This document defines the patch management requirements, responsibilities, processes, and verification activities used to ensure that operating systems and applications remain protected against known vulnerabilities. Effective patch management supports Cyber Essentials compliance by reducing exposure to publicly known security weaknesses and ensuring security updates are applied within an acceptable timeframe.
+
+---
+
+# Purpose
+
+The purpose of this policy is to establish a structured approach for identifying, testing, approving, deploying, and verifying security updates across organisational systems.
+
+This policy supports:
+
+* Cyber Essentials compliance.
+* Vulnerability management.
+* Secure system operation.
+* Reduction of cyber security risks.
+* Demonstration of patching evidence during assessments and audits.
+
+---
+
+# Scope
+
+This policy applies to:
+
+* Desktop computers.
+* Laptops.
+* Servers.
+* Virtual machines.
+* Cloud-hosted systems.
+* Mobile devices.
+* Business-critical applications.
+
+All systems that process, store, or access organisational information are considered within scope unless formally excluded and documented.
+
+---
+
+# Roles and Responsibilities
+
+## IT Owner
+
+Responsible for:
+
+* Monitoring update availability.
+* Performing update testing.
+* Scheduling deployments.
+* Maintaining update records.
+* Collecting evidence.
+* Reporting compliance status.
+
+---
+
+## Approver
+
+Responsible for:
+
+* Reviewing testing outcomes.
+* Approving production deployment.
+* Reviewing exceptions.
+* Authorising emergency patching activities.
+
+---
+
+## Users
+
+Responsible for:
+
+* Leaving devices powered on during maintenance windows.
+* Reporting update-related issues.
+* Not disabling update services without authorisation.
+
+---
+
+# Patch Management Policy Statement
+
+**Policy:**
+
+Security updates should be validated and applied to all workstations within **14 calendar days** of release, except where testing indicates a critical incompatibility.
+
+All patch operations must be logged and a screenshot of successful update application (or an exported update log) uploaded to the designated evidence repository.
+
+---
+
+# Patch Schedule
+
+## Weekly Activities
+
+Performed every week:
+
+* Review newly released security updates.
+* Review vendor security bulletins.
+* Identify critical and high-severity vulnerabilities.
+* Update patch tracking records.
+* Assess potential business impact.
+
+---
+
+## Monthly Rollout Activities
+
+Performed monthly:
+
+* Deploy approved updates.
+* Verify successful installation.
+* Update asset records.
+* Collect supporting evidence.
+* Produce patch compliance report.
+
+---
+
+# Patch Deployment Process
+
+## Stage 1 – Identify Available Updates
+
+Review updates from:
+
+* Microsoft
+* Linux package repositories
+* Third-party software vendors
+* Cloud service providers
+
+Record:
+
+* Release date.
+* Severity level.
+* Systems affected.
+* Remediation deadline.
+
+---
+
+## Stage 2 – Testing Phase
+
+Before organisation-wide deployment:
+
+Test updates on:
+
+* Two representative devices.
+* One primary workstation.
+* One secondary workstation or test device.
+
+Verification should confirm:
+
+* Successful installation.
+* Application compatibility.
+* Network connectivity.
+* Business-critical functionality.
+
+---
+
+## Stage 3 – Approval
+
+Following successful testing:
+
+* Document results.
+* Obtain approval from the designated approver.
+* Schedule production rollout.
+
+---
+
+## Stage 4 – Production Deployment
+
+Deploy updates to all in-scope systems.
+
+Examples include:
+
+* Windows Update.
+* WSUS deployment.
+* Microsoft Intune deployment.
+* Linux package management systems.
+* Automated deployment scripts.
+
+---
+
+# Windows Update Verification
+
+## Procedure
+
+Navigate to:
+
+```text
+Start
+→ Settings
+→ Update & Security
+→ Windows Update
+→ Check for Updates
+```
+
+Verify:
+
+* No outstanding critical updates.
+* Successful update status displayed.
+* Update history available.
+
+### Evidence Required
+
+Capture:
+
+```text
+windows_update_status.png
+```
+
+or export update history where available.
+
+---
+
+# Linux Update Verification
+
+## Ubuntu / Debian
+
+Run:
+
+```bash
 sudo apt update
 sudo apt -y upgrade
+```
 
+Verify:
 
-RHEL/CentOS:
+* No update failures.
+* Successful package installation.
 
+Evidence:
+
+```text
+ubuntu_patch_log.txt
+```
+
+or screenshot:
+
+```text
+ubuntu_update_success.png
+```
+
+---
+
+## RHEL / CentOS
+
+Run:
+
+```bash
 sudo yum update
+```
 
+Verify:
 
-Rollout approach: test on two machines → approve → push via Windows WSUS or scripting
+* Updates complete successfully.
+* No critical errors reported.
 
-Evidence & verification: export update history or screenshot
+Evidence:
 
-Emergency patching process
+```text
+centos_patch_log.txt
+```
 
-Sample policy line:
+or screenshot:
 
-Policy: Security updates should be validated and applied to all workstations within 14 calendar days of release, except where testing indicates a critical incompatibility. All patch operations must be logged and a screenshot of successful update applied (or an update log) uploaded to evidence folder.
+```text
+centos_update_success.png
+```
+
+---
+
+# Rollout Strategy
+
+Recommended deployment approach:
+
+### Phase 1
+
+Test Group
+
+* Device 01
+* Device 02
+
+Duration:
+
+24–48 hours
+
+---
+
+### Phase 2
+
+Approval Review
+
+* Verify stability.
+* Review reported issues.
+* Approve production deployment.
+
+---
+
+### Phase 3
+
+Organisation Rollout
+
+Deploy via:
+
+* WSUS
+* Microsoft Intune
+* PowerShell scripts
+* Linux automation scripts
+* Endpoint management solutions
+
+---
+
+# Evidence and Verification
+
+The following evidence should be collected and retained.
+
+| Evidence Type           | Example Filename             |
+| ----------------------- | ---------------------------- |
+| Windows Update Status   | windows_update_status.png    |
+| Windows Update History  | windows_update_history.png   |
+| Ubuntu Update Log       | ubuntu_patch_log.txt         |
+| Linux Update Screenshot | ubuntu_update_success.png    |
+| WSUS Deployment Report  | wsus_deployment_report.pdf   |
+| Patch Compliance Report | patch_compliance_report.xlsx |
+
+---
+
+# Emergency Patching Process
+
+Certain vulnerabilities may require immediate remediation outside the standard monthly cycle.
+
+Emergency patching may be triggered by:
+
+* Critical vendor advisories.
+* Active exploitation.
+* Cyber Essentials compliance concerns.
+* Regulatory requirements.
+
+---
+
+## Emergency Process
+
+1. Identify vulnerability.
+2. Assess business impact.
+3. Obtain emergency approval.
+4. Test where practical.
+5. Deploy immediately.
+6. Verify successful installation.
+7. Collect evidence.
+8. Update patch records.
+
+Target completion:
+
+**Within 24–72 hours depending on severity.**
+
+---
+
+# Exceptions
+
+Temporary patching exceptions may only be granted when:
+
+* A verified compatibility issue exists.
+* Business-critical services would be disrupted.
+* Alternative mitigations have been implemented.
+
+All exceptions must:
+
+* Be documented.
+* Be approved.
+* Include a remediation deadline.
+
+---
+
+# Compliance Monitoring
+
+Patch compliance should be reviewed:
+
+* Weekly for critical vulnerabilities.
+* Monthly for routine updates.
+* Quarterly during Cyber Essentials readiness reviews.
+
+Failure to comply with patch management requirements should trigger remediation activities and management review.
+
+---
+
+# Related Documents
+
+* Cyber Essentials Readiness Assessment Questionnaire
+* Device Inventory Register
+* Vulnerability Management Procedure
+* Gap Assessment Report
+* Evidence Collection Framework
+
+---
+
+# Document Control
+
+| Version | Date       | Author          | Description     |
+| ------- | ---------- | --------------- | --------------- |
+| 1.0     | __________ | Dumitru Tanasie | Initial Release |
+
+---
+
+## File Naming Convention
+
+**Template**
+
+```text
+Patch_Management_Policy_and_Procedure_v1.docx
+```
+
+**PDF Version**
+
+```text
+Patch_Management_Policy_and_Procedure_v1.pdf
+```
